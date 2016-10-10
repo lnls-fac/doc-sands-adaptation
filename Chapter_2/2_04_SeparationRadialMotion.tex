@@ -1,0 +1,29 @@
+\section{Separation of the radial motion} \label{sec:2.4}
+It is conceptually convenient to separate the radial motion into two parts, one part being a displaced, closed curve, which is the equilibrium orbit for electrons of the displaced energy, and the other part being the free transverse oscillation about this orbit. Suppose we write for $x$
+\begin{align}
+	x = x_{\epsilon} + x_{\beta}\label{eq:2.25}
+\end{align}
+then certainly Eq. \eqref{eq:2.19} is satisfied if both of the following equations are true:
+\begin{align}
+	x_\epsilon'' &= -K_x(s)x_\epsilon + G(s)\delta\label{eq:2.26}\\
+	x_\beta'' &= -K_x(s)x_\beta\label{eq:2.27}
+\end{align}
+We may make the decomposition unique by requiring that $x_\epsilon(s)$ be a \underline{single-valued function} at each physical azimuth; that is, that $x(s)$ be a function which is periodic in s with period $L$. It is then clear that $x_\epsilon(s)$ is a possible (and in fact, unique) closed orbit for an electron of energy $E_0 + \epsilon$ (with $x_\beta = 0$), and that the general radial motion will consist of the sum of the displacement of this new equilibrium orbit and a \underline{free betatron oscillation} $x_\beta$ which satisfies Eq. \eqref{eq:2.27}.
+
+The displacement $x_\epsilon$ is proportional to the energy deviation $\epsilon$. Let’s write
+\begin{align}
+	x_\epsilon(s) = \eta(s)\delta\label{eq:2.28}
+\end{align}
+Now $\eta(s)$ is the single-valued function which satisfies
+\begin{align}\label{eq:2.29}
+	\begin{cases}
+		\eta'' = -K_x(s)\eta + G(s), \\
+        \eta(0) = \eta(L), \\
+        \eta'(0) = \eta'(L).
+    \end{cases}
+\end{align}
+And the total displacement from the ideal orbit can be written
+\begin{align}
+	x = \eta(s)\delta + x_\beta
+\end{align}
+I shall call $\eta(s)$ the off-energy function; it is a unique particular solution of Eq. \eqref{eq:2.29} (because of the required periodicity) and is therefore, a function which characterizes the total guide field. It will be studied in more detail later on.

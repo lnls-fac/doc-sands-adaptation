@@ -1,0 +1,48 @@
+\section{Energy loss}\label{sec:4.1}
+
+A relativistic electron which is accelerated in a macroscopic force field will radiate electromagnetic energy at a rate which is proportional to the square of the accelerating
+ force. The rate depends on the angle between the force and the electrons velocity and is larger by the factor $\gamma^2 = (E/mc^2)^2$ when the force is perpendicular to the velocity than when the force is parallel to the velocity. In a storage ring the typical longitudinal forces (from the accelerating system) are much smaller than the typical transverse magnetic forces and $\gamma^2$ is a large number indeed, so we need consider only the radiation effects that accompany the magnetic forces.\\
+Let $P_\gamma$ stand for the rate of loss of energy by radiation; it may be written\footnote{I shall assume that you are familiar with the classical theory of electromagnetic radiation by relativistic electrons (see e.g., Ref.~\cite{10}) and will only review briefly the results needed for our purposes.}
+\begin{align}
+	P_\gamma &= \dfrac{2}{3} \dfrac{r_e}{m c} \gamma^2 F_\perp^2 \nonumber \\
+    	&= \dfrac{2}{3} \dfrac{r_e c}{(m c^2)^3} E^2 F_\perp^2,
+\end{align}
+where $m$ is the rest mass of the electron, $r_e$ is the classical electron radius, and $F_\perp$ is the magnetic force on the electron. It will be convenient to define the constant
+\begin{align} \label{eq:4.2}
+	C_\gamma = \dfrac{4 \pi}{3} \dfrac{r_e}{(m c^2)^3} = 8.85 \times 10^{-5}\, \text{m-GeV}^{-3}.
+\end{align}
+Then since $F_\perp = ecB$, the radiated power is
+\begin{align} \label{eq:4.3}
+	P_\gamma = \dfrac{e^2 c^3}{2 \pi} C_\gamma E^2 B^2.
+\end{align}
+This instantaneous power is proportional to the square of both the energy and the local magnetic field strength. It is sometimes useful to express the magnetic force in terms of the local radius of curvature $\rho$ of the trajectory; then
+\begin{align} \label{eq:4.4}
+	P_\gamma = \dfrac{c C_\gamma}{2 \pi}\dfrac{E^4}{\rho^2}.
+\end{align}
+An electron circulating on the design orbit has the nominal energy $E_0$ and moves on the radius $\rho = 1/G$ - see Section~\ref{sec:2.2}. To find the energy $U_0$ radiated in one revolution
+ we must integrate $P_\gamma$ with respect to time once around the ring. Since $dt = ds/c$,
+\begin{align}
+	U_0 = \dfrac{C_\gamma E_0^4}{2 \pi} \oint G^2(s) ds.
+\end{align}
+For an isomagnetic guide field\footnote{See Section~\ref{sec:2.2}.} $G = G_0 = 1/\rho_0$ along the curved parts of length $2 \pi \rho_0$ and zero elsewhere, so
+\begin{align} \label{eq:4.8}
+	U_0 = \dfrac{C_\gamma E_0^4}{\rho_0}.
+\end{align}
+For a fixed radius $\rho_0$, the energy radiated per turn varies as the fourth power of the electron energy. A 1 GeV electron moving on a 5 meter radius looses 17 keV each revolution.\\
+The average power radiated is $U_0/T_0$ where $T_0= c/L$ is the time elapsed during one revolution. For the general guide field
+\begin{align} \label{eq:4.9}
+	\mean{P_\gamma} = \dfrac{cC_\gamma}{2\pi} E_0^4 \mean{G^2}.
+\end{align}
+And for an isomagnetic ring,
+\begin{align} \label{eq:4.10}
+	\mean{P_\gamma} = \dfrac{c C_\gamma E_0^4}{\rho_0 L}, && \text{(isomag.).}
+\end{align}
+An electron that is not on the ideal orbit radiates at a different rate. Consider first an electron that has the nominal energy $E_0$. but is circulating with a betatron oscillation. It's rate of radiation will be different from an electron moving on the design orbit only because it moves through a slightly different magnetic field - due to its betatron displacement. But at each azimuth its displacement is equally often positive or negative. And we have assumed that the fields have only a linear variation with displacement. So -- to first order in the betatron amplitude the radiated power averaged -- over a betatron cycle is the same as that of an electron on the design orbit.\\
+The same is not true of an electron with an energy different from $E_0$. That
+case will be analyzed in the next section.
+For ultra-relativistic electrons the radiation is emitted primarily along the direction of motion. Most of the radiation is emitted within the angle $1/\gamma$. The radiation reaction force -- and therefore, the accompanying momentum change -- is exactly opposite to the direction
+ of motion\footnote{Neglecting quantum effects; see Section~\ref{sec:5.1}}. The only effect of the radiation is then to decrease the energy of the electron without changing its direction
+ of motion.
+
+
+

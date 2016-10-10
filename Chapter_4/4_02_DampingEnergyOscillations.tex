@@ -1,0 +1,95 @@
+\section{Damping of the Energy Oscillations}\label{sec:4.2}
+
+In Section~\ref{sec:3.5} we saw that small energy oscillations were damped at a rate proportional
+ to the change of the radiation loss with energy. From Eqs. \eqref{eq:2.43} and \eqref{eq:3.24} the damping coefficient $\alpha_\epsilon$ is
+\begin{align}
+	\alpha_\epsilon = \dfrac{D}{2 T_0} = \dfrac{1}{2 T_0} \left( \dfrac{d U_\text{rad}}{d E}, \right)
+\end{align}
+where $U_\text{rad}$ is the energy loss per revolution. When the energy of an electron deviates from the nominal energy $E_0$, the energy radiated in one revolution changes in part because of the energy change, in part because the electron travels in a different magnetic field and in part because its path length is different. Let’s look at how $dU_\text{rad}/dE$ may be evaluated.\\
+We have already seen that a betatron oscillation does not, to first order, change the average power radiated. So to get $U_\text{rad}$ at any energy we must merely integrate the $P_\gamma$ of Eq.~\eqref{eq:4.3} with respect to time around one complete off-energy closed orbit. It will, however, be convenient to change the variable of integration to $s$. Then,
+\begin{align}
+	U_\text{rad} = \oint P_\gamma dt = \oint P_\gamma \dfrac{dt}{ds} ds.
+\end{align}
+We have earlier evaluated $dt/ds$, see Eq.~\eqref{eq:2.15}:
+\begin{align*}
+	\dfrac{dt}{ds} = \dfrac{1}{c} \left( 1 + \dfrac{x}{\rho_s} \right),
+\end{align*}
+where $x$ is the displacement from the design orbit and $\rho_s(s)$ is the radius of curvature of the design orbit. Since we are now interested in the energy loss on an off-energy closed orbit we should take $x = \eta \epsilon/E_0$, where $\epsilon = E - E_0$. and $\eta(s)$ is
+the off-energy function. See Eq.~\eqref{eq:2.28}. Then
+\begin{align}
+	U_\text{rad} = \dfrac{1}{c} \oint \left( 1 + \dfrac{\eta}{\rho} \dfrac{\epsilon}{E_0} \right) P_\gamma ds.
+\end{align}
+We have already looked at this integral for $\epsilon = 0$; it is just $U_0$. So let’s differentiate now, evaluating the derivative at $\epsilon = 0$.
+\begin{align} \label{eq:4.14}
+	\dfrac{U_\text{rad}}{dE} = \dfrac{1}{c} \oint \left\lbrace \dfrac{dP_\gamma}{dE} + \dfrac{\eta}{\rho} \dfrac{P_\gamma}{E} \right\rbrace_0 ds,
+\end{align}
+where the subscript "O" on the curly brackets means that all quantities in the integrand are to be evaluated on the design orbit, and at the energy $E_0$. From Eq.~\eqref{eq:4.3}, $P_\gamma$ is proportional to the product $E^2 B^2$ -- and remember that when $E$ changes, the orbit moves to a different location so that $B$ also changes. We may then write that
+\begin{align*}
+	\dfrac{dP_\gamma}{dE} = 2 \dfrac{P_\gamma}{E_0} + 2 \dfrac{P_\gamma}{B_0} \dfrac{dB}{dE}.
+\end{align*}
+But
+\begin{align*}
+	\dfrac{dB}{dE} = \dfrac{dx}{dE} \dfrac{dB}{dx} = \dfrac{\eta}{E_0} \dfrac{dB}{dx},
+\end{align*}
+where $dB/dx$ is a property of the guide field. Putting these last two together and into Eq.~\eqref{eq:4.14}
+\begin{align*}
+	\dfrac{dU_\text{rad}}{dE} = \dfrac{1}{c} \oint \left\lbrace 2 \dfrac{P_\gamma}{E} + 2 \dfrac{P_\gamma}{B} \dfrac{\eta}{E_0} \dfrac{dB}{dx} + \dfrac{P_\gamma}{E} \frac{\eta}{\rho}  \right\rbrace_0 ds.
+\end{align*}
+The integral
+ of the first
+ term yields just $2U_0/E_0$ so our result for the variation of the radiated energy is
+\begin{align}
+	\dfrac{dU_\text{rad}}{dE} = \dfrac{U_0}{E_0} \left[ 2 + \dfrac{1}{cU_0} \oint \left\lbrace \eta P_\gamma \left( \dfrac{1}{\rho} + \dfrac{2}{B} \dfrac{dB}{dx} \right) \right\rbrace_0 ds \right]
+\end{align}
+We may now write for the damping constant:
+\begin{align}\label{eq:4.16}
+\alpha_\epsilon = \dfrac{1}{2 T_0} \dfrac{dU_\text{rad}}{dE} = \dfrac{U_0}{2 T_0 E_0} (2 + \mathscr{D}),
+\end{align}
+with
+\begin{align}
+	\mathscr{D} = \dfrac{1}{c U_0} \oint \eta P_\gamma \left\lbrace \dfrac{1}{\rho} + \dfrac{2}{B} \dfrac{dB}{dx} \right\rbrace_0 ds.
+\end{align}
+
+Taking $P_\gamma$ and $U_0$. from Eqs. \eqref{eq:4.3} and \eqref{eq:4.8} and expressing
+ $B$ and $dB/dx$ in terms of $G(s)$ and $K_1(s)$ as defined in Section \ref{sec:2.2}, we may rewrite $\mathscr{D}$ as
+\begin{align} \label{eq:4.18}
+	\mathscr{D} = \dfrac{\oint \eta G (G^2 + 2K_1)ds}{\oint G^2 ds}.
+\end{align}
+This form makes clearer the fact that $\mathscr{D}$ is just a number which is a property of
+the total guide field configuration -- obtained from integrations around the ring of expressions
+ involving only the guide field functions $G$, $K_1$, and $\eta$. The number $\mathscr{D}$ is typically a positive number quite a bit smaller than 1.\\
+Equation \eqref{eq:4.16} has a nice physical interpretation. Since $\mathscr{D}$ is usually small
+we have the approximate relation:
+\begin{align}
+	\alpha_\epsilon \approx \dfrac{U_0}{E_0 T_0} = \dfrac{\mean{P_\gamma}}{E_0},
+\end{align}
+where $\mean{P_\gamma}$ is the average rate of energy loss. The damping time constant for energy oscillations -- which is the inverse of $\alpha_\epsilon$ -- is just the time it takes an electron to radiate away its total energy!\\
+The expression above for $\mathscr{D}$ becomes simpler if the guide field is isomagnetic. Then $G(s)$ is either zero or equal to some constant in the magnets and the integrals extend only over the magnets. Equation \eqref{eq:4.18} becomes
+\begin{align} \label{eq:4.20}
+	\mathscr{D} = \dfrac{1}{2\pi}\oint_{\text{Mag}}\eta(s)\left\lbrace G_0^2 + 2K_1(s) \right\rbrace ds. && \text{(isomag)}
+\end{align}
+If the guide field is also "separated function" the magnets have no gradients and
+\begin{align}\label{eq:4.17}
+	\mathscr{D} = \dfrac{G_0^2}{2\pi}\oint_{\text{Mag}}\eta(s) ds. && \left(\begin{tabular}{l}
+\text{isomag} \\
+\text{sep. func.}
+\end{tabular}\right)
+\end{align}
+The integral is familiar; it appeared earlier when we calculated the dilation factor $\alpha$ for an isomagnetic guide field. Using Eqs. \eqref{eq:3.13} and \eqref{eq:3.14},
+\begin{align}
+	\mathscr{D} = G_0 \mean{\eta}_\text{Mag} = \dfrac{\alpha L}{2 \pi \rho_0} && \left(\begin{tabular}{l}
+\text{isomag} \\
+\text{sep. func.}
+\end{tabular}\right)
+\end{align}
+For this type of ring, the number $\mathscr{D}$ is just the dilation factor $\alpha$ increased by the ratio of the perimeter of the ring $L$ to the magnetic perimeter $2\pi\rho_0$. Typical values for these parameters of a ring might be:
+\begin{align*}
+	\alpha \approx 0.05; && L/(2\pi\rho_0)\approx 3; && \mathscr{D} \approx 0.15.
+\end{align*}
+Recapitulating, for energy oscillations in an isomagnetic, separated function guide field, the damping coefficient for energy oscillations is
+\begin{align}
+	\alpha_\epsilon = \dfrac{\mean{P_\gamma}}{2E_0}\left( 2 + \dfrac{\alpha L}{2 \pi \rho_0} \right). && \left(\begin{tabular}{l}
+\text{isomag} \\
+\text{sep. func.}
+\end{tabular}\right)
+\end{align}

@@ -1,0 +1,50 @@
+\section{Tune Shift with Gradient Errors}\label{sec:dtune_grad_err}
+
+In order to deduce the tune shift with a gradient error, let us use the transfer matrix formalism. From Eq.~\eqref{eq:2.37}, the one-turn transfer matrix is given by,
+\begin{align*}
+	\boldsymbol{M}(0,L)
+    &= \begin{bmatrix}
+	C(0,L) & S(0,L)\\
+	C'(0,L) & S'(0,L)
+	\end{bmatrix}
+\end{align*}
+ Since we know that
+\begin{align*}
+	C(0,L) &= \cos(2\pi\nu) - \dfrac{\beta'}{2} \sin(2\pi\nu),\\
+    S'(0,L) &= \dfrac{\beta'}{2} \sin(2\pi\nu) + \cos(2\pi\nu);
+\end{align*}
+it is easy to see that $\Tr [\boldsymbol{M}(0,L)] = 2\cos(2\pi\nu)$, so it is possible to find the tune $\nu$, from the trace of the one-turn transfer matrix.
+If we have a quadrupole perturbation at $s=0$ (without loss of generality), we may represent it with the transfer matrix of the quadrupole, see Table.~\ref{tab:tab1}.\\
+Since this perturbation resides in a element of length $\Delta s$, we shall use the thin lenses approximation ($\Delta s$ small, while keeping $k\Delta s$ a constant), as follows
+\begin{align}
+	\boldsymbol{M}_k &=
+	\begin{bmatrix}
+			\cos(\sqrt{k}\Delta s) & \frac{1}{\sqrt{k}}\sin(\sqrt{k}\Delta s)\\
+			-\sqrt{k}\sin(\sqrt{k}\Delta s) & \cos(\sqrt{k}\Delta s)
+	\end{bmatrix}\\
+    & \approx
+    \begin{bmatrix}
+			1 & 0\\
+			-k \Delta s & 1
+	\end{bmatrix}.
+\end{align}
+This approximation is valid for $k < 0$ too. The new one-turn matrix is given by $\boldsymbol{M}'(0,L) = \boldsymbol{M}(0,L) \cdot \boldsymbol{M}_k$. As we have just seen, the new tune can be found by calculating $\Tr[\boldsymbol{M}'(0,L)]$. Using the values of $C(0,L)$ and $S'(0,L)$ given above and $S(0,L) = \beta \sin(2\pi\nu)$, the reader can find that
+\begin{align}
+	\Tr[\boldsymbol{M}'(0,L)] = 2\cos(2\pi\nu) - \beta k \Delta s \sin(2\pi\nu).
+\end{align}
+Let $\nu + \Delta\nu$ be the new tune, then
+\begin{align}
+	2\cos(2\pi(\nu+\Delta\nu)) = 2\cos(2\pi\nu) - \beta k \Delta s \sin(2\pi\nu).
+\end{align}
+Supposing that $\Delta\nu$ is sufficiently small, since $\Delta s$ is sufficiently small, we may use the relation
+\begin{align*}
+	\cos(2\pi(\nu+\Delta\nu)) \approx \cos(2\pi\nu) - 2\pi\Delta\nu\sin(2\pi\nu),
+\end{align*}
+to deduce that
+\begin{align}
+	\Delta\nu \approx \dfrac{1}{4\pi}\beta k \Delta s.
+\end{align}
+Supposing this effect occurs in the whole ring (and using the linear approximation), we may sum up all $\Delta\nu$ contributions caused by several $k(s)$ in each $\Delta s$ of the ring, obtaining then, the total tune variation
+\begin{align}
+	\Delta\nu = \dfrac{1}{4\pi}\oint \beta(s) k(s) ds.
+\end{align}

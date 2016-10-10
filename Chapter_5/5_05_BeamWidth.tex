@@ -1,0 +1,134 @@
+\section{Beam Width} \label{sec:5.5}
+
+The emission of discrete quanta in the synchrotron radiation will also excite random betatron oscillations and these quantum-induced oscillations are responsible for the lateral extent of a stored electron beam. Let's look first at the quantum effects on the horizontal betatron oscillations (as in the preceding section, I will consider first only the gross statistical
+ properties of the fluctuations).\\
+In Section~\ref{sec:4.3} we considered the effect of a small radiation loss $\delta E$ -- which
+was assumed there to occur continuously in a path length $\delta \ell$ -- under the assumption that the momentum loss was parallel to the direction of motion. We may take over the results obtained there and adapt them to the case of quantum emission by setting $\delta E$ to the quantum
+ energy $u$ -- keeping for the moment the assumption that quantum emission gives only a change in the magnitude of the momentum and not in its direction. You will recall from Section~\ref{sec:4.3} that a change in energy is accompanied by a change in the betatron displacement only because of the sudden displacement of the reference orbit -- the energy displaced orbit -- about which
+the betatron oscillations occur. Taking the results of Eqs. \eqref{eq:4.35} and \eqref{eq:4.38},
+ the emission of a quantum of energy $u$ will result in a change $\delta x_\beta$ in the betatron displacement and a change $\delta x_\beta'$ in the betatron slope given by
+\begin{align}\label{eq:5.67}
+	\delta x_\beta = -\eta \dfrac{u}{E_0}; && \delta x_\beta' = -\eta' \dfrac{u}{E_0}.
+\end{align}
+The effect that such a sudden disturbance will have on the betatron oscillations will depend on where in the storage ring the quantum emission occurs -- and on where we observe the oscillation.
+ From Section~\ref{sec:2.6} we know how to relate the oscillations observed at one azimuth to those that will be found at another azimuth; so we can for convenience, evaluate the quantum effects by what they do to the oscillations at some fixed azimuth -- say at $s_1$ -- and later transfer the result to any other azimuth. Our program can then be the following: (1) We ask what is
+the effect at $s_1$ of a quantum emission that occurs at some other azimuth $s_2$. (2) We average over all quanta which might be emitted at $s_2$. (3) We sum the contributions from all possible values of $s_2$.\\
+In Section~\ref{sec:2.6} we considered the motion which resulted at $s_1$ from the "initial
+conditions" $x_2$ and $x_2'$ at $s_2$, the result can be written in the form\footnote{It will be understood that here $\beta$ means $\beta_x$}
+\begin{align} \label{eq:5.68}
+	x_\beta(s_1,t_j) = a \sqrt{\beta_1} \cos \varphi_j,
+\end{align}
+where the $\varphi_j$ are the oscillation phases at the times $t_j$ of the successive passages
+of the electron by the azimuth $s_1$, $\beta_1$ is the betatron function at $s_1$ and $a$ is an
+invariant amplitude factor given by
+\begin{align}
+	a^2 = \dfrac{1}{\beta_2} \left\lbrace x_2^2 + \left( \beta_2 x_2' - \dfrac{\beta_2'}{2} x_2 \right)^2 \right\rbrace.
+\end{align}
+If we put for $x_2$ and $x_2'$ the disturbance of Eq.~\eqref{eq:5.67} and write $\delta a^2$ for the resulting amplitude, we have that the emission of a quantum of energy $u$ at $s_2$ gives the
+mean amplitude change (in respect to phase)
+\begin{align} \label{eq:5.70}
+	\mean{\delta a^2} = \dfrac{u^2}{E_0^2} \dfrac{1}{\beta_2} \left\lbrace \eta_2^2 + \left( \beta_2 \eta_2' - \dfrac{\beta_2'}{2} \eta_2 \right)^2 \right\rbrace.
+\end{align}
+To obtain this result, it is necessary to use the following relations
+\begin{align*}
+	\delta(x^2) = 2 x \delta x + (\delta x)^2 & \Rightarrow \mean{\delta x^2} = \mean{\delta x}^2,\\
+    \delta(x'^2) = 2 x' \delta x' + (\delta x')^2 & \Rightarrow \mean{\delta x'^2} = \mean{\delta x'}^2,\\
+    \delta(x x') = x \delta x' + x' \delta x + \delta x \delta x' & \Rightarrow \mean{\delta (x x')} = \mean{\delta x} \mean{\delta x'}.
+\end{align*}
+All of the $s$-dependent quantities on the right-hand-side are to be evaluated at $s_2$, so let's define a new function of $s$:
+\begin{align} \label{eq:5.71}
+	\mathscr{H}(s) = \dfrac{1}{\beta} \left\lbrace \eta^2 + \left( \beta \eta' - \dfrac{\beta'}{2} \eta \right)^2 \right\rbrace.
+\end{align}
+which is specified by the properties of the guide field. Then Eq.~\eqref{eq:5.70} becomes
+simply
+\begin{align} \label{eq:5.73}
+	\mean{\delta a^2} = \dfrac{u^2}{E_0^2} \mathscr{H}(s_2).
+\end{align}
+We now know what will be the result if a quantum is emitted at $s_2$; we must next ask what is the likelihood that such an event will occur. Consider what happens as the electron travels the distance $\Delta s$ at $s_2$ -- which will take the time $\Delta t = \Delta s/c$. Taking the definitions of Section~\ref{sec:5.1}, the expected number of quantum events is $\mathscr{N}\Delta s/c$, and the probable value of $u^2$ for the quantum emitted is $\mean{u^2}$. So the change in the probable value of $a^2$ due to the element $\Delta s$ of the trajectory
+ can be written as
+\begin{align} \label{eq:5.74}
+	\mean{\delta a^2} = \dfrac{\left\lbrace \mathscr{N} \Delta s \mean{u^2} \mathscr{H}(s) \right\rbrace_2}{c E_0^2}.
+\end{align}
+The subscript on the curly brackets means that all quantities inside are to be evaluated at $s_2$ (both $\mathscr{N}$ and $\mean{u^2}$, you will remember, depend on the local radius-of-curvature of the trajectory).\\
+Suppose we now add up the contributions to changes in $\mean{a^2}$ during one trip of the electron around the ring. The resulting change, which we may call $\Delta \mean{a^2}$, is obtained by integrating the right-hand-side of Eq.~\eqref{eq:5.74} once around the ring:
+\begin{align}
+	\Delta \mean{a^2} = \dfrac{1}{c E_0^2} \oint \left\lbrace \mathscr{N} \Delta s \mean{u^2} \mathscr{H}(s) \right\rbrace_2 ds_2.
+\end{align}
+As before\footnote{For the remainder of the development I shall follow the same line of argument used in the preceding section and will not repeat all of the details. You should refer to
+that section for any details that are not clear.}, it will be convenient to represent the integral as the product of the length of the orbit $L$, with the mean value -- with respect to $s$ -- of the integrand.
+\begin{align}\label{eq:5.76}
+	\Delta \mean{a^2} = \dfrac{L}{c E_0^2} \mean{\mathscr{N}\mean{u^2}\mathscr{H}}_s.
+\end{align}
+Although $\mathscr{N}$ and $\mean{u^2}$ depend on the actual electron trajectory -- and so may change from one turn to the next -- they will differ little from the values on the design orbit.
+ Also the differences will, to first order in the displacements from the design orbit, average to zero. Since we are going to be interested, anyway, only in effects which accumulate over many revolutions, we will make no significant error if we take (as we did for the energy oscillations)
+ the average in Eq.~\eqref{eq:5.76} by evaluating $\mathscr{N}\mean{u^2}$ on the design orbit. We shall therefore, interpret the average over $s$ in that way.
+The change $\Delta \mean{a^2}$ of Eq.~\eqref{eq:5.76} occurs in the time of one revolution, namely $L/c$. So we may write that
+\begin{align} \label{eq:5.77}
+	\dfrac{d}{dt} \mean{a^2} = Q_x \bydef \dfrac{\mean{\mathscr{N}\mean{u^2}\mathscr{H}}_s}{E_0^2}.
+\end{align}
+This is of course, only the contribution from the quantum noise. As in Section~\ref{sec:5.2}, we must still add in the average effect of the radiation which contributes a damping term
+\begin{align} \label{eq:5.78}
+	\dfrac{d}{dt} \mean{a^2} = - \dfrac{2 \mean{a^2}}{\tau_x},
+\end{align}
+where $\tau_x$ is the damping time constant of the radial betatron oscillations. Under stationary
+ conditions the total time derivative -- the sum of Eqs. \eqref{eq:5.77} and \eqref{eq:5.78} is zero. We get for the stationary expectation value of $a^2$:
+\begin{align}
+	\mean{a^2} = \dfrac{1}{2} \tau_x Q_x.
+\end{align}
+We may now return to Eq. \eqref{eq:5.68} to get the expected spread in the betatron displacements. Squaring and taking the expectation of $x_\beta(s_1)$ we may write for the rms spread in the radial betatron displacement at $s_1$:
+\begin{align} \label{eq:5.81}
+	\sigma_{x \beta}^2(s_1) = \mean{x_\beta^2(s_1)} = \dfrac{1}{2}\mean{a^2}\beta_1.
+\end{align}
+Since the azimuth $s_1$ may be anywhere, we may now drop the subscript. Combining the last two equations, we may write that
+\begin{align}
+	\sigma_{x \beta}^2(s) = \dfrac{1}{4} \tau_x Q_x \beta(s).
+\end{align}
+The form of the result is similar to that obtained for $\sigma_\epsilon$. Both $\tau_x$ and $Q_x$, are numbers which are determined from the overall properties of the guide field -- and do not, therefore, vary with $s$. The only variation of $\sigma_{x\beta}$ comes from the factor $\beta(s)$. This then is our result for the horizontal spread of a stored electron beam due to quantum induced betatron oscillations.\\
+To see the physical significance of our result we must recover the complexities hidden in $\tau_x$ and $Q_x$. Taking $\mathscr{N}\mean{u^2}$ from Eq.~\eqref{eq:5.41}
+\begin{align}
+	Q_x = \dfrac{3}{2} C_u \hslash c \gamma_0^3 \dfrac{\mean{P_\gamma}_s \mean{|G|^3\mathscr{H}}_s}{\mean{G^2}},
+\end{align}
+where $G(s)$ is the inverse radius of the orbit, and, $\mathscr{H}(s)$ is the function of Eq.~\eqref{eq:5.71}. Taking $\tau_x$ from Eq.~\eqref{eq:4.53} we get that
+\begin{align}
+	\dfrac{\sigma_{x\beta}}{\beta} = \dfrac{1}{4} \tau_x Q_x = \dfrac{C_q \gamma_0 \mean{|G|^3\mathscr{H}}_s}{J_x \mean{G^2}_s},
+\end{align}
+where Cq is the quantum coefficient defined in Eq.~\eqref{eq:5.46}.\\
+For an isomagnetic guide field ($G = 1/\rho_0$, or zero) the result simplifies to
+\begin{align}\label{eq:5.84}
+	\dfrac{\sigma_{x\beta}}{\beta} =\dfrac{C_q \gamma_0^2 \mean{\mathscr{H}}_\text{Mag}}{J_x \rho_0} && \text{(isomag.),}
+\end{align}
+where $\mean{\mathscr{H}}_\text{Mag}$ is the average of $\mathscr{H}$ taken only in the magnets.
+ That is,
+\begin{align}\label{eq:5.85}
+	\mean{\mathscr{H}}_\text{Mag} = \dfrac{1}{2\pi\rho_0} \int_\text{Mag} \dfrac{1}{\beta}\left\lbrace \eta^2 \left( \beta\eta' - \dfrac{\beta'}{2} \eta \right)^2 \right\rbrace ds.
+\end{align}
+Comparing Eq.~\eqref{eq:5.84} with Eq.~\eqref{eq:5.48} we see that for an isomagnetic guide
+field we may write that
+\begin{align}\label{eq:5.86}
+	\dfrac{\sigma_{x\beta}^2(s)}{\beta(s)} =  \dfrac{J_\epsilon \mean{\mathscr{H}}_\text{Mag}}{J_x} \left( \dfrac{\sigma_\epsilon}{E_0} \right)^2 && \text{(isomag.)}
+\end{align}
+For a precise calculation of $\sigma_{x\beta}$ the integral of Eq.~\eqref{eq:5.85} must be evaluated.\\
+As argued in Section~\ref{sec:5.3} for the energy deviations, the likelihood of finding
+any particular betatron displacement will vary as a normal error function. That is, the probability of finding a particular electron with a betatron displacement between $x_\beta$ and $x_\beta + dx_\beta$ will be
+\begin{align}
+	w(x_\beta)dx_\beta = \dfrac{1}{\sqrt{2\pi} \sigma_{x\beta}} \exp\left( -x_\beta^2/2\sigma_{x\beta}^2 \right).
+\end{align}
+If we think of a particular bunch of electrons which contains, say, $N$ electrons, then as it passes any particular azimuth $s$, the number of electrons $n(x_\beta)$ which lie in the radial interval $dx_\beta$ at $x_\beta$ is
+\begin{align*}
+	n(x_\beta)dx_\beta = Nw(x_\beta)dx_\beta,
+\end{align*}
+and so has also a Gaussian distribution. We may think then, of a stored beam as a fuzzy object with a half-width (which depends on $s$) given by the standard deviation $\sigma_{x\beta}$ of its distribution in radius.\\
+We should not forget, however, that the total radial spread has contributions from both the betatron and energy oscillations, since the spread of energies of the electrons in a bunch gives rise to an associated radial spread. Recalling that an electron with the energy deviation $\epsilon$ moves on an orbit whose radial displacement varies with the azimuthal position $s$ according to $x_\epsilon(s) = \eta(s) \epsilon/E_0$, it follows that the mean-square radial spread due to the energy spread is
+\begin{align}
+	\sigma_{x\epsilon}^2(s) = \eta^2(s) \dfrac{\sigma_\epsilon^2}{E_0^2}.
+\end{align}
+Now the periods of the energy oscillations and of the betatron oscillations are widely different, and certainly not precisely commensurate. We may, therefore, consider that -- although they are stimulated by the same stochastic events -- they will be statistically independent. We may then add their contribution to the total
+radial spread as the squares and write that
+\begin{align}
+	\sigma_x^2 = \sigma_{x\beta}^2 + \sigma_{x\epsilon}^2.
+\end{align}
+Let's consider only an isomagnetic guide field. Taking $\sigma_{x\beta}^2$ from Eq.~\eqref{eq:5.86} and using Eq.~\eqref{eq:5.48} for $\sigma_\epsilon^2$, we may write that
+\begin{align}
+	\sigma_x^2(s) = \dfrac{C_q\gamma_0^2}{\rho_0} \left\lbrace \dfrac{\mean{\mathscr{H}}_\text{Mag} \beta(s)}{J_x} + \dfrac{\eta^2(s)}{J_\epsilon} \right\rbrace && \text{(isomag.)}.
+\end{align}
+The results of the section do not take into account the effects of coupling between radial and vertical oscillations. If such coupling exists the results must be modified as described in the following section.

@@ -1,0 +1,38 @@
+\section{Quantum radiation discussion} \label{sec:QuantumRadiation}
+
+In this appendix chapter, we shall elaborate the discussion covered in Section \ref{sec:5.1}. First of all, let us (re-)define our variables:
+\begin{itemize}
+\item $U_i$ is the random variable that represents the energy emitted by the $i$-th quantum event, we assume that the sequence $(U_i)_{i\geq0}$ is i.i.d. (independent and identically distributed);
+\item $N(u)$ is the random variable representing the density of number of quantum events at energy $u$ that happens in a unit time;
+\item $n(u) = \mathbb{E}[N(u)]$ is the mean number density function of quanta emitted per unit time with energy $u$;
+\item $M = \int_0^\infty N(u)du$ is the random variable representing the total number of quantum events that happens in a unit time;
+\item $\mathscr{N} = \mathbb{E}[M] = \int_0^\infty n(u) du$ is the mean number of quanta emitted per unit time;
+\end{itemize}
+where $\mathbb{E}$ stands for the expected value operator. The i.i.d. supposition over the sequence of random quantum events is reasonable, since the mean quantum energy emitted is much smaller than the energy of the electron. Another assumption is that the quantities $\rho$ and $\gamma$ does not change significantly in a  time-scale of a quantum event, which is approximately $\rho/\gamma^3 c$. \\
+Using the above definitions, it is easy to see that the expected total power lost by quanta events (radiation) is given by
+\begin{align}
+	P_\gamma &= \mathbb{E}\left[ \sum_{i=1}^{M} U_i \right],
+\end{align}
+Separating this sums by energy, we can write that
+\begin{align*}
+	P_\gamma &= \mathbb{E}\left[ \int_0^\infty N(u) u du \right]\\
+    		&= \int_0^\infty u \mathbb{E}[N(u)] du\\
+            &= \int_0^\infty u n(u) du \bydef \mathscr{N} \mean{u}.
+\end{align*}
+
+Now, we shall justify more rigorously Eq.~\eqref{eq:5.26}. As shown in equation \eqref{eq:5.25}, the probable change in the amplitude squared due to one single quantum event is $u^2$. So the probable change after $m$ quantum events is
+\begin{align}
+	\mean{\delta A^2} = u_1^2 + u_2^2 + ... + u_m^2,
+\end{align}
+where $u_i$ is the energy emitted by the $i$-th quantum event. However, the emitted energy is not deterministic, so it is necessary a different approach to calculate $\mean{\delta A^2}$.
+As we did for $P_\gamma$, $\mean{\delta A^2}$ can be written as
+\begin{align}
+	\mean{\delta A^2} = \mathbb{E} \left[ \sum_{i=1}^M U_i^2 \right],
+\end{align}
+Then, doing the same steps as before, we may write
+\begin{align*}
+	\mean{\delta A^2} &= \mathbb{E}\left[ \int_0^\infty N(u) u^2 du \right]\\
+    		&= \int_0^\infty u^2 \mathbb{E}[N(u)] du\\
+            &= \int_0^\infty u^2 n(u) du \bydef \mathscr{N} \mean{u^2}.
+\end{align*}
+It is important to remember that if the mean emitted energy $P_\gamma$ were comparable to the electron energy $E$, then the variables $U_i$ and $M$ would not be independent and our expressions would be much more complicated to calculate, since it would not be possible to integrate independently in the energy, \textit{i.e.}, the density numbers of emissions for a given energy would affect one another.

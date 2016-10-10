@@ -1,0 +1,99 @@
+\section{Orbit length: momentum compaction}\label{sec:3.2}
+
+An important consequence of an energy deviation is the associated change in the circumference
+ of the closed orbit. I wish now to take a look at this effect. An electron of the nominal energy $E_0$. which circulates on the design orbit will, in one revolution, travel the distance $L$, the circumference of the design orbit. On any other trajectory, the path length traveled in one revolution will depend on the deviations from the ideal orbit and may be expected to differ from $L$. We have already noticed in Section~\ref{sec:2.4} that an electron which moves from $s$ to $s + ds$ with a displacement $x$ from the design orbit has a path length $d\ell$ different from $ds$ by an amount that depends on the local radius of curvature. See Fig.~\ref{fig:fig9}. We found there - Eq.~\eqref{eq:2.15} - that
+\begin{align} \label{eq:3.7}
+	d\ell = (1 + G(s)x) ds,
+\end{align}
+so long as only terms to first order in $x$ are retained.\\
+A betatron oscillation will produce on the average no first order change in the path length. The path is lengthened on a positive swing ($x > 0$) of the oscillation and shortened on a negative swing. Since the betatron displacements are on the average, symmetric about $x = 0$, the path length change is zero when averaged over one or more complete betatron cycles. If the tune $\nu$ is much greater than $1$ so that there are several betatron cycles in one revolution, the net
+change in the path length in one revolution is small. If $\nu = 1$ however, there will be changes in the path length from one revolution to the next. We shall however, be interested here only on the average path length (averaged over several revolutions) and the betatron oscillations will not, to first order, affect this average.\\
+There is a second order effect - which gives a time change proportional to the square of the betatron amplitude. It can introduce a very small coupling between betatron oscillations
+ and energy oscillations. I am ignoring here all such second-order processes.\\
+ The lateral displacement $x_\epsilon$ of an off-energy orbit does give rise to a change in
+the orbit length - because, for a given energy deviation, $x_\epsilon$ has generally the same
+sign all around the ring. Putting $x_\epsilon$ for $x$ in Eq.~\eqref{eq:3.7} and integrating
+once around the ring, we get for the circumference $\ell_\epsilon$ of an off-energy
+closed orbit
+\begin{align}
+	\ell_\epsilon = \oint d\ell = \oint (1 + G(s)x)ds.
+\end{align}
+The first term of the integral gives the complete integral of $ds$ which is just $L$, the length of the design orbit. The second term gives the elongation due to the energy deviation; let's call it $\delta \ell_\epsilon$. Recalling Eq.~\eqref{eq:3.3} for $x_\epsilon$, we get that
+\begin{align} \label{eq:3.9}
+	\delta\ell_\epsilon = \dfrac{\epsilon}{E_0} \oint G(s) \eta(s) ds.
+\end{align}
+The change in the orbit length is proportional to the energy deviation $\epsilon$, with a constant of proportionality - the definite integral - which can be obtained from the known properties of the guide field.\\
+It is convenient to define a dimensionless parameter $\alpha$, which we may call the momentum compaction by
+\begin{align}\label{eq:3.10}
+	\dfrac{\delta \ell_\epsilon}{L} = \alpha \dfrac{\epsilon}{E_0}.
+\end{align}
+It follows from Eq.~\eqref{eq:3.9} that
+\begin{align}\label{eq:3.11}
+	\alpha = \dfrac{1}{L} \oint G(s) \eta(s) ds.
+\end{align}
+The dilation factor $\alpha$ is a number which like the betatron number $\nu$ is a characteristic of the total guide field. It is a crucial parameter of the energy oscillations.\\
+In the literature, the momentum compaction is usually defined by the relation between the normalized variation of $\ell$ and the normalized variation of the momentum. However, it is acceptable to define as in Eq.~\eqref{eq:3.10}, because when the speed of the particle $v$ approaches the speed of light $c$, these quantities converge to each other, as it is shown below.\\
+From relativistic mechanics, we know that
+\begin{align}\label{eq:}
+	E^2 = p^2c^2 + m_0^2 c^4,
+\end{align}
+Then, for a small energy deviation we have
+\begin{align}
+	2 E \delta E = 2p \,\delta p \, c^2,
+\end{align}
+which can be written as
+\begin{align}
+	\dfrac{\delta E}{E} = \dfrac{p^2 c^2}{E^2} \dfrac{\delta p}{p}.
+\end{align}
+this equation can be simplified by using the relation $p = \gamma m_0 v$, where $\gamma = (1 - v^2/c^2)^{-1/2}$, as follows
+\begin{align}\label{eq:E=P}
+	\dfrac{\delta E}{E} = \left( \dfrac{v}{c} \right)^2 \dfrac{\delta p}{p}.
+\end{align}
+Then, if $v \to c$, $\frac{\delta E}{E} = \frac{\delta p}{p}$.
+We can get a little better understanding of the nature of $\alpha$ by looking at it for the most common kind of guide field, the isomagnetic guide field defined earlier. In an isomagnetic field, $G$ has the value $G_0$ in all magnets and zero elsewhere (see Eq.~\eqref{eq:2.9}) so Eq.~\eqref{eq:3.11} can be expressed by
+\begin{align} \label{eq:3.12}
+	\alpha = \dfrac{G_0}{L} \int_{\text{Mag}} \eta(s) ds. \hspace{5mm} \text{(isomag.)}
+\end{align}
+where the integral is to be taken over only those parts of the design orbit which
+are in the bending magnets.\\
+This result can be written in a more illuminating way. Suppose we define the magnetic average of $\eta$ as
+\begin{align} \label{eq:3.13}
+	\left\langle \eta \right\rangle_{\text{Mag}} = \dfrac{1}{\ell_{\text{Mag}}} \int_{\text{Mag}} \eta(s) ds.
+\end{align}
+where $\ell_{\text{Mag}}$ is the total length of the orbit segments in the bending magnets (This would be the usual definition of the mean value of $\eta$ in all the magnets).
+But all of the bending magnets must add up to a complete circle so $\ell_{\text{Mag}}$ is just $2\pi$ times the constant orbit radius $\rho_0$ in the magnets which is just $1/G_0$; so
+\begin{align} \label{eq:3.14}
+	\alpha = \dfrac{2\pi}{L} \left\langle \eta \right\rangle_{\text{Mag}}.
+\end{align}
+Let the time required to complete one turn in the design orbit be $T$. Then, the time required for a given electron, which has a small energy deviation, to give one complete turn is given by
+\begin{align}
+	T + \delta T = \dfrac{L + \delta \ell_\epsilon}{v + \delta v}.
+\end{align}
+which can be written with a first order approximation as
+\begin{align}\label{eq:T_E}
+	\dfrac{\delta T}{T} &= \dfrac{\delta \ell_\epsilon}{L} - \dfrac{\delta v}{v}\\
+    					&= \alpha \dfrac{\delta E}{E} - \dfrac{\delta v}{v}.
+\end{align}
+Using relativistic mechanics again, it is possible to relate $\delta v$ with $\delta p$. Taking a small momentum deviation in the equation $p = \gamma m_0 v$, one obtains that
+\begin{align*}
+	\delta p &= \left(\gamma m_0 + m_0 v \frac{d\gamma}{dv}\right)\delta v\\
+    		&= \left(\gamma m_0 v + m_0 \frac{v^2}{c^2} \gamma^3 v \right) \dfrac{\delta v}{v}.
+\end{align*}
+Using the relation $p = \gamma m_0 v$ once again,
+\begin{align*}
+	\dfrac{\delta p}{p} &= \left( 1 + \dfrac{v^2}{c^2}\gamma^2 \right) \dfrac{\delta v}{v}\\
+    					&= \gamma^2 \dfrac{\delta v}{v}.
+\end{align*}
+Using Eq.~\eqref{eq:E=P}, it follows that
+\begin{align}
+	\dfrac{\delta E}{E} = \left( \dfrac{v}{c}\gamma \right)^2 \dfrac{\delta v}{v}.
+\end{align}
+Finally, we plug this in Eq.~\eqref{eq:T_E} and obtain
+\begin{align}
+	\dfrac{\delta T}{T} = \left( \alpha - \dfrac{1}{(v/c)^2\gamma^2} \right)\dfrac{\delta E}{E}.
+\end{align}
+As $v$ approaches $c$, which is the case for accelerator rings, the above relation simplifies to
+\begin{align} \label{eq:3.15}
+\frac{\delta T}{T} = \alpha \frac{\delta E}{E}.
+\end{align}
+It is interesting to notice that there exists a $v$ such that the multiplicative term of the energy deviation vanishes. In this case we have an isochronous behavior, since the time that the particle takes to complete one revolution does not change with an energy deviation.

@@ -1,0 +1,99 @@
+\section{Beam Height} \label{sec:5.6}
+
+In calculating the beam width we assumed that the emission of a quantum did not change the direction of motion of the electron. This assumption is not strictly correct. Any individual
+ quantum event may give a small transverse impulse to the electron. We may think that the quantum event corresponds to the emission of a photon of momentum $u/c$ at, say the angle $\theta_\gamma$ with respect to the electron's momentum. It will carry off a transverse component of momentum equal to $\theta_\gamma u/c$. Conservation of momentum requires that there be a corresponding
+ change in the transverse momentum $x'E_0/c$ of the electron -- see Fig.~\ref{fig:fig45}. That is there will be a change in $x'$ given by
+\begin{align} \label{eq:5.98}
+	\delta x' = \dfrac{u}{E_0} \theta_{x},
+\end{align}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\linewidth]{./Figuras/placeholder.png}
+	\caption{Change in the direction of an electron due to the emission of a photon.}
+	\label{fig:fig45}
+\end{figure}
+where $\theta_x$ is the horizontal projection of $\theta_\gamma$. The synchrotron radiation
+ is emitted generally along the direction of motion of the electron, but is spread out in a cone of half-angle $1/\gamma$. So we may consider that $\theta_\gamma$ is typically of the order of $1/\gamma$. The quantity $\eta'$ which appears in Eq.~\eqref{eq:5.67} is of order-of-magnitude
+ 1, so the neglect of the contribution from \eqref{eq:5.98} on the radial motion was well justified.\\
+Consider however, what may be the quantum effects on the vertical betatron motion. If the design orbit lies strictly in a plane there are no first-order effects from quantum emission on the vertical motion (that is, the vertical function which corresponds to is precisely zero). The only remaining effect would be from the angular distribution of the radiation. Let's see what the magnitude of effect would be.\\
+We may take over the results of the preceding section by replacing Eq.~\eqref{eq:5.67} by
+\begin{align}
+	\delta z = 0; && \delta z' = \dfrac{u}{E_0} \theta_z,
+\end{align}
+where $\theta_z$ is the projected vertical angle of emission of the photon. Equation~\eqref{eq:5.73} would become -- using the subscript $z$ to remind us that we are now dealing with a vertical oscillation --
+\begin{align}
+	\delta\mean{a_z^2} = \dfrac{u^2}{E_0^2} \theta_z^2 \beta_z (s_2).
+\end{align}
+Following through the derivations we would find in place of Eq.~\eqref{eq:5.81}
+\begin{align}
+	\sigma_{z\beta}^2(s) = \dfrac{1}{4} \tau_z Q_z \beta_z(s),
+\end{align}
+with,
+\begin{align}
+	Q_z = \dfrac{\mean{\mathscr{N}\mean{u^2 \theta_z^2}\beta_z}_s}{E_0^2}.
+\end{align}
+To evaluate $Q_z$ we would need to take into account the variation of the frequency spectrum of synchrotron radiation with the angle of emission. Since the effect we are dealing with is in any case small, an approximate calculation will do. Suppose we first make the approximation
+\begin{align}
+	\mean{u^2 \theta_z^2} \approx \mean{u^2}\mean{\theta_z^2}.
+\end{align}
+For the mean-square projected angle, we may take $1/2$ the mean-square polar angle of the radiation
+\begin{align}
+	\mean{\theta_z^2} \approx \dfrac{1}{\gamma_0^2}.
+\end{align}
+Also let's replace $\beta_z(s)$ by a typical value $\beta_n$. We then get that
+\begin{align}
+	Q_z \approx \dfrac{\mean{\mathscr{N}\mean{u^2}}_s\beta_n}{\gamma_0^2 E_0^2}.
+\end{align}
+Recall that the average of $\mathscr{N}\mean{u^2}$ is just what we called $Q$ in Section~\ref{sec:5.2}. We may then write that
+\begin{align}
+	\dfrac{\sigma_z^2}{\sigma_\epsilon^2} \approx \dfrac{\tau_z Q_z \beta_n}{\tau_\epsilon Q_\epsilon} \approx \dfrac{J_\epsilon}{J_z} \dfrac{\beta_n^2}{\gamma_0^2 E_0^2}.
+\end{align}
+For a flat design orbit $J_z \approx 1$. Considering only the isomagnetic case, we may take $\sigma_\epsilon^2/E_0^2$ from Eq.~\eqref{eq:5.48} and get
+\begin{align} \label{eq:5.107}
+	\sigma_z^2 \approx \dfrac{C_q \beta_n^2}{\rho_0} && \text{(isomag.)}
+\end{align}
+Roughly speaking, $\beta_n$ is the same order as $\rho_0$ and
+\begin{align}
+	\sigma_z^2 \approx C_q \beta_n.
+\end{align}
+The vertical oscillations induced by the quantum emission are energy independent and less than the radial oscillations by roughly the factor $1/\gamma_0^2$. They are very small indeed.\\
+The vertical oscillations given by Eq.~\eqref{eq:5.107} are so small that they will always be negligible in comparison with the vertical oscillations produced by another much larger effect -- a coupling of oscillation energy from the horizontal betatron oscillations into the vertical
+ ones. We did not analyze such effects when we were considering, in Part II, the nature of the betatron oscillations because they would be essentially perturbations of second order. An analysis of the perturbations expected from the construction imperfections in a real ring shows that the coupling between horizontal and vertical oscillations is likely to produce a beam height in the ring which is at least a few percent of the beam width -- and is therefore much larger than the minimum intrinsic width calculated above.\\
+Indeed, it is -- as we shall see later -- sometimes desirable to obtain a beam height larger than is produced by accidental imperfections. And this can be done by introducing an intentional
+ augmentation of the coupling between the horizontal and vertical oscillations -- as can be effected by special magnetic elements (skew quadrupoles) or by operating the ring near a resonance between $\nu_x$ and $\nu_z$, or by a combination of the two.\\
+A detailed analysis of the coupling of vertical and horizontal oscillations is beyond the scope of this report, but a phenomenological approach will serve our purposes. Suppose we let $\varepsilon_x$ and $\varepsilon_z$ represent the invariant mean-square amplitudes of the radial and vertical oscillations. That is,
+\begin{align} \label{eq:5.109}
+	\varepsilon_x = \dfrac{\sigma_x^2(s)}{\beta_x(s)}; && \varepsilon_z = \dfrac{\sigma_z^2(s)}{\beta_z(s)}.
+\end{align}
+For the special case in which the damping rates of the vertical and horizontal oscillations are equal, we may now argue as follows. In the absence of coupling
+\begin{align}
+	\varepsilon_x = \varepsilon_0 = \dfrac{1}{4} \tau_x Q_x.
+\end{align}
+-- from Eq.~\eqref{eq:5.81}. When coupling is taken into account, the quantum excitation of the radial oscillations can be shared with the vertical oscillations in any proportion up to an equal division. That is, we may have that
+\begin{align}
+	\varepsilon_z = \varkappa \varepsilon_x,
+\end{align}
+where $\varkappa$ is the "coefficient of coupling". In principle $\varkappa$ may be any number between
+0 and 1, although it is probably difficult in practice to reduce $\varkappa$ below one percent or so. Since the excitation is being shared, the combined excitations must still be equal to $\varepsilon_0$.
+\begin{align}
+	\varepsilon_x + \varepsilon_z = \varepsilon_0.
+\end{align}
+We may equivalently write that
+\begin{align}
+	\varepsilon_z &= \dfrac{\varkappa}{1+\varkappa}\varepsilon_0,\\
+    \varepsilon_x &= \dfrac{1}{1+\varkappa}\varepsilon_0.
+\end{align}
+The excitation $\varepsilon_0$ is to be taken from any of the expressions for $\sigma_{x\beta}^2/\beta$ derived (without taking coupling into account) in Section~\ref{sec:5.5}. Given any coupling coefficient $\varkappa$, $\varepsilon_z$ and $\varepsilon_x$ are obtained; and from them the beam half-width and half-height $\sigma_x$ and $\sigma_z$ can be found using Eq.~\eqref{eq:5.109}.\\
+The maximum beam height that can be obtained in this way will occur when $\varkappa = 1$. Then $(\varepsilon_z)_\text{max} = \varepsilon_0/2$, and
+\begin{align}
+	\dfrac{(\sigma_z^2)_\text{max}}{\beta_z} = \dfrac{1}{8} \tau_x Q_x.
+\end{align}
+Using the approximate results of the preceding section for an isomagnetic guide field we may write for the maximum vertical beam spread
+\begin{align}
+	\dfrac{(\sigma_z^2)_\text{max}}{\beta_z} \approx \dfrac{C_q \alpha L \gamma_0^2}{4\pi\rho_0\nu_x} && \text{(isomag.)},
+\end{align}
+where, since we have assumed that $\tau_x = \tau_z$, I have set $J_x = J_z = 1$.\\
+In principle, either or both of the width and height of a beam can be increased by the artificial stimulation of the transverse oscillations -- for example, by the periodic application of impulsive electric or magnetic forces to the stored beam.
+
+
+

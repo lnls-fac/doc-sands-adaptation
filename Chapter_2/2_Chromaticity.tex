@@ -1,0 +1,59 @@
+\section{Chromaticity}
+
+In the last subsection, we understood how a gradient error, i.e., an error in the focusing function $K(s)$ may cause a tune shift. However, it was not discussed how such error may happen. In fact, if we look at Eq.~\eqref{eq:2.17}, one of the terms we have neglected was $K_x x \delta$, since it is a second order term. Nevertheless, we may treat this term as a first order quadrupole error $k(s) = K_x(s) \delta$. Pursuing this path, we can use Eq.~\eqref{eq:2.104} to write a contribution to the tune shift. From now on, let us assume that ${G^2 << K}$, so $K_x \approx K$ and $K_y \approx -K$,
+\begin{align}\label{eq:Dnux_delta}
+	\Delta\nu_x = \left( -\dfrac{1}{4\pi}\oint\beta_x(s) K(s)ds \right) \delta.
+\end{align}
+Using the same reasoning, we find that
+\begin{align}\label{eq:Dnuy_delta}
+	\Delta\nu_y = \left( \dfrac{1}{4\pi}\oint\beta_y(s) K(s)ds \right) \delta.
+\end{align}
+As a matter of fact, the quantity which is responsible to represent the variation of the tune with the energy deviation is the \emph{chromaticity} $\xi$ and it is defined as follows,
+\begin{align}
+	\xi = \dfrac{d\nu}{d\delta}.	
+\end{align}
+The part of the chromaticity which comes from the quadrupoles is called the natural chromaticity and, as expected, its formula is given by
+\begin{align}
+	\xi_{x,\text{nat}} &= -\dfrac{1}{4\pi}\oint\beta_x(s) K(s)ds,\\
+   	\xi_{y,\text{nat}} &= \dfrac{1}{4\pi}\oint\beta_y(s) K(s)ds.
+\end{align}
+The natural chromaticity of a high luminosity accelerator ring is usually large. In subsection~\ref{sec:2.7} it was discussed how dangerous might be some values of tune, so it is natural to think that a wild variation of tune must be avoided. In this sense, it is important to keep $\xi$ small, despite the fact that $\xi_\text{nat}$ is large. This is one of the motivations to introduce the sextupoles in the ring, that is, to control the chromaticity.\\
+For a sextupole magnetic field, where we take into account the second order magnetic field terms, we have
+\begin{align}
+	B_x &= B_2 x y, \label{eq:S_magx} \\ 
+    B_y &= \dfrac{B_2}{2} (x^2 - y^2),\label{eq:S_magy}
+\end{align}
+where $B_2 = \partial^2 B_y/\partial x^2$ at $x=y=0$. We can write the magnetic field in this form by using Maxwell equations. It is easy to show that if $\nabla \times \bm{B} = 0$, then
+\begin{align*}
+	\dfrac{\partial^2 B_x}{\partial x \partial y} = \dfrac{\partial^2 B_y}{\partial x^2} = B_2, 
+\end{align*}
+and using $\nabla \cdot \bm{B} = 0$, then
+\begin{align*}
+	B_2 = \dfrac{\partial^2 B_x}{\partial x \partial y} = - \dfrac{\partial^2 B_y}{\partial y^2}.
+\end{align*}
+This allow us to write the sextupole magnetic field as in equations \eqref{eq:S_magx} and \eqref{eq:S_magy}.
+As we have defined $G$, for the dipole magnetic field; $K$, for the quadrupole magnetic field, with equations \eqref{eq:2.3} and \eqref{eq:2.4}; we might, as well, define $S$, for the sextupole magnetic field as,
+\begin{align}
+	S(s) = \dfrac{ec}{E_0} B_2(s).
+\end{align}
+Next, it is used the same steps as in subsection~\ref{sec:2.3} to deduce that, by the effect of the sextupole magnetic field,
+\begin{align}
+	x''+ K x &= - \dfrac{S}{2} (x^2 - y^2),\\
+    y''- K y &= S x y.
+\end{align}
+Using the fact that $x = x_{\beta} + \eta \delta$ and $y = y_{\beta}$, we may plug them into the above equations and retaining only first order terms in $x_{\beta}$ and $y_{\beta}$, it gives us
+\begin{align}
+	x''_{\beta} + K x_{\beta} &= - S \eta x_{\beta} \delta, \\
+    y''_{\beta} - K y_{\beta} &= S \eta y_{\beta} \delta.
+\end{align}
+Finally, using the same reasoning to obtain equations \eqref{eq:Dnux_delta} and \eqref{eq:Dnuy_delta}, it is possible to show that
+\begin{align}
+	\Delta\nu_x &= \left( \dfrac{1}{4\pi}\oint\beta_x(s) S(s)\eta(s) ds \right) \delta,\\
+    \Delta\nu_y &= \left( -\dfrac{1}{4\pi}\oint\beta_y(s) S(s)\eta(s) ds \right) \delta.
+\end{align}
+Adding up both effects in the tune, from the sextupoles and quadrupoles energy related errors, it gives us the chromaticity
+\begin{align}
+	\xi_x &= -\dfrac{1}{4\pi}\oint\beta_x(s)(K(s) - S(s)\eta(s)) ds, \\
+    \xi_y &= \dfrac{1}{4\pi}\oint\beta_y(s)(K(s) - S(s)\eta(s)) ds.
+\end{align}
+Notice that, for well chosen sextupoles, i.e., $S(s)$, it is clear, looking at the equations above, that we may minimize and control the effects of the chromaticity (a.k.a. tune shift with the energy) in the ring.

@@ -1,0 +1,34 @@
+\documentclass[ebook,11pt,oneside,openany]{memoir}
+%\documentclass[10pt,oneside]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{indentfirst}
+\usepackage{bm}
+\numberwithin{equation}{chapter}
+%\usepackage[tableposition=top]{caption}
+\usepackage[num,abnt-emphasize=bf, bibjustif]{abntex2cite}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[pdftex,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black]{hyperref}
+%-------------------------------
+\usepackage{mathrsfs} %for mathscr chars (D, P, H)
+%-------------------------------
+%for tabularx and breaking tables over several pages
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{ltablex}
+%-------------------------------
+
+%\usepackage{tipa}
+\citebrackets[]
+
+\DeclareMathOperator{\Tr}{Tr}
+
+\def\mean#1{\left< #1 \right>}
+
+\newcommand\bydef{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
+
+% for placeholder text
+%\usepackage{lipsum}

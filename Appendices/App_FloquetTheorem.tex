@@ -1,0 +1,41 @@
+\section{Floquet Theorem} \label{sec:FloquetTheorem}
+
+Considering Hill's equation,
+\begin{align}\label{eq:Hill}
+	x''+K(s)x=0,
+\end{align}
+where $K(s)$ is a piecewise continuous function in every finite interval and that it is periodic with minimal period $L$. According to Floquet theorem, any solution can be written as the linear combination of the following independent solutions:
+\begin{align*}
+	x_1(s) &= \zeta(s) e^{i \varphi(s)}, \\
+	x_2(s) &= \zeta(s) e^{-i \varphi(s)},
+\end{align*}
+where the functions $\zeta$ and $\varphi$ satisfy the following periodic boundary conditions for all $s$, and $\nu$ represents a constant phase advance:
+\begin{align*}
+	\zeta(s) = \zeta(s+L), && \varphi(s+L)-\varphi(s) = 2\pi \nu.
+\end{align*}
+Plugging this result in equation \eqref{eq:Hill}, it results in a system of differential equations:
+\begin{align*}
+	\begin{cases}
+		2 \zeta' \varphi' + \zeta \varphi'' = 0, \\
+		\zeta'' + K(s)\zeta - \zeta \varphi'^2 = 0.
+	\end{cases}
+\end{align*}
+The first differential equation can be written as
+\begin{align*}
+	\dfrac{d}{ds}( \varphi' \zeta^2 ) &= 0.
+\end{align*}
+Then, it is easy to show that
+\begin{align}
+	\varphi'(s) &= \dfrac{C}{\zeta^2(s)},
+\end{align}
+where $C$ is a constant, which can be set equal to $1$ without loss of generality.
+Then, the second equation becomes
+\begin{align}
+	\zeta'' + K(s) \zeta - \dfrac{1}{\zeta^3}=0.
+\end{align}
+
+If the initial conditions $x(0)$, $x'(0)$ are real numbers and $K(s)$ is a real valued function, then a general form of the solution can be written as
+\begin{align}
+	x(s) = a \zeta(s) \cos(\varphi(s) - \vartheta),
+\end{align}
+where $a$ and $\vartheta$ are constants determined by the initial conditions.
