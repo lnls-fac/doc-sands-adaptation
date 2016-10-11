@@ -15,7 +15,7 @@ Suppose that there is a gradient error $k$ in only a small azimuthal interval $\
 Let’s again approximate the betatron motion by a simple harmonic oscillation; and ask what will happen when an electron arrives at $s = 0$ at the maximum of an oscillation. The motion will be as shown in Fig.~\ref{fig:fig23}. Before arriving at $s = 0$ the
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[width=0.8\linewidth]{./Figuras/placeholder.png}
+	\includegraphics[width=0.8\linewidth]{./Figuras/fig23.jpeg}
 	\caption{Effect of a gradient error at $s = 0$.}
 	\label{fig:fig23}
 \end{figure}
@@ -53,80 +53,80 @@ shift $\Delta\varphi$ gets reduced by the factor $\cos^2\varphi_0$ - as you can 
 \end{align}
 Notice that the tune shift is just proportional to the gradient error at any point and to the value of $\beta$ there. We see again that the betatron function is an indicator of the local "sensitivity" to imperfections of the guide field.\\
 \begin{proof}
-	Let $x = a\ cos(\varphi-\vartheta)$ be the solution of the differential equation $x'' = -Kx$. For $K(s) = K(s)_{nominal}$, we've seen that an approximate solution exists, which is given by $x = b\ cos(s/\beta_n + \varphi_0)$. When an electron passes $s=0$, its motion is now given by another differential equation: $x'' = -K(s)_{atual}\ x$ where $K(s)_{actual} = K(s)_{nominal} + k(s)$. This change on the focussing function $K(s)$ will lead to a variation $\Delta \beta$ on the betatron function. Both amplitude and phase depends on $\beta(s)$, so both of them will change too. These changes will be written as $\Delta b$ and $\Delta \varphi$, respectively. So, the solution for the new differential equation can be written as
+	Let $x = a\ \cos(\varphi-\vartheta)$ be the solution of the differential equation $x'' = -Kx$. For $K(s) = K(s)_{nominal}$, we've seen that an approximate solution exists, which is given by $x = b\ \cos(s/\beta_n + \varphi_0)$. When an electron passes $s=0$, its motion is now given by another differential equation: $x'' = -K(s)_{atual}\ x$ where $K(s)_{actual} = K(s)_{nominal} + k(s)$. This change on the focussing function $K(s)$ will lead to a variation $\Delta \beta$ on the betatron function. Both amplitude and phase depends on $\beta(s)$, so both of them will change too. These changes will be written as $\Delta b$ and $\Delta \varphi$, respectively. So, the solution for the new differential equation can be written as
 	\begin{align*}
-		x = (b+\Delta b)\ cos(s/\beta_n + \varphi_0 + \Delta \varphi)
+		x = (b+\Delta b)\ \cos(s/\beta_n + \varphi_0 + \Delta \varphi)
 	\end{align*}
 	You can notice that the term $\Delta \varphi$ is not multiplied by $s$, but the term $1/\beta_n$ is. The reason is that $\Delta \varphi$ only effects the electron motion in $s=0$, which is not the case for $s/\beta_n$.
 	
 	Now, considering the electron motion before the kick, we have that
 	\begin{align*}
-		x_i' &= -\frac{b}{\beta_n}\ sen(s/\beta_n + \varphi_0)\\
-		\therefore x_i'(0) &= -\frac{b}{\beta_n}\ sen(\varphi_0)
+		x_i' &= -\frac{b}{\beta_n}\ \sin(s/\beta_n + \varphi_0)\\
+		\therefore x_i'(0) &= -\frac{b}{\beta_n}\ \sin(\varphi_0)
 	\end{align*}
 	and after the kick,
 	\begin{align*}
-		x_f' = -\frac{b+\Delta b}{\beta_n}\ sen(s/\beta_n + \Delta \varphi + \varphi_0)\\
-		x_f'(0) = -\frac{b+\Delta b}{\beta_n}\ sen(\Delta \varphi + \varphi_0)
+		x_f' = -\frac{b+\Delta b}{\beta_n}\ \sin(s/\beta_n + \Delta \varphi + \varphi_0)\\
+		x_f'(0) = -\frac{b+\Delta b}{\beta_n}\ \sin(\Delta \varphi + \varphi_0)
 	\end{align*}
 	Then, the variation of $\Delta x'$ at $s=0$ is
 	\begin{align*}
 		\Delta x(0)' &= x(0)'_f - x(0)'_i\\
-				  &= -\frac{b+\Delta b}{\beta_n}\ sen(\Delta \varphi + \varphi_0) + \frac{b}{\beta_n}\ sen(\varphi_0)
+				  &= -\frac{b+\Delta b}{\beta_n}\ \sin(\Delta \varphi + \varphi_0) + \frac{b}{\beta_n}\ \sin(\varphi_0)
 	\end{align*}
-	Applying the angular transformation $sen(\Delta \varphi + \varphi_0) = sen(\Delta \varphi)cos(\varphi_0) + cos(\Delta \varphi)sen(\varphi_0)$, it can be rewritten as
+	Applying the angular transformation $\sin(\Delta \varphi + \varphi_0) = \sin(\Delta \varphi)\cos(\varphi_0) + \cos(\Delta \varphi)\sin(\varphi_0)$, it can be rewritten as
 	\begin{align*}
-		\Delta x' &= -\frac{b+\Delta b}{\beta_n}\ [sen(\Delta \varphi)cos(\varphi_0) + cos(\Delta \varphi)sen(\varphi_0)] + \frac{b}{\beta_n}\ sen(\varphi_0)
+		\Delta x' &= -\frac{b+\Delta b}{\beta_n}\ [\sin(\Delta \varphi)\cos(\varphi_0) + \cos(\Delta \varphi)\sin(\varphi_0)] + \frac{b}{\beta_n}\ \sin(\varphi_0)
 	\end{align*}
-	For small $\Delta x'$, $\Delta \varphi$ is small and we can approximate $sen(\Delta \varphi) \approx \Delta \varphi$ and $cos(\Delta \varphi) \approx 1$. We have that
+	For small $\Delta x'$, $\Delta \varphi$ is small and we can approximate $\sin(\Delta \varphi) \approx \Delta \varphi$ and $\cos(\Delta \varphi) \approx 1$. We have that
 	\begin{align*}
-		\Delta x' &= -\frac{b+\Delta b}{\beta_n}\ [\Delta \varphi\ cos(\varphi_0) + sen(\varphi_0)] + \frac{b}{\beta_n}\ sen(\varphi_0)\\
-				  &= -\frac{b+\Delta b}{\beta_n}\ \Delta \varphi\ cos(\varphi_0) - \frac{\Delta b}{\beta_n}\ sen(\varphi_0)
+		\Delta x' &= -\frac{b+\Delta b}{\beta_n}\ [\Delta \varphi\ \cos(\varphi_0) + \sin(\varphi_0)] + \frac{b}{\beta_n}\ \sin(\varphi_0)\\
+				  &= -\frac{b+\Delta b}{\beta_n}\ \Delta \varphi\ \cos(\varphi_0) - \frac{\Delta b}{\beta_n}\ \sin(\varphi_0)
 	\end{align*}
 	Discarding all second order terms,
 	\begin{align*}
-		\Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ cos(\varphi_0) - \frac{\Delta b}{\beta_n}\ sen(\varphi_0)
+		\Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ \cos(\varphi_0) - \frac{\Delta b}{\beta_n}\ \sin(\varphi_0)
 	\end{align*}
 	Now, we know that he electron motion must be continuous. In other words, its motion right before the kick must be equal to its motion right after the kick, and we can write that
 	\begin{align*}
-		b\ cos(\varphi_0) = (b+\Delta b)\ cos(\Delta \varphi + \varphi_0)
+		b\ \cos(\varphi_0) = (b+\Delta b)\ \cos(\Delta \varphi + \varphi_0)
 	\end{align*}
-	Applying the angular transformation $cos(\Delta \varphi + \varphi_0) = cos(\Delta \varphi)cos(\varphi_0) - sen(\Delta \varphi)sen(\varphi_0)$ and approximating again $sen(\Delta \varphi)$ and $cos(\Delta \varphi)$, we have that
+	Applying the angular transformation $\cos(\Delta \varphi + \varphi_0) = \cos(\Delta \varphi)\cos(\varphi_0) - \sin(\Delta \varphi)\sin(\varphi_0)$ and approximating again $\sin(\Delta \varphi)$ and $\cos(\Delta \varphi)$, we have that
 	\begin{align*}
-		b\ cos(\varphi_0) = (b+\Delta b)[cos(\varphi_0)-\Delta \varphi\ sen(\varphi)]
+		b\ \cos(\varphi_0) = (b+\Delta b)[\cos(\varphi_0)-\Delta \varphi\ \sin(\varphi)]
 	\end{align*}
 	It can be rewritten as 
 	\begin{align*}
-		\frac{\Delta b}{(b+\Delta b)\Delta \varphi} = tg(\varphi_0)
+		\frac{\Delta b}{(b+\Delta b)\Delta \varphi} = \tan(\varphi_0)
 	\end{align*}
 	Discarding all second order terms,
 	\begin{align*}
-		\frac{\Delta b}{b \Delta \varphi} &= tg(\varphi_0)\\
-		\therefore \Delta b &= b\ \Delta \varphi\ tg(\varphi_0)
+		\frac{\Delta b}{b \Delta \varphi} &= \tan(\varphi_0)\\
+		\therefore \Delta b &= b\ \Delta \varphi\ \tan(\varphi_0)
 	\end{align*}
 	Substituting this in the  $\Delta x'$ expression, we have that
 	\begin{align*}
-		\Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ cos(\varphi_0) - \frac{b\ \Delta \varphi\ tg(\varphi_0)}{\beta_n}\ sen(\varphi_0)\\
-				  &= -\frac{b}{\beta_n}\ \Delta \varphi\ cos(\varphi_0) - \frac{b\ \Delta \varphi\ sen^2(\varphi_0)}{\beta_n\ cos(\varphi_0)}
+		\Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ \cos(\varphi_0) - \frac{b\ \Delta \varphi\ \tan(\varphi_0)}{\beta_n}\ \sin(\varphi_0)\\
+				  &= -\frac{b}{\beta_n}\ \Delta \varphi\ \cos(\varphi_0) - \frac{b\ \Delta \varphi\ \sin^2(\varphi_0)}{\beta_n\ \cos(\varphi_0)}
 	\end{align*}
-	Multiplying both sides of the equation by $cos(\varphi_0)$:
+	Multiplying both sides of the equation by $\cos(\varphi_0)$:
 	\begin{align*}
-		cos(\varphi_0)\ \Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ cos^2(\varphi_0) - \frac{b\ \Delta \varphi\ sen^2(\varphi_0)}{\beta_n}\\
-			&= -\frac{b\ \Delta \varphi}{\beta_n}[cos^2(\varphi_0)+sen^2(\varphi_0)]\\
+		\cos(\varphi_0)\ \Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ \cos^2(\varphi_0) - \frac{b\ \Delta \varphi\ \sin^2(\varphi_0)}{\beta_n}\\
+			&= -\frac{b\ \Delta \varphi}{\beta_n}[\cos^2(\varphi_0)+\sin^2(\varphi_0)]\\
 			&= -\frac{b\ \Delta \varphi}{\beta_n}
 	\end{align*}
 	From \eqref{eq:2.96}, $\Delta x' = -k\ \Delta s\ x$. So,
 	\begin{align*}
-		-k\ \Delta s\ x\ cos(\varphi_0) &= -\frac{b\ \Delta \varphi}{\beta_n}
+		-k\ \Delta s\ x\ \cos(\varphi_0) &= -\frac{b\ \Delta \varphi}{\beta_n}
 	\end{align*}
-	But we know that $x = b\ cos(s/\beta_n + \varphi_0)$ and, of course, $x(0) = b\ cos(\varphi_0)$. Substituting it in the mainly expression:
+	But we know that $x = b\ \cos(s/\beta_n + \varphi_0)$ and, of course, $x(0) = b\ \cos(\varphi_0)$. Substituting it in the mainly expression:
 	\begin{align*}
-		-k\ \Delta s\ b\ cos^2(\varphi_0) &= -\frac{b\ \Delta \varphi}{\beta_n}\\
+		-k\ \Delta s\ b\ \cos^2(\varphi_0) &= -\frac{b\ \Delta \varphi}{\beta_n}\\
 		\therefore \Delta \varphi &= \beta_n\ k\ \Delta s\ \cos^2(\varphi_0)
 	\end{align*}
 	From early discussions, we know that
 	\begin{align*}
-		\Delta \nu \approx - \frac{\Delta \varphi}{2\pi} = -\frac{\beta_n\ k\ \Delta s\ cos^2(\varphi_0)}{2\pi}
+		\Delta \nu \approx - \frac{\Delta \varphi}{2\pi} = -\frac{\beta_n\ k\ \Delta s\ \cos^2(\varphi_0)}{2\pi}
 	\end{align*}
     So, for the special case where the electron arrives at $s=0$ at the maximum of an oscillation, $\varphi_0=0$ and
     \begin{align*}

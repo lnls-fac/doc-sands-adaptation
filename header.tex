@@ -1,5 +1,6 @@
-\documentclass[ebook,11pt,oneside,openany]{memoir}
+\documentclass[ebook,10pt,oneside,openany]{memoir}
 %\documentclass[10pt,oneside]{article}
+\usepackage[bottom=2cm,top=2cm,left=2cm,right=2cm]{geometry}
 \usepackage[utf8x]{inputenc}
 \usepackage[english]{babel}
 \usepackage{url}
@@ -13,12 +14,9 @@
 \usepackage[normalem]{ulem}
 \usepackage[pdftex,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black]{hyperref}
 %-------------------------------
-\usepackage{mathrsfs} %for mathscr chars (D, P, H)
+\usepackage{mathrsfs} %for mathscr chars {D, P, H}
 %-------------------------------
-%for tabularx and breaking tables over several pages
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{ltablex}
+\usepackage{booktabs,tabularx,ltablex} % breaking tables over several pages
 %-------------------------------
 
 %\usepackage{tipa}
@@ -32,3 +30,4 @@
 
 % for placeholder text
 %\usepackage{lipsum}
+
