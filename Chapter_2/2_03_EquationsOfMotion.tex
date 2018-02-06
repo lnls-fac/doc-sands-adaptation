@@ -28,7 +28,7 @@ and in a path element $d\ell$ of the trajectory the change in angle is
 Next, notice that so long as the angle $x'$ is small -- as I shall always assume --
 a path element $d\ell$ of a trajectory at $x$ is related to the corresponding change in $s$ by
 \begin{align}
-	d\ell = \frac{\varrho_s + x}{\varrho_s} ds = \left(1+\frac{x}{\varrho_s}\right)ds = (1+G(s))ds\label{eq:2.15}
+	d\ell = \frac{\varrho_s + x}{\varrho_s} ds = \left(1+\frac{x}{\varrho_s}\right)ds = (1+G(s)x)ds\label{eq:2.15}
 \end{align}
 Next, we may write for $B$
 \begin{align}
@@ -52,24 +52,24 @@ And so we get from \eqref{eq:2.12} that
 				&= -\frac{E_0}{E_0+\epsilon}(G+K_1x)(1+Gx)ds\\
 				&= -\frac{E_0}{E_0+\epsilon}(G+(G^2+K_1)x + K_1Gx^2)ds
 	\end{align*}
-	
+
     Keeping only terms to first order,
 	\begin{align*}
 		d\theta &= \frac{1}{1+\delta}(-G-(G^2+K_1)x)ds
 	\end{align*}
-    
+
 	$\delta$ is very small, so we can consider that $\frac{1}{1+\delta}$ is just  the sum of a geometric series. So, we can expand this term in a summatory:
 	\begin{align*}
 		d\theta &= \left(1 - \delta + \delta^2+ ...\right)(-G-(G^2+K_1)x)ds
 	\end{align*}
-	
+
     Again, keeping only terms to first order,
 	\begin{align*}
 		d\theta &= \left(1 - \delta\right)(-G-(G^2+K_1)x)ds\\
 				&= (-G-(G^2+K_1)x)ds + \left(G\left(\delta\right)+(G^2+K_1)x\left(\delta\right)\right)ds\\
 				&= \left\{-G-(G^2+K_1)x + G\delta\right\}ds
 	\end{align*}
-	
+
 	Now, from \eqref{eq:2.12},
 	\begin{align*}
 		x'' &= \frac{d(\theta-\theta_0)}{ds}\\
@@ -92,12 +92,12 @@ The corresponding equation for the vertical motion is easier to derive; you can 
 				&= K_1 y (1+Gx)ds\\
 				& = (K_1 y + GK_1xy)ds
 	\end{align*}
-	
+
 	Discarding terms to second order,
 	\begin{align*}
 		d\theta &= K_1 y ds\\
 	\end{align*}
-	
+
 	Now, from \eqref{eq:2.12},
 	\begin{align*}
 		y'' &= \frac{d(\theta-\theta_0)}{ds}\\
@@ -114,7 +114,7 @@ Notice that with our linearized approximation, the motions in $x$ and $y$ are in
 \end{align}
 with the definitions:
 \begin{align}
-	K_x(s) &= G^2(s)+K_1(s) \label{eq:2.21}\\ 
+	K_x(s) &= G^2(s)+K_1(s) \label{eq:2.21}\\
 	K_y(s) &= -K_1(s) \label{eq:2.22}
 \end{align}
 The term corresponding to $G^2$ is missing from $K_y$ because of our assumption that
