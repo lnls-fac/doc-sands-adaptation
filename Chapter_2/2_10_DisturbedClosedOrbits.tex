@@ -64,6 +64,37 @@ appropriate values of $a$ and $\vartheta$ are\footnote{The phase constant $\vart
 	a &= -\dfrac{\delta G \Delta s \sqrt{\beta(0)}}{2 \sin \pi \nu},\\
     \vartheta &= \pi\nu.
 \end{align}
+
+\begin{proof}
+From Eq. \eqref{eq:2.52} we obtain
+
+\begin{align*}
+x_c'(s) =\dfrac{\beta'(s)x}{2\beta(s)} - \dfrac{a}{\sqrt{\beta(s)}}\sin\left(\varphi(s) - \vartheta\right).
+\end{align*}
+
+Since $x$ and $\beta$ are periodic, i.e., $x(0)=x(L)$ and $\beta(0) = \beta(L)$, $\varphi(L) - \varphi(0) = 2 \pi \nu$, by definition, and $\varphi(s=0)=0$, we use $\Delta x' =  \delta G \Delta s$,
+to get the following expression
+
+\begin{align*}
+\dfrac{a}{\sqrt{\beta(0)}}\left[\sin(2\pi \nu - \vartheta) - \sin(-\theta)\right] = \delta G \Delta s.
+\end{align*}
+
+The terms between squared brackets can be simplified as follows
+
+\begin{align*}
+\sin(2\pi \nu - \vartheta) - \sin(-\vartheta) &= \sin(2\pi \nu)\cos\vartheta - \cos(2\pi \nu)\sin \vartheta + \sin \vartheta\\
+                                         &= 2\sin(\pi \nu)\cos(\pi \nu)\cos\vartheta + \left(1-\cos(2\pi \nu)\right)\sin\vartheta\\
+                                           &= 2\sin(\pi \nu)\cos(\pi \nu)\cos\vartheta + 2\sin^2(\pi \nu)\sin\vartheta\\
+                                           &= 2\sin(\pi\nu)\left[\cos(\pi\nu)\cos\vartheta + \sin(\pi\nu)\cos\vartheta\right] \\
+                                           &=  2\sin(\pi\nu)\cos(\pi\nu - \vartheta).
+\end{align*}
+Therefore
+\begin{align*}
+2\sin(\pi\nu)\cos(\pi\nu - \vartheta)\dfrac{a}{\sqrt{\beta(0)}} = -\delta G \Delta s
+\end{align*}
+and we see that the preceding expression holds if $a = -\dfrac{\delta G \Delta s \sqrt{\beta(0)}}{2 \sin \pi \nu}$ and $\vartheta = \pi \nu$.
+\end{proof}
+
 The displacement of the disturbed closed orbit is then
 \begin{align}\label{eq:2.92}
 	x_c(s) = -\dfrac{\delta G \Delta s \sqrt{\beta(0)}}{2 \sin\pi\nu}\sqrt{\beta(s)}\cos\{\varphi(s)-\pi\nu\}.
