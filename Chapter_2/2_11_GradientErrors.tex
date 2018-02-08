@@ -53,12 +53,12 @@ shift $\Delta\varphi$ gets reduced by the factor $\cos^2\varphi_0$ - as you can 
 \end{align}
 Notice that the tune shift is just proportional to the gradient error at any point and to the value of $\beta$ there. We see again that the betatron function is an indicator of the local "sensitivity" to imperfections of the guide field.\\
 \begin{proof}
-	Let $x = a\ \cos(\varphi-\vartheta)$ be the solution of the differential equation $x'' = -Kx$. For $K(s) = K(s)_{nominal}$, we've seen that an approximate solution exists, which is given by $x = b\ \cos(s/\beta_n + \varphi_0)$. When an electron passes $s=0$, its motion is now given by another differential equation: $x'' = -K(s)_{atual}\ x$ where $K(s)_{actual} = K(s)_{nominal} + k(s)$. This change on the focussing function $K(s)$ will lead to a variation $\Delta \beta$ on the betatron function. Both amplitude and phase depends on $\beta(s)$, so both of them will change too. These changes will be written as $\Delta b$ and $\Delta \varphi$, respectively. So, the solution for the new differential equation can be written as
+	Let $x = a\ \cos(\varphi-\vartheta)$ be the solution of the differential equation $x'' = -Kx$. For $K(s) = K(s)_{nominal}$, we've seen that an approximate solution exists, which is given by $x = b\ \cos(s/\beta_n + \varphi_0)$. When an electron passes $s=0$, its motion is now given by another differential equation: $x'' = -K(s)_{actual}\ x$ where $K(s)_{actual} = K(s)_{nominal} + k(s)$. This change on the focussing function $K(s)$ will lead to a variation $\Delta \beta$ on the betatron function. Both amplitude and phase depends on $\beta(s)$, so both of them will change too. These changes will be written as $\Delta b$ and $\Delta \varphi$, respectively. So, the solution for the new differential equation can be written as
 	\begin{align*}
 		x = (b+\Delta b)\ \cos(s/\beta_n + \varphi_0 + \Delta \varphi)
 	\end{align*}
 	You can notice that the term $\Delta \varphi$ is not multiplied by $s$, but the term $1/\beta_n$ is. The reason is that $\Delta \varphi$ only effects the electron motion in $s=0$, which is not the case for $s/\beta_n$.
-	
+
 	Now, considering the electron motion before the kick, we have that
 	\begin{align*}
 		x_i' &= -\frac{b}{\beta_n}\ \sin(s/\beta_n + \varphi_0)\\
@@ -87,7 +87,7 @@ Notice that the tune shift is just proportional to the gradient error at any poi
 	\begin{align*}
 		\Delta x' &= -\frac{b}{\beta_n}\ \Delta \varphi\ \cos(\varphi_0) - \frac{\Delta b}{\beta_n}\ \sin(\varphi_0)
 	\end{align*}
-	Now, we know that he electron motion must be continuous. In other words, its motion right before the kick must be equal to its motion right after the kick, and we can write that
+	Now, we know that the electron motion must be continuous. In other words, its motion right before the kick must be equal to its motion right after the kick, and we can write that
 	\begin{align*}
 		b\ \cos(\varphi_0) = (b+\Delta b)\ \cos(\Delta \varphi + \varphi_0)
 	\end{align*}
@@ -95,7 +95,7 @@ Notice that the tune shift is just proportional to the gradient error at any poi
 	\begin{align*}
 		b\ \cos(\varphi_0) = (b+\Delta b)[\cos(\varphi_0)-\Delta \varphi\ \sin(\varphi)]
 	\end{align*}
-	It can be rewritten as 
+	It can be rewritten as
 	\begin{align*}
 		\frac{\Delta b}{(b+\Delta b)\Delta \varphi} = \tan(\varphi_0)
 	\end{align*}
