@@ -23,10 +23,19 @@ The derivative of $\theta_0$ is, we have seen, just $-1/\varrho_s = -G(s)$. But 
 \end{align}
 and in a path element $d\ell$ of the trajectory the change in angle is
 \begin{align}
-	d\theta = -\frac{d\ell}{\varrho} = -\frac{ecB}{E}d\ell\label{eq:2.14}
+	d\theta = -\frac{d\ell}{\varrho} = -\frac{ecB}{E}d\ell\label{eq:2.14}.
 \end{align}
-Next, notice that so long as the angle $x'$ is small -- as I shall always assume --
-a path element $d\ell$ of a trajectory at $x$ is related to the corresponding change in $s$ by
+
+Since $\frac{d\ell}{ds} = \frac{d\ell}{d\theta}\frac{d\theta}{d\theta_0}\frac{d\theta_0}{ds}$, then
+
+\begin{align*}
+\frac{d\ell}{ds} = \left(-\varrho\right)\frac{d\theta}{d\theta_0}\left(-\frac{1}{\varrho_s}\right).
+\end{align*}
+
+Next, notice that so long as the angle $x'$ is small -- as I shall always assume -- the variations of angles $\theta$ and $\theta_0$ are approximately the same in first order,
+so $\frac{d\theta}{d\theta_0} \approx 1$. Moreover, the radius of curvature $\varrho$ is $\varrho \approx \varrho_s + x$ in first order again. Thus, a path element $d\ell$ of a trajectory at
+$x$ is related to the corresponding change in $s$ by
+
 \begin{align}
 	d\ell = \frac{\varrho_s + x}{\varrho_s} ds = \left(1+\frac{x}{\varrho_s}\right)ds = (1+G(s)x)ds\label{eq:2.15}
 \end{align}
