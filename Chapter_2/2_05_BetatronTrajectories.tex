@@ -25,7 +25,7 @@ As an illustration suppose we consider the motion for a $K(s)$ like that shown f
 	\label{fig:fig11}
 \end{figure}
 
-The detailed form of $C$ and of $S$ will depend on the reference azimuth $s_0$. They are in general, \textit{not} periodic functions, even though $K(s)$ is. For a ring with stable trajectories, $C$ and $S$ are bounded oscillatory functions which have a different shape on each successive revolution of the ring; although they are "quasi-periodic” in the sense that after some number of revolutions they will lie very close (or in some hypothetical cases even exactly on) the trajectory of an earlier revolution.
+The detailed form of $C$ and of $S$ will depend on the reference azimuth $s_0$. They are in general, \textit{not} periodic functions, even though $K(s)$ is. For a ring with stable trajectories, $C$ and $S$ are bounded oscillatory functions which have a different shape on each successive revolution of the ring; although they are ``quasi-periodic'' in the sense that after some number of revolutions they will lie very close (or in some hypothetical cases even exactly on) the trajectory of an earlier revolution.
 
 Now since Eq.~\eqref{eq:2.31} is linear in $x$, any linear combination of $C$ and $S$ will also describe a possible trajectory; and more particularly, all possible trajectories can be described by such a linear combination. That is, for any trajectory
 \begin{align}
@@ -37,7 +37,7 @@ where $C'$ and $S'$ are the derivations of $C$ and $S$ with respect to $s$; and 
 It is often convenient to write the last two equations in a matrix notation. Let's let $\boldsymbol{x}(s)$ stand for the “vector” whose components are $x(s)$ and $x'(s)$;
 \begin{align}
 	\boldsymbol{x}(s) = \begin{bmatrix}
-	x(s)\\ 
+	x(s)\\
 	x'(s)
 	\end{bmatrix}
 \end{align}
@@ -58,7 +58,7 @@ The transfer matrix for any span of $s$ can often be conveniently found in terms
 \end{align}
 The matrix for a segment which extends from $s_1$ to $s_2 = s_1 + \ell$ with a constant $K$ is given in Table~\ref{tab:tab1} for the three cases; $K > 0$, $K = 0$, and $K < 0$. They may be derived from the equations in \eqref{eq:2.32}.
 
-The transfer matrix method is useful when designing a ring, or in looking at special problems such as the initial trajectories at injection. It does not, however, provide the most convenient description of the general nature of the trajectories of stored electrons. For many purposes another method of describing the trajectories is more useful. It may be called the "pseudo-harmonic" description.
+The transfer matrix method is useful when designing a ring, or in looking at special problems such as the initial trajectories at injection. It does not, however, provide the most convenient description of the general nature of the trajectories of stored electrons. For many purposes another method of describing the trajectories is more useful. It may be called the ``pseudo-harmonic'' description.
 \begin{table}[!ht]
 	\caption{Transfer matrices for segments of constant $K$.}
 	\centering
@@ -85,7 +85,7 @@ The general solutions of Eq.~\eqref{eq:2.31} can be written as
 \begin{align}
 	x(s) = a\zeta(s)\ \cos\{\varphi(s)-\vartheta\}\label{eq:2.39}
 \end{align}
-where $\zeta(s)$ and $\varphi(s)$ are specially defined functions of $s$ with certain convenient properties and $a$ and $\vartheta$ are constants ("initial conditions") which determine a particular trajectory. Specifically, if we define
+where $\zeta(s)$ and $\varphi(s)$ are specially defined functions of $s$ with certain convenient properties and $a$ and $\vartheta$ are constants (``initial conditions'') which determine a particular trajectory. Specifically, if we define
 \begin{align}
 	\varphi(s) = \int_{0}^{s} \frac{d\bar{s}}{\zeta^2(\bar{s})}
 \end{align}
@@ -114,8 +114,8 @@ and
 so that $\sqrt{\beta(s)}$ is the function defined by Eq.~\eqref{eq:2.42}. Given the focusing function $K(s)$ for a storage ring, the function $\beta(s)$ is uniquely determined; it can therefore, serve as an alternate “representation” of the focusing characteristics of the ring. Notice, however, that while $K(s)$ is given in terms of the local properties (at each $s$) of the guide field, the function
 $\beta(s)$ -- or $\zeta(s)$ -- depends on the total configuration of the ring. On the other hand once $\beta(s)$ is known, $K(s)$ can be immediately obtained from its local derivatives by Eqs. \eqref{eq:2.42} and \eqref{eq:2.45}. But it is $\beta(s)$ which reveals more directly the significant characteristics of the trajectories of stored electrons.
 
-It is possible to have guide fields that do not result in stable (that is, bounded) trajectories. For such fields $\beta(s)$ is not defined. But such fields can hardly be said to form a "storage" ring; so we are not interested in them here. Although they may be of interest to the storage ring designer -- as something to be avoided!
+It is possible to have guide fields that do not result in stable (that is, bounded) trajectories. For such fields $\beta(s)$ is not defined. But such fields can hardly be said to form a ``storage'' ring; so we are not interested in them here. Although they may be of interest to the storage ring designer -- as something to be avoided!
 
-I will return later to a discussion of how $\beta(s)$ is related to the guide field properties; but it will be more useful to look first at the qualities of the trajectories described by the pseudo-harmonic solutions described by Eq.~\ref{eq:2.43}. 
+I will return later to a discussion of how $\beta(s)$ is related to the guide field properties; but it will be more useful to look first at the qualities of the trajectories described by the pseudo-harmonic solutions described by Eq.~\ref{eq:2.43}.
 
 Don't forget that all of the discussion of this section applies equally to vertical as well as to radial motion. A ring is therefore, described by the two functions $\beta_x$ and $\beta_y$ (or $\zeta_x$ and $\zeta_y$), which are derived from the two focussing functions $K_x$ and $K_y$. It follows that the phase function $\varphi(s)$ is also different for motion in $x$ and in $y$.

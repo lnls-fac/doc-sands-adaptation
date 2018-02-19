@@ -10,13 +10,13 @@ A betatron oscillation will produce on the average no first order change in the 
 change in the path length in one revolution is small. If $\nu = 1$ however, there will be changes in the path length from one revolution to the next. We shall however, be interested here only on the average path length (averaged over several revolutions) and the betatron oscillations will not, to first order, affect this average.\\
 There is a second order effect - which gives a time change proportional to the square of the betatron amplitude. It can introduce a very small coupling between betatron oscillations
  and energy oscillations. I am ignoring here all such second-order processes.\\
- The lateral displacement $x_\epsilon$ of an off-energy orbit does give rise to a change in
+ The lateral displacement $x_\epsilon$ of an dispersion orbit does give rise to a change in
 the orbit length - because, for a given energy deviation, $x_\epsilon$ has generally the same
 sign all around the ring. Putting $x_\epsilon$ for $x$ in Eq.~\eqref{eq:3.7} and integrating
-once around the ring, we get for the circumference $\ell_\epsilon$ of an off-energy
+once around the ring, we get for the circumference $\ell_\epsilon$ of an dispersion
 closed orbit
 \begin{align}
-	\ell_\epsilon = \oint d\ell = \oint (1 + G(s)x)ds.
+	\ell_\epsilon = \oint d\ell = \oint (1 + G(s)x_\epsilon)ds.
 \end{align}
 The first term of the integral gives the complete integral of $ds$ which is just $L$, the length of the design orbit. The second term gives the elongation due to the energy deviation; let's call it $\delta \ell_\epsilon$. Recalling Eq.~\eqref{eq:3.3} for $x_\epsilon$, we get that
 \begin{align} \label{eq:3.9}
@@ -31,7 +31,7 @@ It follows from Eq.~\eqref{eq:3.9} that
 \begin{align}\label{eq:3.11}
 	\alpha = \dfrac{1}{L} \oint G(s) \eta(s) ds.
 \end{align}
-The dilation factor $\alpha$ is a number which like the betatron number $\nu$ is a characteristic of the total guide field. It is a crucial parameter of the energy oscillations.\\
+The momentum compaction $\alpha$ is a number which like the betatron number $\nu$ is a characteristic of the total guide field. It is a crucial parameter of the energy oscillations.\\
 In the literature, the momentum compaction is usually defined by the relation between the normalized variation of $\ell$ and the normalized variation of the momentum. However, it is acceptable to define as in Eq.~\eqref{eq:3.10}, because when the speed of the particle $v$ approaches the speed of light $c$, these quantities converge to each other, as it is shown below.\\
 From relativistic mechanics, we know that
 \begin{align}\label{eq:}
@@ -45,7 +45,7 @@ which can be written as
 \begin{align}
 	\dfrac{\delta E}{E} = \dfrac{p^2 c^2}{E^2} \dfrac{\delta p}{p}.
 \end{align}
-this equation can be simplified by using the relation $p = \gamma m_0 v$, where $\gamma = (1 - v^2/c^2)^{-1/2}$, as follows
+this equation can be simplified by using the relation $p = \gamma m_0 v$ and $E = \gamma m_0 c^2$, where $\gamma = (1 - v^2/c^2)^{-1/2}$, as follows
 \begin{align}\label{eq:E=P}
 	\dfrac{\delta E}{E} = \left( \dfrac{v}{c} \right)^2 \dfrac{\delta p}{p}.
 \end{align}

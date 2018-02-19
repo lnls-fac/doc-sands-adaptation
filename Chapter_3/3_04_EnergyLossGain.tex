@@ -6,7 +6,7 @@ An electron of the nominal energy $E_0$, moving on the design orbit will radiate
 If an electron with the energy $E_0$ is given a betatron oscillation its instantaneous rate of radiation loss may change -- because of a different lateral acceleration along the trajectory. But the average energy loss over a complete betatron oscillation will not change to first order in the betatron amplitude. (Changes in the lateral oscillation will be proportional to $x$ and will, to first order, average to zero over a complete
 cycle). Since we shall be satisfied to consider only the effects which occur over many betatron oscillations, we need to look only at the average energy loss. So long as we are keeping to our first order view of a storage ring we may ignore any dependence of the radiation loss on the betatron displacements.
 
-The radiation loss will however, change with a change in the energy of an electron. Both its different trajectory and its different energy can contribute to a modified energy loss. Because all energy changes occur slowly, we may consider that an electron is at any instant moving on the off-energy closed orbit which corresponds to its instantaneous energy -- or is performing free betatron oscillations about that orbit. Since we know the form of the off-energy orbit, we can compute the energy lost in each revolution. I shall consider this problem later (in \autoref{sec:4.1}); for now we may take it as a given function $U_{rad}(\epsilon)$ of the energy deviation $\epsilon$.
+The radiation loss will however, change with a change in the energy of an electron. Both its different trajectory and its different energy can contribute to a modified energy loss. Because all energy changes occur slowly, we may consider that an electron is at any instant moving on the dispersion closed orbit which corresponds to its instantaneous energy -- or is performing free betatron oscillations about that orbit. Since we know the form of the dispersion orbit, we can compute the energy lost in each revolution. I shall consider this problem later (in \autoref{sec:4.1}); for now we may take it as a given function $U_{rad}(\epsilon)$ of the energy deviation $\epsilon$.
 
 Since we shall generally be interested only in small energy deviations, we need keep only the linear term in the variation of $U_{rad}$ and write that
 \begin{align}
@@ -20,14 +20,14 @@ and the derivative is evaluated at the nominal energy $E_0$. For the present, th
 
 Let's now turn to the radio frequency accelerating system -- “rf system” for short -- which supplies energy to the electrons to compensate for the radiation loss. The rf system consists typically of one or more cavity resonators such as the one shown schematically in \autoref{fig:fig30}, disposed at various places around the storage ring
 and supplied with rf power from some synchronized radio power sources. These cavities produce oscillating electric fields along the electron trajectories; and it is the component of these fields along the electron's path which feeds energy to the electrons. An electron which goes around once on the design orbit will be given by the rf system an amount of energy $U_{rf}$ equal to the integral of the instantaneous electric force along its trajectory.
- 
+
  \begin{figure}[!htb]
  	\centering
  	\includegraphics[width=0.7\linewidth]{./Figuras/fig30.jpeg}
  	\caption{Schematic diagram of an rf accelerating cavity.}
  	\label{fig:fig30}
  \end{figure}
- 
+
 Since the rf fields are time varying, \footnote{As they must be if there is to be a net integral of the electric field around a closed path!}the energy gained by an electron in making one circuit around the ring will depend on the time at which that circuit begins in relation to the oscillations of the accelerating fields. Let's say that the time dependence of the fields is given. Then the energy $U_{rf}$ gained by the electron -- in one revolution will depend on the time1 that it starts its revolution. (We may take that the revolution starts at some reference azimuth, say $s = 0$.)
 
 If electrons are to be stored on (or near) the design orbit, the variation of $U_{rf}(\bar{t})$ must have certain characteristics. I shall assume that $U_{rf}(\bar{t}$) is a periodic function with a period that is some integral submultiple of the period $T_0$, the period of revolution of an electron that circulates on the design orbit. That is,
@@ -73,7 +73,7 @@ Because of the time variations of the rf accelerating fields only a synchronous 
 \begin{align}
 	U_{rf} = eV(\tau)
 \end{align}
-where $e$ is the electronic charge and $V(\tau)$ is called the "rf voltagel" -- by analogy with a dc accelerating system. The form of $V(\tau)$ is of course related to $U_{rf}(\tau)$; specifically,
+where $e$ is the electronic charge and $V(\tau)$ is called the ``rf voltagel'' -- by analogy with a dc accelerating system. The form of $V(\tau)$ is of course related to $U_{rf}(\tau)$; specifically,
 \begin{align}
 	eV(\tau) = U_{rf}(\bar{t}_s + \Delta t) = U_{rf}(\bar{t}_s - \tau)
 \end{align}
@@ -86,12 +86,12 @@ The variation with $\tau$ is reversed from the variation with $\bar{t}$ so the e
 	\label{fig:fig33}
 \end{figure}
 
-It should perhaps be emphasized that the effective "voltage" of a multiple cavity system typical of high energy rings is not simply related to any observable electric "voltage" but depends on the relative positions and oscillation phases of the various rf cavities in the system. The voltage $V(\tau)$ may in fact, depend on the sense of circulation around the ring and may therefore, be quite different for electrons circulating one way around the ring and positrons circulating in the opposite direction.
+It should perhaps be emphasized that the effective ``voltage'' of a multiple cavity system typical of high energy rings is not simply related to any observable electric ``voltage'' but depends on the relative positions and oscillation phases of the various rf cavities in the system. The voltage $V(\tau)$ may in fact, depend on the sense of circulation around the ring and may therefore, be quite different for electrons circulating one way around the ring and positrons circulating in the opposite direction.
 
 We are now ready to consider the energy oscillations of an electron in a circulating bunch in a storage ring. Let's first see qualitatively what will happen. Suppose an electron has initially the nominal energy $E_0$ but a positive time displacement $\tau$ -- so that it is ahead of the synchronous position. The radiation loss depends only on the energy so it will be $U_0$ each revolution. But the energy gain will be greater than $U_0$. The electron will gain a little bit of energy each revolution. But an increase in energy will, by Eq. \eqref{eq:3.15}, cause its revolution time to get longer; and its time advance with respect to the bunch center will, accordingly, begin to decrease. After some revolutions the time displacement will decrease to zero. But, by then, the electron's energy will be higher than the nominal energy $E_0$ since the electron has continually been gaining energy -- so the time displacement will continue to decrease now toward negative values of $\tau$. At negative values of $\tau$ however, the energy gain will be too small to compensate for the energy loss by radiation and the electron's energy will begin to decrease toward the nominal energy. When the nominal energy is reached, the time displacement will stop decreasing; but, since it is then negative the energy gain per revolution is below $U_0$ and the energy will begin dropping below $E_0$. Now the time displacement will begin returning toward zero. The process will continue until $\tau$ returns to its starting value, at which point the energy will again be $E_0$.
 
 Let's put this description into quantitative terms. First, take the variation of the time displacement $\tau$. It is convenient to keep track of what is happening by observing a bunch once each revolution when the bunch center is at some arbitrarily chosen reference point. The discussion will be easiest if we take the reference point in some field free region (away from any magnets or rf cavities). In \autoref{fig:fig34} I show two “pictures” of the same bunch on two successive passages of the reference azimuth. In each picture the bunch center is at the reference azimuth so the time between the two pictures is just $T_0$ the revolution time on the design orbit.
- 
+
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.6\linewidth]{./Figuras/fig34.jpeg}
@@ -129,7 +129,7 @@ The rate-of-change of the energy deviation $\epsilon$ -- when averaged over a co
 
 The two coupled equations, \eqref{eq:3.32} and \eqref{eq:3.34} describe the energy oscillations -- and the associated oscillations of the time displacement -- of a stored electron. They must be solved together to give the time variation of $\epsilon$ and of $\tau$.
 
-It will turn out -- unfortunately -- that the time displacements which are associated with small energy deviations need not themselves be "small", in the sense that they may span a significant fraction of a complete cycle of the variation of $V(\tau)$. This will be the one instance in which we may not look only at linear terms. We shall need at times to take into account the full nonlinear variations of $V(\tau)$. At other times, however, we shall wish to focus our attention on the small energy oscillations which correspond also to small time displacements. For such oscillations we shall need to retain only the linear part of the variation of $V(\tau)$. Since the acceleration energy gain at $\tau = 0$ is by definition $U_0$, we may then write
+It will turn out -- unfortunately -- that the time displacements which are associated with small energy deviations need not themselves be ``small'', in the sense that they may span a significant fraction of a complete cycle of the variation of $V(\tau)$. This will be the one instance in which we may not look only at linear terms. We shall need at times to take into account the full nonlinear variations of $V(\tau)$. At other times, however, we shall wish to focus our attention on the small energy oscillations which correspond also to small time displacements. For such oscillations we shall need to retain only the linear part of the variation of $V(\tau)$. Since the acceleration energy gain at $\tau = 0$ is by definition $U_0$, we may then write
 \begin{align}
 	U_{rf} = eV(\tau) = U_0 + e\dot{V}_0\tau\label{eq:3.35}
 \end{align}
@@ -139,7 +139,7 @@ It is quite common for the rf voltage of a storage ring to have a sinusoidal var
 \begin{align}\label{eq:3.36}
 	V(\tau) = \widehat{V} \sin(\omega_{rf}(\tau+\tau_0))
 \end{align}
-where $\widehat{V}$ is called the “peak rf voltage" and $\omega_{rf}\tau_0$  is called the "synchronous rf phase angle". With our assumptions
+where $\widehat{V}$ is called the ``peak rf voltage'' and $\omega_{rf}\tau_0$  is called the ``synchronous rf phase angle''. With our assumptions
 \begin{align}
 	\omega_{rf} = 2\pi \frac{k}{T_0} = k\omega_r
 \end{align}
