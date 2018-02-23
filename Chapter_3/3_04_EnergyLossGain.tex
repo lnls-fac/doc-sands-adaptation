@@ -6,7 +6,8 @@ An electron of the nominal energy $E_0$, moving on the design orbit will radiate
 If an electron with the energy $E_0$ is given a betatron oscillation its instantaneous rate of radiation loss may change -- because of a different lateral acceleration along the trajectory. But the average energy loss over a complete betatron oscillation will not change to first order in the betatron amplitude. (Changes in the lateral oscillation will be proportional to $x$ and will, to first order, average to zero over a complete
 cycle). Since we shall be satisfied to consider only the effects which occur over many betatron oscillations, we need to look only at the average energy loss. So long as we are keeping to our first order view of a storage ring we may ignore any dependence of the radiation loss on the betatron displacements.
 
-The radiation loss will however, change with a change in the energy of an electron. Both its different trajectory and its different energy can contribute to a modified energy loss. Because all energy changes occur slowly, we may consider that an electron is at any instant moving on the dispersion closed orbit which corresponds to its instantaneous energy -- or is performing free betatron oscillations about that orbit. Since we know the form of the dispersion orbit, we can compute the energy lost in each revolution. I shall consider this problem later (in \autoref{sec:4.1}); for now we may take it as a given function $U_{rad}(\epsilon)$ of the energy deviation $\epsilon$.
+The radiation loss will however, change with a change in the energy of an electron. Both its different trajectory and its different energy can contribute to a modified energy loss. Because all energy changes occur slowly, we may consider that an electron is at any instant moving on the off-energy
+ closed orbit which corresponds to its instantaneous energy -- or is performing free betatron oscillations about that orbit. Since we know the form of the off-energy orbit, we can compute the energy lost in each revolution. I shall consider this problem later (in \autoref{sec:4.1}); for now we may take it as a given function $U_{rad}(\epsilon)$ of the energy deviation $\epsilon$.
 
 Since we shall generally be interested only in small energy deviations, we need keep only the linear term in the variation of $U_{rad}$ and write that
 \begin{align}
@@ -28,7 +29,7 @@ and supplied with rf power from some synchronized radio power sources. These cav
  	\label{fig:fig30}
  \end{figure}
 
-Since the rf fields are time varying, \footnote{As they must be if there is to be a net integral of the electric field around a closed path!}the energy gained by an electron in making one circuit around the ring will depend on the time at which that circuit begins in relation to the oscillations of the accelerating fields. Let's say that the time dependence of the fields is given. Then the energy $U_{rf}$ gained by the electron -- in one revolution will depend on the time1 that it starts its revolution. (We may take that the revolution starts at some reference azimuth, say $s = 0$.)
+Since the rf fields are time varying\footnote{As they must be if there is to be a net integral of the electric field around a closed path!}, the energy gained by an electron in making one circuit around the ring will depend on the time at which that circuit begins in relation to the oscillations of the accelerating fields. Let's say that the time dependence of the fields is given. Then the energy $U_{rf}$ gained by the electron -- in one revolution will depend on the time $\bar{t}$ that it starts its revolution. (We may take that the revolution starts at some reference azimuth, say $s = 0$.)
 
 If electrons are to be stored on (or near) the design orbit, the variation of $U_{rf}(\bar{t})$ must have certain characteristics. I shall assume that $U_{rf}(\bar{t}$) is a periodic function with a period that is some integral submultiple of the period $T_0$, the period of revolution of an electron that circulates on the design orbit. That is,
 \begin{align}
@@ -73,7 +74,7 @@ Because of the time variations of the rf accelerating fields only a synchronous 
 \begin{align}
 	U_{rf} = eV(\tau)
 \end{align}
-where $e$ is the electronic charge and $V(\tau)$ is called the ``rf voltagel'' -- by analogy with a dc accelerating system. The form of $V(\tau)$ is of course related to $U_{rf}(\tau)$; specifically,
+where $e$ is the electronic charge and $V(\tau)$ is called the ``rf voltage'' -- by analogy with a dc accelerating system. The form of $V(\tau)$ is of course related to $U_{rf}(\tau)$; specifically,
 \begin{align}
 	eV(\tau) = U_{rf}(\bar{t}_s + \Delta t) = U_{rf}(\bar{t}_s - \tau)
 \end{align}
