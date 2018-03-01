@@ -10,7 +10,7 @@ Let $P_\gamma$ stand for the rate of loss of energy by radiation; it may be writ
 where $m$ is the rest mass of the electron, $r_e = \dfrac{e^2}{m_e c^2}$ is the classical electron radius, and $F_\perp$ is the magnetic force on the electron.
 
 \begin{proof}
-We will begin with the expression of the electric field produced by an accelerated electron at a point of coordinates $(r,\phi,\theta)$, with the electron on the origin; this expression is
+We will begin with the expression of the electric field produced by an accelerated electron (considering the velocity still small compared to the velocity of light) at a point of coordinates $(r,\phi,\theta)$, with the electron on the origin; this expression is
 
 \begin{align*}
 E = \dfrac{e\dot{v}\sin \theta}{c^2 r}.
@@ -18,28 +18,39 @@ E = \dfrac{e\dot{v}\sin \theta}{c^2 r}.
 In order to calculate the rate of energy radiated by the electron, we must obtain the expression for the poynting vector $|\mathbf{S}| = (c/4\pi)E^2$ and integrate it over the area $dA$ related to the solid angle $d\Omega$ by $dA = r^2d\Omega = r^2\sin\theta d\theta d\phi$
 
 \begin{align*}
-P = \int_{0}^{2\pi}\int_{0}^{\pi}\dfrac{cE^2}{4\pi}r^2\sin\theta d\theta d\phi = \dfrac{2}{3}\dfrac{e^2a^{*2}}{c^3}
+P = \int_{0}^{2\pi}\int_{0}^{\pi}\dfrac{cE^2}{4\pi}r^2\sin\theta d\theta d\phi = \dfrac{2}{3}\dfrac{e^2a^{2}}{c^3}
 \end{align*}
-where $a^{*}$ is the acceleration of the particle on the laboratory reference frame, which can be written as $a^{*2} = c^2\gamma^6\left\{\boldsymbol{\dot{\beta}}^2 - \left(\boldsymbol{\beta}\times \boldsymbol{\dot{\beta}}\right)^2\right\}$, then
+where $a^{*}$ is the acceleration of the particle. With Newton second law we rewrite the former expression in a convenient manner
 
 \begin{align*}
-P = \dfrac{2}{3}\dfrac{e^2 \gamma^6}{c}\left\{\boldsymbol{\dot{\beta}}^2 - \left(\boldsymbol{\beta}\times \boldsymbol{\dot{\beta}}\right)^2\right\}.
+P = \dfrac{2}{3}\dfrac{e^2}{c^3} \left(\dfrac{d\mathbf{p}}{dt}\cdot\dfrac{d\mathbf{p}}{dt}\right)
 \end{align*}
 
-Now we must separate the parallel from transversal acceleration in the following manner: $\boldsymbol{\dot{\beta}} = \boldsymbol{\dot{\beta}}_\parallel + \boldsymbol{\dot{\beta}}_\perp$. Thus, inserting this new form
-of $\boldsymbol{\dot{\beta}}$ on power expression and using vectorial properties, we can also separate the power in two components:
+Since we wish to approach the relativistic limit, we must use covariant expressions to generalize our results and the straighforward covariant expression of radiation power is simply
 
 \begin{align*}
-P_\parallel &=   \dfrac{2}{3}\dfrac{e^2 \gamma^6_p}{c}\boldsymbol{\dot{\beta}}_\parallel^2 \\
-P_\perp &=   \dfrac{2}{3}\dfrac{e^2 \gamma^4_t}{c}\boldsymbol{\dot{\beta}}_\perp^2.
+P = -\dfrac{2}{3}\dfrac{e^2}{c^3} \left(\dfrac{d{p_\mu}}{d\tau}\dfrac{dp^\mu}{d\tau}\right),
 \end{align*}
 
-The parallel acceleration is related to the parallel force by $mc\gamma^3\boldsymbol{\dot{\beta}}_\parallel = \dfrac{d\mathbf{p}_\parallel}{dt}$ and the transverse acceleration can be obtained from the Lorentz force $mc \gamma\boldsymbol{\dot{\beta}}_\perp = \dfrac{d\boldsymbol{p}_{\perp}}{dt} = ec\boldsymbol{\dot{\beta}} \times \mathbf{B}$.
-Thus we only need to substitute these relations to obtain the power in terms of momentum variation.
+where $d\tau = \gamma^{-1}dt$ is the proper time and the Minkowski metric is $g_{\mu \nu} = (+ - - -)$. Performing the scalar product of these quadrivectors we obtain
 
 \begin{align*}
-P_\parallel &=   \dfrac{2}{3}\dfrac{e^2}{m^2c^3}\left(\dfrac{d\mathbf{p}_\parallel}{dt}\right)^2 \\
-P_\perp &=   \dfrac{2}{3}\dfrac{e^2 \gamma^2_t}{m^2c^3}\left(\dfrac{d\mathbf{p}_\perp}{dt}\right)^2 .
+-\dfrac{d{p_\mu}}{d\tau}\dfrac{dp^\mu}{d\tau} = \left(\dfrac{d\mathbf{p}}{d\tau}\right)^2 - \frac{1}{c^2}\left(\dfrac{dE}{d\tau}\right)^2 = \left(\dfrac{d\mathbf{p}}{d\tau}\right)^2 - \beta^2\left(\dfrac{dp}{d\tau}\right)^2
+\end{align*}
+
+Consider that there is no transversal momentum (which is the case of an electron on a circular orbit), then $\boldsymbol{{p}} = \boldsymbol{p}_\parallel$ or equivalently $\boldsymbol{\beta} = \boldsymbol{\beta_\parallel}$. Although, there is a longitudinal and a transversal force components, therefore
+ there is such components for the derivative of momentum. The parallel acceleration is related to the parallel force by $mc\gamma^3\boldsymbol{\dot{\beta}}_\parallel = \dfrac{d\mathbf{p}_\parallel}{dt} = \mathbf{F}_\parallel$ and the transverse acceleration can be obtained from the Lorentz force by
+ $mc \gamma\boldsymbol{\dot{\beta}}_\perp = \dfrac{d\boldsymbol{p}_{\perp}}{dt} = ec\boldsymbol{{\beta}} \times \mathbf{B} = \mathbf{F}_\perp$. Obviously $\mathbf{F}_\parallel \cdot \mathbf{F}_\perp = 0$, thus
+
+ \begin{align*}
+ -\dfrac{d{p_\mu}}{d\tau}\dfrac{dp^\mu}{d\tau} = (1- \beta^2)\left(\dfrac{dp_\parallel}{d\tau}\right)^2 + \left(\dfrac{dp_\perp}{d\tau}\right)^2,
+ \end{align*}
+
+ using that $1-\beta^2 = \gamma^{-2}$ and $d\tau = \gamma^{-1}dt$, we obtain two components for the radiation power
+
+\begin{align*}
+P_\parallel &=   \dfrac{2}{3}\dfrac{e^2}{m^2c^3}F_\parallel^2 \\
+P_\perp &=   \dfrac{2}{3}\dfrac{e^2 \gamma^2}{m^2c^3}F_\perp^2 .
 \end{align*}
 
 Since we know that $E = \gamma mc^2$, becomes explicit that the radiation power for parallel acceleration does not depends on particle energy, while the transverse radiation power does. That means that applying the same accelerating force on the particle, we will obtain much more radiation power if the acceleration
