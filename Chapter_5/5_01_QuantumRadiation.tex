@@ -39,7 +39,7 @@ The number $\omega_c$ is called the critical frequency\footnote{Caution!
  frequency of the electron. The spectral function $S(\omega/\omega_c)$ is a pure algebraic
  function of its argument which can be expressed by
 \begin{align}
-	S(\xi) = \dfrac{9 \sqrt{3}}{8\pi} \xi \int_\xi^{\infty} K_{5/3} (\bar{\xi}) d\xi.
+	S(\xi) = \dfrac{9 \sqrt{3}}{8\pi} \xi \int_\xi^{\infty} K_{5/3} (\bar{\xi}) d\bar{\xi}.
 \end{align}
 where $K_{5/3}$ is the modified Bessel function of the second kind. It follows from the definition of Eq.~\eqref{eq:5.2} that $S$ is normalized so that
 \begin{align}
@@ -75,14 +75,14 @@ with
     F(\xi) = \dfrac{1}{\xi}S(\xi).
 \end{align}
 Like the frequency spectrum, the quantum spectrum is, apart from the scale factor $P_\gamma/u_c^2$ a universal function of the ratio $u/u_c$.
-The function $F(\xi)$ is also shown in Fig.~\ref{fig:fig42}. The rate of emission of quanta per unit energy interval diverges at low energies\footnote{The spectrum is, anyway, questionable for $u < u_c/\gamma^3$, according to the conditions mentioned earlier.}. But only as $u^{-2/3}$, so the rate of emission of the quanta in any finite interval of quantum energies -- an integral
+The function $F(\xi)$ is also shown in Fig.~\ref{fig:fig42}. The rate of emission of quanta per unit energy interval diverges at low energies\footnote{The spectrum is, anyway, questionable for $u < u_c/\gamma^3 \approx \hbar c/\rho$, according to the conditions mentioned earlier.}. But only as $u^{-2/3}$, so the rate of emission of the quanta in any finite interval of quantum energies -- an integral
  over $u$ -- is finite.\\
 Let's let $\mathscr{N}$ stand for the total rate of emission of quanta (of all energies):
 \begin{align}
 	\mathscr{N} = \int_0^\infty n(u) du.
 \end{align}
 From the asymptotic expressions for $S(\xi)$ in \eqref{eq:5.6}, its complete integral
- is clearly $\approx 1$. It is actually $15\sqrt{3/8}$ so
+ is clearly $\approx 1$. It is actually $\dfrac{15\sqrt{3}}{8}$ so
 \begin{align} \label{eq:5.12}
 	\mathscr{N} = \dfrac{15\sqrt{3}}{8} \dfrac{P_\gamma}{u_c}.
 \end{align}

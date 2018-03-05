@@ -14,7 +14,7 @@ where $\Omega$ is the (real) synchrotron frequency and the amplitude $A_0$ is a 
 \end{align}
 See Fig.~\ref{fig:fig43}. This new oscillation can be written as
 \begin{align}
-	\epsilon = A_1 e^{\Omega (t - t_1)}
+	\epsilon = A_1 e^{i \Omega (t - t_1)}
 \end{align}
 \begin{figure}[!htb]
 	\centering
@@ -26,7 +26,7 @@ where\footnote{Obtained from $A^2 = \epsilon \epsilon^*$.}
 \begin{align}
 	A_1^2 = A_0^2 + u^2 - 2 A_0 u \cos \Omega (t_i - t_0),
 \end{align}
-and $t_1$ is some time displacement of no concern to us now. The quantum emission changes the amplitude of the oscillation to a new value which depends on the initial amplitude and on ($t_i - t_0$). Since the time $t_i$ at which a quantum emission occurs is completely unpredictable -- and since we are interested only in the cumulative affect of many such events -- we should ask only statistical questions. Such as: What is the probable amplitude change? In general, the phase ($t_i - t_0$) is completely random and the expectation value of $\cos\Omega(t_i - t+0)$ is therefore zero. Then, the probable amplitude change due to the quantum event is
+and $t_1$ is some time displacement of no concern to us now. The quantum emission changes the amplitude of the oscillation to a new value which depends on the initial amplitude and on ($t_i - t_0$). Since the time $t_i$ at which a quantum emission occurs is completely unpredictable -- and since we are interested only in the cumulative affect of many such events -- we should ask only statistical questions. Such as: What is the probable amplitude change? In general, the phase ($t_i - t_0$) is completely random and the expectation value of $\cos\Omega(t_i - t_0)$ is therefore zero. Then, the probable amplitude change due to the quantum event is
 \begin{align}\label{eq:5.25}
 	\mean{\delta A^2} = \mean{A_1^2 - A_0^2} = \mean{u^2}
 \end{align}
@@ -69,13 +69,13 @@ Let's now do a precise calculation which is somewhat more complicated -- first, 
 \end{align}
 But since the emission of quanta at the various different energies is also uncorrelated, each energy will contribute independently to the random-walk growth of $\mean{A^2}$. We need only sum the contributions from each interval $\Delta u$:
 \begin{align}
-	\dfrac{d}{dt}\mean{A^2} = \int_0^\infty = u^2 n(u) du.
+	\dfrac{d}{dt}\mean{A^2} = \int_0^\infty u^2 n(u) du.
 \end{align}
 You will recognize the integral as just the product $\mathscr{N}\mean{u^2}$ considered in the preceding section -- Eq.~\eqref{eq:5.17}:
 \begin{align}
 	\dfrac{d}{dt} \mean{A^2} = \mathscr{N} \mean{u^2}.
 \end{align}
-The rate of growth just obtained depends on the electron energy -- which we may take to be the nominal energy $E_0$ -- and on $\rho$, the local radius of curvature of the trajectory, both of which may vary around the ring. From our derivation we may expect that the time for a ``significant'' change in the amplitude of the energy oscillation will be of the order of the damping time constant $\tau_\epsilon$. Since both the period of the oscillation $\approx \Omega$,
+The rate of growth just obtained depends on the electron energy -- which we may take to be the nominal energy $E_0$ -- and on $\rho$, the local radius of curvature of the trajectory, both of which may vary around the ring. From our derivation we may expect that the time for a ``significant'' change in the amplitude of the energy oscillation will be of the order of the damping time constant $\tau_\epsilon$. Since both the period of the oscillation $\approx 1/\Omega$,
  and the damping time $\tau_\epsilon$ are each much longer than a revolution time $T_0$ we may, without injustice, replace the rapidly varying quantity $\mathscr{N}\mean{u^2}$ by its mean value over one revolution of the ring. We shall also make a negligible error (on the average) if we replace the instantaneous radius of curvature $\rho$ of the trajectory at each azimuth $s$ by the local radius of curvature of the design orbit. Taking the average of $\mathscr{N}\mean{u^2}$
  over one revolution by integrating with respect to the azimuthal coordinate $s$, we may define\footnote{The index s on the brackets indicates that the average is taken over the coordinate $s$ as distinct from the average of $u^2$ which is over the distribution in $u$.},
 \begin{align}
@@ -95,7 +95,7 @@ which may be written -- using Eq.~\eqref{eq:4.9} -- as
 \begin{align}
 	(P_\gamma)_\text{design orbit} = \dfrac{\mean{P_\gamma}_s G^2}{\mean{G^2}_s}.
 \end{align}
-And $U_c$ on the design orbit is from Eq.~\eqref{eq:5.9},
+And $u_c$ on the design orbit is from Eq.~\eqref{eq:5.9},
 \begin{align} \label{eq:5.40}
 	(u_c)_\text{design orbit} = \dfrac{3}{2} \hslash c \gamma_0^3 |G|.
 \end{align}
