@@ -52,7 +52,7 @@ We now know what will be the result if a quantum is emitted at $s_2$; we must ne
 The subscript on the curly brackets means that all quantities inside are to be evaluated at $s_2$ (both $\mathscr{N}$ and $\mean{u^2}$, you will remember, depend on the local radius-of-curvature of the trajectory).\\
 Suppose we now add up the contributions to changes in $\mean{a^2}$ during one trip of the electron around the ring. The resulting change, which we may call $\Delta \mean{a^2}$, is obtained by integrating the right-hand-side of Eq.~\eqref{eq:5.74} once around the ring:
 \begin{align}
-	\Delta \mean{a^2} = \dfrac{1}{c E_0^2} \oint \left\lbrace \mathscr{N} \Delta s \mean{u^2} \mathscr{H}(s) \right\rbrace_2 ds_2.
+	\Delta \mean{a^2} = \dfrac{1}{c E_0^2} \oint \left\lbrace \mathscr{N} \mean{u^2} \mathscr{H}(s) \right\rbrace_2 ds_2.
 \end{align}
 As before\footnote{For the remainder of the development I shall follow the same line of argument used in the preceding section and will not repeat all of the details. You should refer to
 that section for any details that are not clear.}, it will be convenient to represent the integral as the product of the length of the orbit $L$, with the mean value -- with respect to $s$ -- of the integrand.
@@ -77,25 +77,25 @@ where $\tau_x$ is the damping time constant of the radial betatron oscillations.
 \end{align}
 We may now return to Eq. \eqref{eq:5.68} to get the expected spread in the betatron displacements. Squaring and taking the expectation of $x_\beta(s_1)$ we may write for the rms spread in the radial betatron displacement at $s_1$:
 \begin{align} \label{eq:5.81}
-	\sigma_{x \beta}^2(s_1) = \mean{x_\beta^2(s_1)} = \dfrac{1}{2}\mean{a^2}\beta_1.
+	\sigma_{x_\beta}^2(s_1) = \mean{x_\beta^2(s_1)} = \dfrac{1}{2}\mean{a^2}\beta_1.
 \end{align}
 Since the azimuth $s_1$ may be anywhere, we may now drop the subscript. Combining the last two equations, we may write that
 \begin{align}
-	\sigma_{x \beta}^2(s) = \dfrac{1}{4} \tau_x Q_x \beta(s).
+	\sigma_{x_beta}^2(s) = \dfrac{1}{4} \tau_x Q_x \beta(s).
 \end{align}
-The form of the result is similar to that obtained for $\sigma_\epsilon$. Both $\tau_x$ and $Q_x$, are numbers which are determined from the overall properties of the guide field -- and do not, therefore, vary with $s$. The only variation of $\sigma_{x\beta}$ comes from the factor $\beta(s)$. This then is our result for the horizontal spread of a stored electron beam due to quantum induced betatron oscillations.\\
+The form of the result is similar to that obtained for $\sigma_\epsilon$. Both $\tau_x$ and $Q_x$, are numbers which are determined from the overall properties of the guide field -- and do not, therefore, vary with $s$. The only variation of $\sigma_{x_\beta}$ comes from the factor $\beta(s)$. This then is our result for the horizontal spread of a stored electron beam due to quantum induced betatron oscillations.\\
 To see the physical significance of our result we must recover the complexities hidden in $\tau_x$ and $Q_x$. Taking $\mathscr{N}\mean{u^2}$ from Eq.~\eqref{eq:5.41}
 \begin{align}
 	Q_x = \dfrac{3}{2} C_u \hslash c \gamma_0^3 \dfrac{\mean{P_\gamma}_s \mean{|G|^3\mathscr{H}}_s}{\mean{G^2}},
 \end{align}
 where $G(s)$ is the inverse radius of the orbit, and, $\mathscr{H}(s)$ is the function of Eq.~\eqref{eq:5.71}. Taking $\tau_x$ from Eq.~\eqref{eq:4.53} we get that
 \begin{align}
-	\dfrac{\sigma_{x\beta}}{\beta} = \dfrac{1}{4} \tau_x Q_x = \dfrac{C_q \gamma_0 \mean{|G|^3\mathscr{H}}_s}{J_x \mean{G^2}_s},
+	\dfrac{\sigma_{x_\beta}^2}{\beta} = \dfrac{1}{4} \tau_x Q_x = \dfrac{C_q \gamma_0^2 \mean{|G|^3\mathscr{H}}_s}{J_x \mean{G^2}_s},
 \end{align}
-where Cq is the quantum coefficient defined in Eq.~\eqref{eq:5.46}.\\
+where $C_q$ is the quantum coefficient defined in Eq.~\eqref{eq:5.46}.\\
 For an isomagnetic guide field ($G = 1/\rho_0$, or zero) the result simplifies to
 \begin{align}\label{eq:5.84}
-	\dfrac{\sigma_{x\beta}}{\beta} =\dfrac{C_q \gamma_0^2 \mean{\mathscr{H}}_\text{Mag}}{J_x \rho_0} && \text{(isomag.),}
+	\dfrac{\sigma_{x_\beta}^2}{\beta} =\dfrac{C_q \gamma_0^2 \mean{\mathscr{H}}_\text{Mag}}{J_x \rho_0} && \text{(isomag.),}
 \end{align}
 where $\mean{\mathscr{H}}_\text{Mag}$ is the average of $\mathscr{H}$ taken only in the magnets.
  That is,
@@ -105,29 +105,29 @@ where $\mean{\mathscr{H}}_\text{Mag}$ is the average of $\mathscr{H}$ taken only
 Comparing Eq.~\eqref{eq:5.84} with Eq.~\eqref{eq:5.48} we see that for an isomagnetic guide
 field we may write that
 \begin{align}\label{eq:5.86}
-	\dfrac{\sigma_{x\beta}^2(s)}{\beta(s)} =  \dfrac{J_\epsilon \mean{\mathscr{H}}_\text{Mag}}{J_x} \left( \dfrac{\sigma_\epsilon}{E_0} \right)^2 && \text{(isomag.)}
+	\dfrac{\sigma_{x_\beta}^2(s)}{\beta(s)} =  \dfrac{J_\epsilon \mean{\mathscr{H}}_\text{Mag}}{J_x} \left( \dfrac{\sigma_\epsilon}{E_0} \right)^2 && \text{(isomag.)}
 \end{align}
-For a precise calculation of $\sigma_{x\beta}$ the integral of Eq.~\eqref{eq:5.85} must be evaluated.\\
+For a precise calculation of $\sigma_{x_\beta}$ the integral of Eq.~\eqref{eq:5.85} must be evaluated.\\
 As argued in Section~\ref{sec:5.3} for the energy deviations, the likelihood of finding
 any particular betatron displacement will vary as a normal error function. That is, the probability of finding a particular electron with a betatron displacement between $x_\beta$ and $x_\beta + dx_\beta$ will be
 \begin{align}
-	w(x_\beta)dx_\beta = \dfrac{1}{\sqrt{2\pi} \sigma_{x\beta}} \exp\left( -x_\beta^2/2\sigma_{x\beta}^2 \right).
+	w(x_\beta)dx_\beta = \dfrac{1}{\sqrt{2\pi} \sigma_{x_\beta}} \exp\left( -x_\beta^2/2\sigma_{x_\beta}^2 \right).
 \end{align}
 If we think of a particular bunch of electrons which contains, say, $N$ electrons, then as it passes any particular azimuth $s$, the number of electrons $n(x_\beta)$ which lie in the radial interval $dx_\beta$ at $x_\beta$ is
 \begin{align*}
 	n(x_\beta)dx_\beta = Nw(x_\beta)dx_\beta,
 \end{align*}
-and so has also a Gaussian distribution. We may think then, of a stored beam as a fuzzy object with a half-width (which depends on $s$) given by the standard deviation $\sigma_{x\beta}$ of its distribution in radius.\\
+and so has also a Gaussian distribution. We may think then, of a stored beam as a fuzzy object with a half-width (which depends on $s$) given by the standard deviation $\sigma_{x_\beta}$ of its distribution in radius.\\
 We should not forget, however, that the total radial spread has contributions from both the betatron and energy oscillations, since the spread of energies of the electrons in a bunch gives rise to an associated radial spread. Recalling that an electron with the energy deviation $\epsilon$ moves on an orbit whose radial displacement varies with the azimuthal position $s$ according to $x_\epsilon(s) = \eta(s) \epsilon/E_0$, it follows that the mean-square radial spread due to the energy spread is
 \begin{align}
-	\sigma_{x\epsilon}^2(s) = \eta^2(s) \dfrac{\sigma_\epsilon^2}{E_0^2}.
+	\sigma_{x_\epsilon}^2(s) = \eta^2(s) \dfrac{\sigma_\epsilon^2}{E_0^2}.
 \end{align}
 Now the periods of the energy oscillations and of the betatron oscillations are widely different, and certainly not precisely commensurate. We may, therefore, consider that -- although they are stimulated by the same stochastic events -- they will be statistically independent. We may then add their contribution to the total
 radial spread as the squares and write that
 \begin{align}
-	\sigma_x^2 = \sigma_{x\beta}^2 + \sigma_{x\epsilon}^2.
+	\sigma_x^2 = \sigma_{x_\beta}^2 + \sigma_{x\epsilon}^2.
 \end{align}
-Let's consider only an isomagnetic guide field. Taking $\sigma_{x\beta}^2$ from Eq.~\eqref{eq:5.86} and using Eq.~\eqref{eq:5.48} for $\sigma_\epsilon^2$, we may write that
+Let's consider only an isomagnetic guide field. Taking $\sigma_{x_\beta}^2$ from Eq.~\eqref{eq:5.86} and using Eq.~\eqref{eq:5.48} for $\sigma_\epsilon^2$, we may write that
 \begin{align}
 	\sigma_x^2(s) = \dfrac{C_q\gamma_0^2}{\rho_0} \left\lbrace \dfrac{\mean{\mathscr{H}}_\text{Mag} \beta(s)}{J_x} + \dfrac{\eta^2(s)}{J_\epsilon} \right\rbrace && \text{(isomag.)}.
 \end{align}
