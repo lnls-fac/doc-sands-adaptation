@@ -61,7 +61,7 @@ So $\xi$ has the conceptually simple form
 	\xi = \dfrac{\epsilon_\text{max}^2}{2\sigma_\epsilon^2}.
 \end{align}
 The potential $\Phi_\text{max}$ and, therefore, the number $\xi$ depends on the magnitude of the rf voltage which must always be sufficiently large to give a quantum lifetime greater than the desired storage time of the beam. Typically $\xi$ must be at least as large as 18 or so, requiring that $\epsilon_\text{max}/\sigma_\epsilon$ be about 6.\\
-For the particular (but very common) case of a storage ring with an isomagnetic guide field and a sinusoidally varying rf voltage, the parameter $\xi$ can be expressed rather simply in terms of the ring parameters. Bringing together the results obtained in earlier sections for $\epsilon_\text{max}$ and $\sigma_\epsilon$ you can show that
+For the particular (but very common) case of a storage ring with an isomagnetic guide field and a sinusoidally varying rf voltage, the parameter $\xi$ can be expressed rather simply in terms of the ring parameters. Bringing together the results obtained in earlier sections for $(\epsilon_\text{max}/E_0^2) = \frac{U_0 F(q)}{\pi \alpha k E_0}$ and $(\sigma_\epsilon/E_0)^2 = \frac{C_q\gamma_0^2}{J_\epsilon \rho_0}$ you can show that
 \begin{align}
 	\xi = \dfrac{J_\epsilon E_0}{\alpha k E_1} F(q) && \text{(isomag.)}.
 \end{align}
@@ -69,6 +69,7 @@ where $E_1$ is a constant with the dimensions of an energy:
 \begin{align}
 	E_1 = \dfrac{3mc^2 C_q}{2 r_e} = \dfrac{55 \sqrt{3}}{64} \dfrac{\hslash c}{r_e} \approx 1.08 \times 10^8 \text{eV},
 \end{align}
-and $F(q)$ is the energy aperture function which was defined in Eq.~\eqref{eq:3.60} and is shown in Fig.~\ref{fig:fig38}. The parameter $q$ is the rf overvoltage -- namely the ratio of the peak rf voltage to the energy lost in one turn. For large overvoltages $F(q)$ is approximately $(2q- \pi)$ and the quantum lifetime increases exponentially with increasing rf voltage.\\
+
+since $U_0 = \frac{C_\gamma E_0^4}{\rho_0}$ for isomagnetic guide fields and $C_\gamma = \frac{4\pi r_e}{(mc^2)^3}$. $F(q)$ is the energy aperture function which was defined in Eq.~\eqref{eq:3.60} and is shown in Fig.~\ref{fig:fig38}. The parameter $q$ is the rf overvoltage -- namely the ratio of the peak rf voltage to the energy lost in one turn. For large overvoltages $F(q)$ is approximately $(2q- \pi)$ and the quantum lifetime increases exponentially with increasing rf voltage.\\
 Notice that in a storage ring with a given guide field (that is with a fixed $\alpha$,
 $J_\epsilon$, $\tau_\epsilon$ and $E_0$) the overvoltage required for any particular quantum lifetime (that is for a particular $\xi$) depends on the harmonic number $k$ of the rf system. For large harmonic numbers the overvoltage required varied approximately as $\sqrt{k}$.
