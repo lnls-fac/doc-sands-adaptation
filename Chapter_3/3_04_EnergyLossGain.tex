@@ -51,9 +51,9 @@ two possible choices (at least) of $\bar{t}_s$ in each cycle of $U_{rf}$ -- one 
 
 An electron which is moving with a lateral displacement from the design orbit will see somewhat different electric fields than one moving on the design orbit. It is generally true, however, that its energy gain in one complete revolution -- the path integral of the electric force -- depends very little on the lateral displacements. I shall therefore ignore any dependence of the energy gain on such lateral displacements -- whether they are due to energy deviations or to betatron oscillations -- and consider only the important variation of the energy gain with the starting time $\bar{t}$.
 
-The circulating position of a synchronous electron provides a convenient reference point for the study of the longitudinal oscillations of the electrons in a bunch. We may indeed refer to the moving position of the synchronous electron as the “center” of the bunch and describe the instantaneous azimuthal position of any other electron of the bunch by giving its longitudinal displacement $y$ from the bunch center. That is, we define
+The circulating position of a synchronous electron provides a convenient reference point for the study of the longitudinal oscillations of the electrons in a bunch. We may indeed refer to the moving position of the synchronous electron as the “center” of the bunch and describe the instantaneous azimuthal position of any other electron of the bunch by giving its longitudinal displacement $z$ from the bunch center. That is, we define
 \begin{align}
-	y(t) = s(t) - s_c(t)
+	z(t) = s(t) - s_c(t)
 \end{align}
 where $s$ is the azimuthal position of any particular electron and $s_c$ refers to the position of the bunch center. See \autoref{fig:fig32}.
 
@@ -66,7 +66,7 @@ where $s$ is the azimuthal position of any particular electron and $s_c$ refers 
 
 For the present discussion I find it somewhat more convenient to describe the longitudinal motion by an equivalent variable $\tau$ defined simply by
 \begin{align}
-	\tau(t) = y(t)/c
+	\tau(t) = z(t)/c
 \end{align}
 which I shall call the time displacement from the center of the bunch. (The time displacement is very nearly equal to the time interval $\Delta t$ between the arrival of an electron at any particular azimuth and the arrival of the synchronous electron. The difference is equal to the change of $\tau$ in the time $\Delta t = - \tau$ which because of the slow rate of change of $\tau$ can be ignored.) Notice that the time displacement $\tau$ is positive when an electron arrives at each azimuth ahead of the synchronous electron and $\Delta t$ is negative, since it arrives before the synchronous electron.
 
@@ -100,17 +100,17 @@ Let's put this description into quantitative terms. First, take the variation of
 	\label{fig:fig34}
 \end{figure}
 
-The pictures show also the position of some particular electron of the bunch: “Electron A”. In the first picture Electron A is ahead of the bunch center by the distance $y_1$. In the second picture the longitudinal displacement has decreased to $y_2$. Between the two pictures the bunch center has traveled once around the design orbit, a distance $L=cT_0$. And since Electron A travels also at the speed $c$, it also has covered a path length equal to $L$. But if it has an energy deviation $\epsilon$ from the nominal energy, the path length for one complete revolution (back to $y_1$) -- would be, as shown in \autoref{sec:3.2}, greater than $L$ by the amount $\delta \ell$ with
+The pictures show also the position of some particular electron of the bunch: “Electron A”. In the first picture Electron A is ahead of the bunch center by the distance $z_1$. In the second picture the longitudinal displacement has decreased to $z_2$. Between the two pictures the bunch center has traveled once around the design orbit, a distance $L=cT_0$. And since Electron A travels also at the speed $c$, it also has covered a path length equal to $L$. But if it has an energy deviation $\epsilon$ from the nominal energy, the path length for one complete revolution (back to $z_1$) -- would be, as shown in \autoref{sec:3.2}, greater than $L$ by the amount $\delta \ell$ with
 \begin{align}
 	\frac{\delta \ell}{L} = \alpha\frac{\epsilon}{E_0}
 \end{align}
-Electron A fails to reach its previous azimuth by the small distance $\delta y = -\delta \ell$, so
+Electron A fails to reach its previous azimuth by the small distance $\delta z = -\delta \ell$, so
 \begin{align}
-	y_2 - y_1 = \delta y = -\alpha \frac{\epsilon}{E_0}L
+	z_2 - z_1 = \delta y = -\alpha \frac{\epsilon}{E_0}L
 \end{align}
 The change $\tau$ during the revolution $n$ is
 \begin{align}
-	\Delta \tau_{n+1} = \frac{\delta y}{c} = -\alpha \frac{\epsilon_n}{E_0}\frac{L}{c} = -\alpha\frac{\epsilon_n}{E_0}T_0
+	\Delta \tau_{n+1} = \frac{\delta z}{c} = -\alpha \frac{\epsilon_n}{E_0}\frac{L}{c} = -\alpha\frac{\epsilon_n}{E_0}T_0
 \end{align}
 Since the time between the two pictures is $T_0$ the time rate-of-change of $\tau$ is $\Delta \tau/T_0$ or
 \begin{align}

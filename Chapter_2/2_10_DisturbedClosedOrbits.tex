@@ -128,3 +128,50 @@ If the field deviations are true ``errors'' with an unknown statistical distribu
 As mentioned earlier the total displacement from the ideal orbit is the sum of $x_c$ and a free betatron oscillation. In the following sections I shall ignore $x_c$ with the understanding
  that it must always be added in, when one wishes to find the total displacement of a trajectory
  from the design orbit.
+
+ \subsection{Closed orbit correction}
+The design orbit is modified to a new closed orbit $x_c$ due to field errors, as discussed previously. The expression of this closed orbit is given in terms of different field errors $\delta G(s_j)$ at different positions $s_j$
+by the following:
+
+ \begin{align*}
+ x_c(s) = \dfrac{\sqrt{\beta(s)}}{2\sin\pi\nu} \sum_j \delta G({s}_j) \sqrt{\beta({s}_j)}\cos\{ |\varphi(s) - \varphi({s}_j)| - \pi\nu \}.
+ \end{align*}
+
+ Since orbit distortions can change beam parameters such as aperture for betatron oscillations it is commom to include a set of magnets for the correction of disturbed orbits. First of all, we need to know the beam position and only after
+ that apply some correction on the orbit. The beam position is measure by devices called beam position monitor (BPM, for short). Suppose there are a number $m$ of BPMs over the storage ring, thus there will be $m$ measurements of displaced close orbits, which we can organize as a vector with $m$ components.
+
+ \begin{align*}
+ \mathbf{x} = \left(x_1,x_2,\ldots,x_m\right).
+ \end{align*}
+
+ The purpose of the correctors magnets is to produce small pertubations of fields in order to displace the disturbed closed orbit aiming to reach the design closed orbit. Suppose the strenght of these small fields due to the $j$-th corrector is $\Delta \theta_j$ and over the storage rings are $n$ correction magnets.
+ Since we consider the field kick given by the corrector as a small perturbation, we already know the expression for the closed orbit displacement at position $s_i$ produced by all $n$ correction magnets:
+
+ \begin{align*}
+ \Delta x_i = \dfrac{\sqrt{\beta_i}}{2\sin\pi\nu} \sum_{j=1}^{n} \Delta \theta_j \sqrt{\beta_j}\cos\{ |\varphi_i - \varphi_j| - \pi\nu \}.
+ \end{align*}
+
+ Notice that the previous equation can be rewritten as $\Delta x_i = \sum_{j=1}^{n}M_{ij}\Delta\theta_j$, which is nothing but a matrix equation
+
+ \begin{align*}
+   \Delta \mathbf{x}_m = \mathcal{M}\Delta \boldsymbol{\theta}_n,
+ \end{align*}
+
+ where $\mathcal{M}$ is a $m \times n$ matrix, whose terms are
+
+ \begin{align*}
+M_{ij} = \dfrac{\sqrt{\beta_i}}{2\sin\pi\nu}\sqrt{\beta_j}\cos\{ |\varphi_i - \varphi_j| - \pi\nu \}.
+\end{align*}
+
+The distorted closed orbit can be corrected at least where the BPMs are placed and we wish that the displacement produced by the correction magnets cancels out the orbit displacement produced by field errors, i.e., $\mathbf{x}_m + \Delta \mathbf{x}_m = 0$, then $\mathbf{x}_m + \mathcal{M}\Delta\boldsymbol{\theta}_n = 0$. Therefore
+
+\begin{align*}
+  \Delta \boldsymbol{\theta}_n = - \mathcal{M}^{-1}\Delta \mathbf{x}_m.
+\end{align*}
+
+If $m=n$ or $n>m$ we can solve the problem exactly, since given all the $m$ measurements of BPMs we can determine the $n$ strenghts of correction magnets. There are few methods available to solve this problem, such as Linear Optimization from Closed Orbits (LOCO), some of them uses the theory of Singular Values Decompostion (SVD)
+and there is also the well-known method of least squares, which tries to minimize the square of the difference between orbit distortions at the monitor and the displacements produced by correctors
+
+\begin{align*}
+  \left(\mathbf{x}_m - \Delta \mathrm{x}_m\right)^{2}_{\text{min}}=  \left(\mathbf{x}_m - \mathcal{M}\Delta \boldsymbol{\theta}_n\right)^{2}_{\text{min}}.
+\end{align*}
