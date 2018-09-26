@@ -1,0 +1,49 @@
+\section{Horizontal Damping}\label{sec:hor_damping}
+
+The expressions for the betatron displacements are given by
+
+\begin{align}
+x_\beta &= A\sqrt{\beta} \cos\varphi, \\
+x_\beta'& = - A\dfrac{1}{\sqrt{\beta}} \left(\alpha\cos\varphi + \sin\varphi\right).
+\end{align}
+
+The amplitude $A$ (action) satisfies the relation $A^2 = \gamma x_\beta^2 + 2\alpha x_\beta x_\beta' + \beta x_\beta'^2$, therefore
+
+\[
+A\delta A = \gamma x_\beta \delta x_\beta + \alpha \left(x_\beta \delta x_\beta' + x_\beta' \delta x_\beta\right)  + \beta x_\beta'\delta x_\beta'.
+\]
+
+Since $\delta x = \delta x' = 0$ we obtain $\delta x_\beta = - \eta \delta E / E_0$ and $\delta x_\beta' = - \eta' \delta E / E_0$, then
+
+\begin{equation}
+A\delta A = -\dfrac{\delta E}{E_0} \left(\gamma x_\beta \eta + \alpha \left(x_\beta \eta' + x_\beta' \eta\right)  + \beta x_\beta'\eta'\right).
+\label{eq:amp}
+\end{equation}
+
+We must evaluate $\delta E$ along the off-energy orbit. Since $\delta E = P_\gamma \delta l / c$ and $\delta l = -(1 + x / \rho_s) \delta s$
+(the minus sign in $\delta s$ comes from the fact that in the emission process the path length is decreasing instead of increasing as in \eqref{eq:2.15}), thus we obtain
+
+\begin{equation}
+\delta E = -\dfrac{P_\gamma \delta s}{c} \left(1 + \dfrac{x}{\rho_s}\right).
+\label{eq:energy_off}
+\end{equation}
+
+Notice that since $x = x_\beta + x_\delta$, when \eqref{eq:energy_off} is inserted into \eqref{eq:amp} the terms $x_\delta x_\beta$ and $x_\delta x_\beta'$
+will be zero when averaged over betatron oscilations, then we can write down $(1 + x/\rho_s) = (1 + x_\beta / \rho_s)$. Then we obtain
+
+\[
+A\delta A = \dfrac{P_\gamma \delta s}{c E_0 \rho_s} \left(\gamma x_\beta^2 \eta + \alpha \left(x_\beta^2 \eta' + x_\beta' x_\beta  \eta\right)  + \beta x_\beta' x_\beta \eta'\right).
+\]
+
+From the expressions for betatron displacement we obtain the average of each term: $\langle x_\beta ^2 \rangle = A^2 \beta /2$ and $\langle x_\beta' x_\beta  \rangle =  - A^2 \alpha /2$.
+Then we calculate the average of amplitude variation as (assuming an isomagnetic field $\rho_s = \rho_0$)
+
+\[
+A\Delta A = \dfrac{ A^2 U_0}{2 E_0 \rho_0} \left(\gamma \beta \eta + \alpha \beta \eta' - \alpha^2\eta  - \alpha \beta  \eta'\right).
+\]
+
+Remember that $\gamma\beta = 1 + \alpha^2$, therefore
+
+\begin{equation}
+\dfrac{\Delta A}{A} = \dfrac{U_0 \eta }{2 E_0 \rho_0}
+\end{equation}
