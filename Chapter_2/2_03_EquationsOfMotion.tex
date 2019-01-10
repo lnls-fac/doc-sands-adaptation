@@ -94,18 +94,12 @@ The corresponding equation for the vertical motion is easier to derive; you can 
 
 \begin{proof}
 	For the vertical motion, applying the Lorentz force, we can see that it has the opposite sign from the radial motion:
+
 	\begin{align*}
-		d\theta &= -\frac{d\ell}{\varrho} = + \frac{ecB}{E}d\ell\\
-				&= \frac{ecB}{E}d\ell\\
-				&= \frac{ecB}{E}(1+Gx)ds\\
-				&= K_1 y (1+Gx)ds\\
-				& = (K_1 y + GK_1xy)ds
+		d\theta &= -\frac{d\ell}{\varrho} = + \frac{ecB}{E}d\ell =  K_1 y ds.
 	\end{align*}
 
-	Discarding terms to second order,
-	\begin{align*}
-		d\theta &= K_1 y ds\\
-	\end{align*}
+ We have used the fact that there is no horizontal dipole component, therefore for the vertical plane the field expansion has only a linear term $\frac{ecB}{E} = K_1 y$ and $d\ell = ds$.
 
 	Now, from \eqref{eq:2.12},
 	\begin{align*}
@@ -113,7 +107,7 @@ The corresponding equation for the vertical motion is easier to derive; you can 
 			&= \frac{K_1 y\ ds}{ds}\\
 			&= K_1 y
 	\end{align*}
-	keeping in mind that $\frac{d\theta_0}{ds} = 0$ because of our assumption that the design orbit lies in a horizontal plane.
+	keeping in mind that $\frac{d\theta_0}{ds} = 0$ comes from the assumption that the design orbit lies in a horizontal plane.
 \end{proof}
 
 Notice that with our linearized approximation, the motions in $x$ and $y$ are independent. For our consideration of the electron trajectories, I would like to use the standard form:
