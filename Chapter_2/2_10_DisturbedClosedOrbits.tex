@@ -73,7 +73,7 @@ x_c'(s) =\dfrac{\beta'(s)x}{2\beta(s)} - \dfrac{a}{\sqrt{\beta(s)}}\sin\left(\va
 Since $x$ and $\beta$ are periodic, i.e., $x(0)=x(L)$ and $\beta(0) = \beta(L)$, $\varphi(L) - \varphi(0) = 2 \pi \nu$, by definition, and $\varphi(s=0)=0$, we use $\Delta x' =  \delta G \Delta s$,
 to get the following expression
 \begin{align*}
-\dfrac{a}{\sqrt{\beta(0)}}\left[\sin(2\pi \nu - \vartheta) - \sin(-\theta)\right] = \delta G \Delta s.
+\dfrac{a}{\sqrt{\beta(0)}}\left[\sin(2\pi \nu - \vartheta) - \sin(-\vartheta)\right] = \delta G \Delta s.
 \end{align*}
 The terms between squared brackets can be simplified as follows
 \begin{align*}
@@ -144,7 +144,7 @@ by the following:
  \mathbf{x} = \left(x_1,x_2,\ldots,x_{2m}\right).
  \end{align*}
 
- The purpose of the correctors magnets is to produce small pertubations of fields in order to displace the disturbed closed orbit aiming to reach the design closed orbit. Suppose the strength of these small fields due to the $j$-th corrector is $\Delta \theta_j$ and over the storage rings are $n_x$ horizontal corrector magnets and $n_y$ vertical ones.
+ Suppose the strength of these small fields due to the $j$-th corrector is $\Delta \theta_j$ and over the storage rings are $n_x$ horizontal corrector magnets and $n_y$ vertical ones.
  Since we consider the field kick given by the corrector as a small perturbation, we already know the expression for the closed orbit displacement at position $s_i$ produced by all correctors:
 
  \begin{align*}
@@ -169,7 +169,7 @@ The distorted closed orbit can be corrected at least where the BPMs are placed a
   \Delta \boldsymbol{\theta}_n = - \mathcal{M}^{-1}\Delta \mathbf{x}_m.
 \end{align*}
 
-If $2m=n_x+n_y$ we obtain a square response matrix $\mathcal{M}$ and its inverse obtained by the ordinary inversion. When $2m < n_x+n_y$ or $2m > n_x + n_y$ , the response matrix is rectangular. A commom method used to obtain the pseudo-inverse of the response matrix is the Singular Value Decomposition (SVD). When the system is overdetermined the SVD pseudo-inversion gives the solution for the minimum correctors strength that corrects the orbit distortion measured at BPMs. When underdetermined its only possible to find solution for the correctors that minimizes the BPMs readings.
+If $2m=n_x+n_y$ we obtain a square response matrix $\mathcal{M}$ and its inverse is obtained by the ordinary inversion. When $2m < n_x+n_y$ or $2m > n_x + n_y$ , the response matrix is rectangular. A commom method used to obtain the pseudo-inverse of the response matrix is the Singular Value Decomposition (SVD). When the system is overdetermined the SVD pseudo-inversion gives the solution for the minimum correctors strength that corrects the orbit distortion measured at BPMs. When underdetermined its only possible to find solution for the correctors that minimizes the BPMs readings.
 
 \begin{align*}
   \left(\mathbf{x}_m - \Delta \mathrm{x}_m\right)^{2}_{\text{min}}=  \left(\mathbf{x}_m - \mathcal{M}\Delta \boldsymbol{\theta}_n\right)^{2}_{\text{min}}.
