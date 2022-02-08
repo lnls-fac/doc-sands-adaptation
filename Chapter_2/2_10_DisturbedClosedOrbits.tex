@@ -131,23 +131,25 @@ As mentioned earlier the total displacement from the ideal orbit is the sum of $
 
  \subsection{Closed orbit correction}
 
- The orbit distortion in the presence of field errors $\delta G(s_j)$ at different positions $s_j$ along the ring is given by:
+ The orbit correction system in storage rings has Beam Position Monitors (BPMs) and small dipoles magnets, called correctors or steering magnets, that steer the beam depending on orbit distortions measured by the BPMs.
+
+ The orbit distortion in the presence of localized field errors $\delta G(s_j)$ at different positions $s_j$ along the ring is given by:
 	\begin{align*}
 		u_c(s_i) = \dfrac{\sqrt{\beta_u(s_i)}}{2\sin\pi\nu} \sum_j \delta G({s}_j) \sqrt{\beta_u({s}_j)}\cos\{ |\varphi(s_i) - \varphi({s}_j)| - \pi\nu \},
 	\end{align*}
-	where $u$ may represent the $x$ or $y$ coordinate.  The orbit distortions $\Delta u(s_i)$ can be measured in localized positions $s_i$, where the Beam Position Monitors (BPMs) are installed. The equation above can be cast in the form $\Delta u_i = \sum_{j} M_{ij}^{uu} \Delta \theta_{j}^{u}$. Therefore, one can define the orbit response matrix, whose elements can be recognized as:
+	where $u$ may represent the $x$ or $y$ coordinate.  The orbit distortions $\Delta u(s_i)$ can be measured in localized positions $s_i$, where BPMs are installed, and localized dipolar fields $\delta G(s_j)$ (typically called ``kicks'') can be created by the correctors, also in localized positions $s_j$. The above equation can be cast in the form $\Delta u_i = \sum_{j} M_{ij}^{uu} \Delta \theta_{j}^u$ (identifying $\Delta \theta_{j}^u = \delta G(s_j)$). Therefore, one can define the orbit response matrix, whose elements can be recognized as:
  \begin{align}
  M_{ij}^{uu} = \dfrac{\sqrt{\beta_{u}(s_i)\beta_{u}(s_j)}}{2\sin\left(\pi\nu_{u}\right)}\cos\left( |\varphi_{u}(s_i) - \varphi_{u}(s_j)| - \pi\nu_{u} \right).
  \end{align}
 
- The orbit correction system in storage rings has BPMs and small dipoles magnets, called correctors or steering magnets, that steers the beam depending on orbit distortions measured by the BPMs. The orbit distortions measurements and the dipolar kick variations can be sorted in vectors as
+ The orbit distortions measurements and the kick variations can be sorted in vectors as
  \begin{align*}
 	 \Delta \vec{u} &= \left(\Delta x_1, \ldots, \Delta x_{\mathrm{N}_{\mathrm{BPM}}}, \Delta y_1, \ldots, \Delta y_{\mathrm{N}_{\mathrm{BPM}}}\right), \\
 	 \Delta \vec{\theta} &= \left(\Delta \theta_1^x, \ldots, \Delta \theta_{\mathrm{N}_{\mathrm{CH}}}^x, \Delta \theta_1^y, \ldots, \Delta \theta_{\mathrm{N}_{\mathrm{CV}}}^y\right).
  \end{align*}
 
- $\mathrm{N}_{\mathrm{BPM}}$ is the number of BPMs, $\mathrm{N}_{\mathrm{CH}}$ is the number of horizontal correctors (CH) and $\mathrm{N}_{\mathrm{CV}}$ is the number of vertical correctors (CV). In this vectorial form, the orbit distortion is related to the kick variation by $\Delta \vec{u} = \mathbf{M} \Delta \vec{\theta}$, and the orbit response matrix has dimension $2 \mathrm{N}_{\mathrm{BPM}} \times \left(\mathrm{N}_{\mathrm{CH}} + \mathrm{N}_{\mathrm{CV}}\right)$.
+ $\mathrm{N}_{\mathrm{BPM}}$ is the number of BPMs, $\mathrm{N}_{\mathrm{CH}}$ is the number of horizontal correctors (CH) and $\mathrm{N}_{\mathrm{CV}}$ is the number of vertical correctors (CV). In this vectorial form, the orbit distortion created by the kicks variation is given by $\Delta \vec{u} = \mathbf{M} \Delta \vec{\theta}$, and the orbit response matrix has dimension $2 \mathrm{N}_{\mathrm{BPM}} \times \left(\mathrm{N}_{\mathrm{CH}} + \mathrm{N}_{\mathrm{CV}}\right)$.
 
- Suppose that the BPMs measure the orbit distortion $\vec{u}_{\mathrm{d}}$.With the dipolar correctors it is possible to produce an orbit variation that minimizes the 2-norm of the residual orbit. From the minimization of $||\vec{u}_{\mathrm{d}} - \mathbf{M}\Delta \vec{\theta}||^2$ with respect to $\Delta\vec{\theta}$, the required kick variations are $\Delta \vec{\theta} = -\left(\mathbf{M}^{\mathsf{T}}\mathbf{M}\right)^{-1}\mathbf{M}^{\mathsf{T}}\vec{u}_{\mathrm{d}}$. Since the actual problem may be non-linear, the corrections must be calculated and applied iteratively until convergence.
+ Suppose that the BPMs measure the orbit distortion $\vec{u}_{\mathrm{d}}$. With the correctors it is possible to produce an orbit variation that minimizes the 2-norm of the residual orbit. From the minimization of $||\vec{u}_{\mathrm{d}} - \mathbf{M}\Delta \vec{\theta}||^2$ with respect to $\Delta\vec{\theta}$, the required kick variations are $\Delta \vec{\theta} = -\left(\mathbf{M}^{\mathsf{T}}\mathbf{M}\right)^{-1}\mathbf{M}^{\mathsf{T}}\vec{u}_{\mathrm{d}}$. Since the actual problem may be non-linear, the corrections must be calculated and applied iteratively until convergence.
 
- The pseudo-inverse of $\mathbf{M}^{\mathsf{T}}\mathbf{M}$ can be obtained, for example, with the method of Singular Value Decomposition (SVD). The SVD-based orbit correction is quite common in storage rings but there are other algorithms also available, depending on the application purpose.
+ The pseudo-inverse of $\mathbf{M}^{\mathsf{T}}\mathbf{M}$ can be obtained, for example, with the method of Singular Value Decomposition (SVD), with a suitable choice of singular values used in the pseudo-inversion procedure. The SVD-based orbit correction is quite common in storage rings but there are other algorithms also available, depending on the application purpose.
