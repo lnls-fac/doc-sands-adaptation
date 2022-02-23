@@ -130,47 +130,26 @@ As mentioned earlier the total displacement from the ideal orbit is the sum of $
  from the design orbit.
 
  \subsection{Closed orbit correction}
-The design orbit is modified to a new closed orbit $x_c$ due to field errors, as discussed previously. The expression of this closed orbit is given in terms of different field errors $\delta G(s_j)$ at different positions $s_j$
-by the following:
 
+ The orbit correction system in storage rings has Beam Position Monitors (BPMs) and small dipoles magnets, called correctors or steering magnets, that steer the beam depending on orbit distortions measured by the BPMs.
+
+ The orbit distortion in the presence of localized field errors $\delta G(s_j)$ at different positions $s_j$ along the ring is given by:
+	\begin{align*}
+		u_c(s_i) = \dfrac{\sqrt{\beta_u(s_i)}}{2\sin\pi\nu} \sum_j \delta G({s}_j) \sqrt{\beta_u({s}_j)}\cos\{ |\varphi(s_i) - \varphi({s}_j)| - \pi\nu \},
+	\end{align*}
+	where $u$ may represent the $x$ or $y$ coordinate.  The orbit distortions $\Delta u(s_i)$ can be measured in localized positions $s_i$, where BPMs are installed, and localized dipolar fields $\delta G(s_j)$ (typically called ``kicks'') can be created by the correctors, also in localized positions $s_j$. The above equation can be cast in the form $\Delta u_i = \sum_{j} M_{ij}^{uu} \Delta \theta_{j}^u$ (identifying $\Delta \theta_{j}^u = \delta G(s_j)$). Therefore, one can define the orbit response matrix, whose elements can be recognized as:
+ \begin{align}
+ M_{ij}^{uu} = \dfrac{\sqrt{\beta_{u}(s_i)\beta_{u}(s_j)}}{2\sin\left(\pi\nu_{u}\right)}\cos\left( |\varphi_{u}(s_i) - \varphi_{u}(s_j)| - \pi\nu_{u} \right).
+ \end{align}
+
+ The orbit distortions measurements and the kick variations can be sorted in vectors as
  \begin{align*}
- x_c(s) = \dfrac{\sqrt{\beta(s)}}{2\sin\pi\nu} \sum_j \delta G({s}_j) \sqrt{\beta({s}_j)}\cos\{ |\varphi(s) - \varphi({s}_j)| - \pi\nu \}.
+	 \Delta \vec{u} &= \left(\Delta x_1, \ldots, \Delta x_{\mathrm{N}_{\mathrm{BPM}}}, \Delta y_1, \ldots, \Delta y_{\mathrm{N}_{\mathrm{BPM}}}\right), \\
+	 \Delta \vec{\theta} &= \left(\Delta \theta_1^x, \ldots, \Delta \theta_{\mathrm{N}_{\mathrm{CH}}}^x, \Delta \theta_1^y, \ldots, \Delta \theta_{\mathrm{N}_{\mathrm{CV}}}^y\right).
  \end{align*}
 
- Since orbit distortions can change beam parameters such as aperture for betatron oscillations it is commom to include a set of magnets for the correction of disturbed orbits. First of all, we need to know the beam position and only after
- that apply some correction on the orbit. The beam position is measured by devices called beam position monitors (BPM, for short). Suppose there are a number $m$ of BPMs over the storage ring, thus there will be $2m$ position measurements of displaced close orbits (horizontal and vertical), which we can organize as a column-vector with $2m$ components.
+ $\mathrm{N}_{\mathrm{BPM}}$ is the number of BPMs, $\mathrm{N}_{\mathrm{CH}}$ is the number of horizontal correctors (CH) and $\mathrm{N}_{\mathrm{CV}}$ is the number of vertical correctors (CV). In this vectorial form, the orbit distortion created by the kicks variation is given by $\Delta \vec{u} = \mathbf{M} \Delta \vec{\theta}$, and the orbit response matrix has dimension $2 \mathrm{N}_{\mathrm{BPM}} \times \left(\mathrm{N}_{\mathrm{CH}} + \mathrm{N}_{\mathrm{CV}}\right)$.
 
- \begin{align*}
- \mathbf{x} = \left(x_1,x_2,\ldots,x_{2m}\right).
- \end{align*}
+ Suppose that the BPMs measure the orbit distortion $\vec{u}_{\mathrm{d}}$. With the correctors it is possible to produce an orbit variation that minimizes the 2-norm of the residual orbit. From the minimization of $||\vec{u}_{\mathrm{d}} - \mathbf{M}\Delta \vec{\theta}||^2$ with respect to $\Delta\vec{\theta}$, the required kick variations are $\Delta \vec{\theta} = -\left(\mathbf{M}^{\mathsf{T}}\mathbf{M}\right)^{-1}\mathbf{M}^{\mathsf{T}}\vec{u}_{\mathrm{d}}$. Since the actual problem may be non-linear, the corrections must be calculated and applied iteratively until convergence.
 
- Suppose the strength of these small fields due to the $j$-th corrector is $\Delta \theta_j$ and over the storage rings are $n_x$ horizontal corrector magnets and $n_y$ vertical ones.
- Since we consider the field kick given by the corrector as a small perturbation, we already know the expression for the closed orbit displacement at position $s_i$ produced by all correctors:
-
- \begin{align*}
- \Delta x_i = \dfrac{\sqrt{\beta_i}}{2\sin\pi\nu} \sum_{j=1}^{n_x + n_y} \Delta \theta_j \sqrt{\beta_j}\cos\{ |\varphi_i - \varphi_j| - \pi\nu \}.
- \end{align*}
-
- Notice that the previous equation can be rewritten in form $\Delta x_i = \sum_{j=1}^{n_x + n_y}M_{ij}\Delta\theta_j$, which is nothing but a vectorial equation
-
- \begin{align*}
-   \Delta \mathbf{x}_{2m} = \mathcal{M}\Delta \boldsymbol{\theta}_{n_x + n_y},
- \end{align*}
-
- where $\mathcal{M}$ is a $2m \times n_x + n_y$ called orbit response matrix, whose terms are
-
- \begin{align*}
-M_{ij} = \dfrac{\sqrt{\beta_i}}{2\sin\pi\nu}\sqrt{\beta_j}\cos\{ |\varphi_i - \varphi_j| - \pi\nu \}.
-\end{align*}
-
-The distorted closed orbit can be corrected at least where the BPMs are placed and we wish that the displacement produced by the correction magnets cancels out the orbit displacement produced by field errors, i.e., $\mathbf{x}_{2m} + \Delta \mathbf{x}_{2m} = 0$, then $\mathbf{x}_{2m} + \mathcal{M}\Delta\boldsymbol{\theta}_{n_x + n_y} = 0$. Therefore
-
-\begin{align*}
-  \Delta \boldsymbol{\theta}_n = - \mathcal{M}^{-1}\Delta \mathbf{x}_m.
-\end{align*}
-
-If $2m=n_x+n_y$ we obtain a square response matrix $\mathcal{M}$ and its inverse is obtained by the ordinary inversion. When $2m < n_x+n_y$ or $2m > n_x + n_y$ , the response matrix is rectangular. A commom method used to obtain the pseudo-inverse of the response matrix is the Singular Value Decomposition (SVD). When the system is overdetermined the SVD pseudo-inversion gives the solution for the minimum correctors strength that corrects the orbit distortion measured at BPMs. When underdetermined its only possible to find solution for the correctors that minimizes the BPMs readings.
-
-\begin{align*}
-  \left(\mathbf{x}_m - \Delta \mathrm{x}_m\right)^{2}_{\text{min}}=  \left(\mathbf{x}_m - \mathcal{M}\Delta \boldsymbol{\theta}_n\right)^{2}_{\text{min}}.
-\end{align*}
+ The pseudo-inverse of $\mathbf{M}^{\mathsf{T}}\mathbf{M}$ can be obtained, for example, with the method of Singular Value Decomposition (SVD), with a suitable choice of singular values used in the pseudo-inversion procedure. The SVD-based orbit correction is quite common in storage rings but there are other algorithms also available, depending on the application purpose.

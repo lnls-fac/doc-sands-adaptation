@@ -1,4 +1,37 @@
-\input{header}
+% \input{header}
+\documentclass[ebook,a4paper,12pt,oneside,openany]{memoir}
+%\documentclass[10pt,oneside]{article}
+\usepackage[bottom=2cm,top=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{indentfirst}
+\usepackage{bm}
+\numberwithin{equation}{chapter}
+%\usepackage[tableposition=top]{caption}
+\usepackage[num,abnt-emphasize=bf, bibjustif]{abntex2cite}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[pdftex,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black]{hyperref}
+%-------------------------------
+\usepackage{mathrsfs} %for mathscr chars {D, P, H}
+%-------------------------------
+\usepackage{booktabs,tabularx,ltablex} % breaking tables over several pages
+%-------------------------------
+
+%\usepackage{tipa}
+\citebrackets[]
+
+\DeclareMathOperator{\Tr}{Tr}
+
+\def\mean#1{\left< #1 \right>}
+
+\newcommand\bydef{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
+
+% for placeholder text
+%\usepackage{lipsum}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% To do List:								%%
