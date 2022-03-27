@@ -3,19 +3,35 @@
 """Vacuum Chamber Limits."""
 
 import matplotlib.pyplot as plt
-from pymodels import si
+
+# pyaccel is a package developed by FAC that is used for modelling accelerators
+# and to do tracking and calculation of optical functions. this package
+# requires our tracking code packge written in c++ called trackcpp
+# https://github.com/lnls-fac/trackcpp
+# https://github.com/lnls-fac/pyaccel
+
 import pyaccel
+
+# pymodels is a package written by FAC with current Sirius accelerator models.
+# it uses the general pyaccel package to define Sirius accelerator's lattices.
+# the package defines convenient symbols so that users can more easily access
+# package and subpackages modules, functions classes. for example, 'si' symbol
+# imported bellow access code related to srius storage rinf. 'bo' for booster,
+# 'li' for linac, and so on...
+# https://github.com/lnls-fac/pymodels
+
+from pymodels import si
 
 
 def print_model(model):
     """."""
-    # print basic information about accelerator
+    # print basic information about accelerator model
     print('--- accelerator ---')
-    print(f'circumference: {model.length:.4f} m')
-    print(f'energy: {model.energy/1e9} GeV')
-    print(f'beta  : {model.beta_factor:.10f}')
-    print(f'gamma : {model.gamma_factor:.1f}')
-    print(f'brho  : {model.brho:.6f} T.m')
+    print(f'circumference       : {model.length:.4f} m')
+    print(f'energy              : {model.energy/1e9} GeV')
+    print(f'beta                : {model.beta_factor:.10f}')
+    print(f'gamma               : {model.gamma_factor:.1f}')
+    print(f'brho (mag. rigidity): {model.brho:.6f} T.m')
 
 
 def plot_vchamber(model):
@@ -64,7 +80,7 @@ def plot_vchamber(model):
 # create SI model
 model = si.create_accelerator()
 
-# shift model to start after thin injection septum
+# shift model so that it starts right after the thin injection septum
 injseptf = pyaccel.lattice.find_indices(model, 'fam_name', 'InjSeptF')
 model = pyaccel.lattice.shift(model, start=injseptf[0])
 

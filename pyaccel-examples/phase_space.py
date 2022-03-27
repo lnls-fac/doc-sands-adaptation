@@ -4,8 +4,24 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from pymodels import si
+
+# pyaccel is a package developed by FAC that is used for modelling accelerators
+# and to do tracking and calculation of optical functions. this package
+# requires our tracking code packge written in c++ called trackcpp
+# https://github.com/lnls-fac/trackcpp
+# https://github.com/lnls-fac/pyaccel
+
 import pyaccel
+
+# pymodels is a package written by FAC with current Sirius accelerator models.
+# it uses the general pyaccel package to define Sirius accelerator's lattices.
+# the package defines convenient symbols so that users can more easily access
+# package and subpackages modules, functions classes. for example, 'si' symbol
+# imported bellow access code related to srius storage rinf. 'bo' for booster,
+# 'li' for linac, and so on...
+# https://github.com/lnls-fac/pymodels
+
+from pymodels import si
 
 
 def run_tracking(model, rx0, elements):
@@ -20,7 +36,7 @@ def run_tracking(model, rx0, elements):
 
     # track one turn from initial condition
     traj, *_ = pyaccel.tracking.line_pass(model, pos, indices='open')
-    traj_init = traj[:, elements]  # select traj pos at defined elements
+    traj_init = traj[:, elements]  # select traj pos at required elements
 
     nrturns = 1000
     traj = np.zeros((len(elements), 6, nrturns+1))
@@ -57,7 +73,7 @@ def plot_phase_space(model, rx0):
 # create SI model
 model = si.create_accelerator()
 
-# turne longitudinal dynamics off
+# turn longitudinal dynamics off (purely symplectic transverse dynamics)
 model.cavity_on = False
 model.radiation_on = False
 
