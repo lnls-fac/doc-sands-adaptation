@@ -51,15 +51,16 @@ def run_tracking(model):
         # take particle pos at end of turn as initial condition for next turn
         pos = traj[:,-1]
     
-    return twiss, envelop, traj_turns
+    return twiss, action, envelop, traj_turns
     
 
 def plot_envelope(model):
     """."""
-    twiss, envelop, traj_turns = run_tracking(model)
+    twiss, action, envelop, traj_turns = run_tracking(model)
     rx0 = traj_turns[0][0,0]
 
     m2um = 1e6
+    m2nm = 1e9
     for n in range(len(traj_turns)):
         rx = m2um * traj_turns[n][0, :]
         plt.plot(twiss.spos, rx, '-.', label=f'Turn {n}')
@@ -71,7 +72,8 @@ def plot_envelope(model):
     plt.ylabel('rx [um]')
     title = 'Horizontal position from Tracking\n' + \
         f'(Envelope function defined by initial' + \
-        f' condition x = {m2um*rx0:.0f} um)'
+        f' condition x = {m2um*rx0:.0f} um,' + \
+        f' J = {action*m2nm:.2f} nm.rad)'
     plt.title(title)
     plt.legend()
     plt.show()
@@ -80,10 +82,10 @@ def plot_envelope(model):
 # create SI model
 model = si.create_accelerator()
 
-# refine elemts in the model
+# refine elements in the model
 model = pyaccel.lattice.refine_lattice(model, 0.05)
 
-# turne longitudinal dynamics off
+# turn longitudinal dynamics off
 model.cavity_on = False
 model.radiation_on = False
 
