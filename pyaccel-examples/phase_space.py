@@ -26,12 +26,13 @@ from pymodels import si
 
 def run_tracking(model, rx0, elements):
     """."""
+    mm2m = 1e-3
     # initial particle position
-    px0 = 0.0 / 1000  # horizontal angle [rad]
-    ry0 = 0.0 / 1000  # vertical pos [m]
-    py0 = 0.0 / 1000  # vertical angle [rad]
-    de0 = 0.0 / 100   # relative energy deviation
-    dl0 = 0.0 / 1000  # longitudinal deviation [m]
+    px0 = 0.0* mm2m  # horizontal angle [rad]
+    ry0 = 0.0* mm2m  # vertical pos [m]
+    py0 = 0.0* mm2m  # vertical angle [rad]
+    de0 = 0.0* mm2m  # relative energy deviation
+    dl0 = 0.0* mm2m  # longitudinal deviation [m]
     pos = [rx0, px0, ry0, py0, de0, dl0]
 
     # track one turn from initial condition
@@ -58,15 +59,17 @@ def plot_phase_space(model, rx0):
     # do tracking
     traj = run_tracking(model, rx0=rx0, elements=elements)
 
+    m2mm = 1e3
+    m2um = rad2urad = 1e6
     # plot trajectory in phase space
     for idx, ele in enumerate(elements):
         fam_name = '{} @ {:.3f} m'.format(model[ele].fam_name, spos[ele])
-        rx, px = traj[idx, 0, :], traj[idx, 1, :]
-        plt.plot(1e6*rx, 1e6*px, '.', label=fam_name)
+        rx, px = m2um * traj[idx, 0, :], rad2urad * traj[idx, 1, :]
+        plt.plot(rx, px, '.', label=fam_name)
     plt.legend()
     plt.xlabel('rx [um]')
     plt.ylabel('px [urad]')
-    plt.title(f'Trajectory in Phase Space, x0 = {1e3*rx0:.2f} mm\n(at different ring positions)')
+    plt.title(f'Trajectory in Phase Space, x0 = {m2mm*rx0:.2f} mm\n(at different ring positions)')
     plt.show()
     
     
