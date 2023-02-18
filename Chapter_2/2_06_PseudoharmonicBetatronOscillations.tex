@@ -2,16 +2,16 @@
 We have seen that the betatron oscillations -- in either $x$ or $y$ -- are described by a pseudo-harmonic oscillation whose representative form is
 \begin{align}
 	x(s) &= a\sqrt{\beta}\ \cos\{\varphi-\vartheta\}\label{eq:2.46}\\
-	\varphi &= \int_{0}^{s} \frac{d\bar{s}}{\beta}\label{eq:2.47}
+	\phi &= \int_{0}^{s} \frac{d\bar{s}}{\beta}\label{eq:2.47}
 \end{align}
 where $\beta$ is a given function of $s$, which we may call the betatron function, and $a$
-and $\vartheta$ are constants of the particular trajectory. The two equations above describe completely the path taken by the electron. To get a complete picture of the motion of the electron in the coordinate $x$ we must only add the fact that the electron travels always at the speed $c$ of light. For many purposes it is adequate to take that the azimuth of the electron varies simply as
+and $\upsilon$ are constants of the particular trajectory. The two equations above describe completely the path taken by the electron. To get a complete picture of the motion of the electron in the coordinate $x$ we must only add the fact that the electron travels always at the speed $c$ of light. For many purposes it is adequate to take that the azimuth of the electron varies simply as]
 \begin{align}
 	s = s_0 + ct\label{eq:2.48}
 \end{align}
 You should remember, however, that this is only an approximation which neglects terms that are the order of $x/\varrho_s$, where $\varrho_s$, is the radius of curvature of the design orbit. The correction terms to Eq.~\eqref{eq:2.48} will be looked at in Section~\ref{sec:3.2}.
 
-The betatron function describes completely the lateral focussing properties of the guide field. By its nature the betatron function must be always positive-definite; it has a “wave-like” character, and in a well-designed ring it will wander not too far (say a fraction of an order-of-magnitude) from its mean value. It might typically look like the curve (a) in Fig.~\ref{fig:fig12}. The definition of $\beta(s)$ constrains it to be periodic in $s$ with the period $L$:
+The betatron function describes completely the lateral focussing properties of the guide field. By its nature the betatron function must be always positive-definite; it has a “wave-like” character, and in a well-designed ring it will wander not too far (say a fraction of an order-of-magnitude) from its mean value. It might typically look like the curve (a) in Fig. 12. The definition of $\beta(s)$ constrains it to be periodic in $s$ with the period $L$:
 \begin{align}
 	\beta(s+L) = \beta(s)
 \end{align}
@@ -19,7 +19,7 @@ It has a unique value at each physical azimuth. If the guide field has a higher 
 
 As the electron travels around the ring it executes a lateral oscillation which is not harmonic -- nor periodic. The motion is a kind of distorted sine-wave with a varying amplitude ($a\sqrt{\beta}$) which is modulated in proportion to the root of the betatron function, and with a “phase” ($\varphi-\vartheta$) which advances with $s$ at a varying rate proportional to $1/\beta$. The nature of the motion is illustrated in parts (b) and (c) of Fig.~\ref{fig:fig12}. The two segments of trajectory shown correspond to the same 2, but to different starting phases.
 
-Suppose that we chose some initial $a$ and $\vartheta$, and follow the trajectory for many successive revolutions. We would get a path such as the one shown in part (d) of Fig.~\ref{fig:fig12}, where, for convenience, I have superimposed all of the successive revolutions on the same segment of $s$. (Or, if you wish, since $s$ is a cyclic variable, I am plotting $s$ (modulo $L$) instead of $s$). The picture gives some idea of what we would see if we watched a single stored electron circulating in a ring.
+Suppose that we chose some initial $a$ and $\upsilon$, and follow the trajectory for many successive revolutions. We would get a path such as the one shown in part (d) of Fig.~\ref{fig:fig12}, where, for convenience, I have superimposed all of the successive revolutions on the same segment of $s$. (Or, if you wish, since $s$ is a cyclic variable, I am plotting $s$(modulo $L$) instead of $s$). The picture gives some idea of what we would see if we watched a single stored electron circulating in a ring.
 
 \begin{figure}[!htb]
 	\centering
@@ -28,7 +28,7 @@ Suppose that we chose some initial $a$ and $\vartheta$, and follow the trajector
 	\label{fig:fig12}
 \end{figure}
 
-One important feature of the betatron motion is evident in Fig.~\ref{fig:fig12}(d) -- at each physical azimuth the displacement $x$ of a circulating electron lies always below a limiting extreme value $X(s)$ obtained by setting $cos(\varphi - \vartheta) = 1$; namely
+One important feature of the betatron motion is evident in Fig.~\ref{fig:fig12}(d) -- at each physical azimuth the displacement $x$ of a circulating electron lies always below a limiting extreme value $X(s)$ obtained by setting $cos(\phi - \upsilon) = 1$; namely
 \begin{align}
 	X(s) = a\sqrt{\beta(s)}
 \end{align}
@@ -40,7 +40,7 @@ At each physical azimuth a stored electron may generally be expected to pass fre
 
 Let's look now at the slope of the betatron trajectory, $x' = dx/ds$. Taking the derivative of Eq.~\eqref{eq:2.46}, we may write
 \begin{align}
-	x' = - \frac{a}{\sqrt{\beta}}\sin(\varphi-\vartheta)+\frac{\beta'}{2\beta}x\label{eq:2.52}
+	x' = - \frac{a}{\sqrt{\beta}}\sin(\phi-\upsilon)+\frac{\beta'}{2\beta}x\label{eq:2.52}
 \end{align}
 The first term comes from the changing phase; and the second from the variation of $\beta$.
 
@@ -48,7 +48,7 @@ Notice that the zeros of $x'$ -- and therefore, the peak values of $x$ -- do not
 \begin{align}
 	\tan(\varphi-\vartheta) = \frac{\beta'}{2}
 \end{align}
-which means that
+which means at
 \begin{align}
 	\cos(\varphi-\vartheta) = \left[1+\frac{\beta'^2}{4}\right]^{-\frac{1}{2}}
 \end{align}
@@ -81,7 +81,7 @@ The phase constant $\vartheta$ must also be determined from $x$ and $x'$. It can
 \end{align}
 where $\varphi_1 = \varphi(s_1)$.
 
-We are often interested only in the maximum value $X(s)$ which can be reached at any physical azimuth on any subsequent revolution. This maximum is independent of $\vartheta$ and is obtained by replacing the cosine factor of Eq.~\eqref{eq:2.57} by 1:
+We are often interested only in the maximum value $X(s)$ which can be reached at any physical azimuth on any subsequent revolution. This maximum is independent of $\upsilon$ and is obtained by replacing the cosine factor of Eq.~\eqref{eq:2.57} by 1:
 \begin{align}
 	X(s) = \frac{1}{\sqrt{\beta_1}}\left[x_1^2+\left(\beta_1x'_1-\frac{x_1\beta'_1}{2}\right)^2\right]^\frac{1}{2}\sqrt{\beta(s)}
 \end{align}
