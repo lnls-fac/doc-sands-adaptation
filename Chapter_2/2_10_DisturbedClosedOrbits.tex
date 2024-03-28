@@ -135,9 +135,9 @@ As mentioned earlier the total displacement from the ideal orbit is the sum of $
 
  The orbit distortion in the presence of localized field errors $\delta G(s_j)$ at different positions $s_j$ along the ring is given by:
 	\begin{align*}
-		u_c(s_i) = \dfrac{\sqrt{\beta_u(s_i)}}{2\sin\pi\nu} \sum_j \delta G({s}_j) \sqrt{\beta_u({s}_j)}\cos\{ |\varphi(s_i) - \varphi({s}_j)| - \pi\nu \},
+		u_c(s_i) = \dfrac{\sqrt{\beta_u(s_i)}}{2\sin\pi\nu} \sum_j \delta G({s}_j) \sqrt{\beta_u({s}_j)}\cos\{ |\varphi(s_i) - \varphi({s}_j)| - \pi\nu \} \Delta s_j,
 	\end{align*}
-	where $u$ may represent the $x$ or $y$ coordinate.  The orbit distortions $\Delta u(s_i)$ can be measured in localized positions $s_i$, where BPMs are installed, and localized dipolar fields $\delta G(s_j)$ (typically called ``kicks'') can be created by the correctors, also in localized positions $s_j$. The above equation can be cast in the form $\Delta u_i = \sum_{j} M_{ij}^{uu} \Delta \theta_{j}^u$ (identifying $\Delta \theta_{j}^u = \delta G(s_j)$). Therefore, one can define the orbit response matrix, whose elements can be recognized as:
+	where $u$ may represent the $x$ or $y$ coordinate.  The orbit distortions $\Delta u(s_i)$ can be measured in localized positions $s_i$, where BPMs are installed, and localized dipolar fields $\delta G(s_j)$ (typically called ``kicks'') can be created by the correctors, also in localized positions $s_j$. The above equation can be cast in the form $\Delta u_i = \sum_{j} M_{ij}^{uu} \Delta \theta_{j}^u$ (identifying $\Delta \theta_{j}^u = \delta G(s_j) \Delta s_j$). Therefore, one can define the orbit response matrix, whose elements can be recognized as:
  \begin{align}
  M_{ij}^{uu} = \dfrac{\sqrt{\beta_{u}(s_i)\beta_{u}(s_j)}}{2\sin\left(\pi\nu_{u}\right)}\cos\left( |\varphi_{u}(s_i) - \varphi_{u}(s_j)| - \pi\nu_{u} \right).
  \end{align}
