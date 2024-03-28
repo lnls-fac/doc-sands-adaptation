@@ -90,16 +90,16 @@ The maximum stable oscillation goes back and forth between the points $C$ and $D
 \end{align}
 For the special case of an rf voltage function that is a pure sinusoid -- as described by Eq.~\eqref{eq:3.36} -- it is possible to calculate $\Phi(\tau)$ using Eq.~\eqref{eq:3.53},
 \begin{align}\label{eq:Phi_sine}
-	\Phi(\tau) = \dfrac{\alpha U_0}{2\pi k E_0} \left\lbrace \sqrt{q^2-1} - q \cos [\omega_{\text{rf}}(\tau - \tau_0)] - \omega_{\text{rf}} \tau \right\rbrace,
+	\Phi(\tau) = \dfrac{\alpha U_0}{2\pi k E_0} \left\lbrace \sqrt{q^2-1} - q \cos [\omega_{\text{rf}}\tau - \phi_0] - \omega_{\text{rf}} \tau \right\rbrace,
 \end{align}
 in which
 \begin{align} \label{eq:3.60}
 q = e\hat{V}/U_0
 \end{align}
-is the overvoltage -- namely the ratio of the peak rf voltage to the minimum voltage required to store a synchronous electron. Notice that, from Fig.~\ref{fig:fig36}, $\Phi_{\max}$ happens the first time $\Phi'(\tau^*) = 0$ for $\tau^* > 0$. More precisely, we have the next point for which $\sin[\omega_{\text{rf}}(\tau^*-\tau_0)]$ assumes the same value as $\sin[\omega_{\text{rf}}(-\tau_0)]$, that is
+is the overvoltage -- namely the ratio of the peak rf voltage to the minimum voltage required to store a synchronous electron. Notice that, from Fig.~\ref{fig:fig36}, $\Phi_{\max}$ happens the first time $\Phi'(\tau^*) = 0$ for $\tau^* > 0$. More precisely, we have the next point for which $\sin[\omega_{\text{rf}}\tau^*-\phi_0]$ assumes the same value as $\sin[-\phi_0)]$, that is
 \begin{align*}
-	& \omega_{\text{rf}}(\tau^* - \tau_0) = \pi - \omega_{\text{rf}}(-\tau_0) \\
-    \Rightarrow \, & \tau^* = \dfrac{\pi}{\omega_{\text{rf}}} + 2\tau_0.
+	& \omega_{\text{rf}}\tau^* - \phi_0 = \pi - (-\phi_0) \\
+    \Rightarrow \, & \tau^* = \dfrac{\pi}{\omega_{\text{rf}}} + \dfrac{2\phi_0}{\omega_{\text{rf}}}.
 \end{align*}
 
 Plugging this result in Eq.~\eqref{eq:Phi_sine}, results in
