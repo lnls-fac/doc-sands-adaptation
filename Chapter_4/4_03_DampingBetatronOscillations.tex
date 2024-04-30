@@ -2,7 +2,7 @@
 It is now time to take a look at the so-called radiation damping of the betatron oscillations. I shall give here only an approximate treatment, but using a method which can -- with only a bit of tedious algebra -- be extended to an exact calculation. The exact result is, in any case, obtained more easily by a general theorem that will be discussed in the next section.\\
 Let's look first at the vertical betatron oscillations (the notation will be the one used in Part II). I shall approximate the motion by ignoring the variation of $\beta$ with $s$, then I may write (see Section \ref{sec:2.8})
 \begin{align}
-	y = A \cos(\varphi), && y' = \dfrac{A}{\beta}\sin(\varphi),
+	y = A \cos(\varphi), && y' = - \dfrac{A}{\beta}\sin(\varphi),
 \end{align}
 where $\varphi$ is $s/\beta$. The amplitude $A$ of the oscillations can be obtained from $y$ and
 $y'$ at any instant by
@@ -29,7 +29,7 @@ Again, the accelerating force doesn't change $y$. But now it does change $y'$ wh
 \begin{align}
 	y_{f}' = \dfrac{p_\perp}{p + \delta p} = \dfrac{p_\perp}{p} \left( 1 - \dfrac{\delta p}{p} \right) = y' \left( 1 - \dfrac{\delta p}{p} \right).
 \end{align}
-The change in $y’$ is
+The change in $y'$ is
 \begin{align}
 	\delta y' = -y' \dfrac{\delta p}{p} = -y' \dfrac{\delta E}{E}.
 \end{align}
@@ -106,7 +106,7 @@ Now let's apply these ideas to the radiation loss $\delta E$ in an azimuthal ele
  A precise calculation would proceed from the changes in $x$ and $x'$ found in Eqs. \eqref{eq:4.35} and \eqref{eq:4.38}. In keeping with the approximations made earlier in this
 section, however, I am going to make the simplifying assumption that $\eta$ is a constant, so that $\eta' = 0$ (this is a reasonable approximation but including $\eta'$ in the calculation is not that difficult, but it is needed to consider the complete expression for betatron oscillations, see appendix \ref{sec:hor_damping}); and write the variation of $x_\beta$ with $s$ in the same form that I took for $y$; namely,
 \begin{align}
-	x_\beta = A \cos \varphi; && x_\beta' = \dfrac{A}{\beta} \sin \varphi.
+	x_\beta = A \cos \varphi; && x_\beta' = - \dfrac{A}{\beta} \sin \varphi.
 \end{align}
 This time we have that
 \begin{align}
@@ -147,11 +147,11 @@ Fortunately, this is only part of the story. We must also take into account the 
 \end{align}
 which gives for the damping coefficient $\alpha_x$ of the radial oscillations
 \begin{align}\label{eq:4.48}
-	\alpha_x = - \left(1 - \dfrac{\eta}{\rho_0} \right) \dfrac{U_0}{2 E_0 T_0}.
+	\alpha_x = \left(1 - \dfrac{\eta}{\rho_0} \right) \dfrac{U_0}{2 E_0 T_0}.
 \end{align}
 A precise calculation for a separated function isomagnetic guide field gives exactly the same result, if we replace $\eta$ by $\mean{\eta}_\text{Mag}$, the mean value of $\eta(s)$ in the magnets. But recalling Eq.~\eqref{eq:3.14}, $\mean{\eta}_\text{Mag} = L\alpha/2\pi$ so
 \begin{align} \label{eq:4.49}
-	\alpha_x = - \left(1 - \dfrac{\alpha L}{2\pi\rho_0} \right) \dfrac{U_0}{2 E_0 T_0}. && \left(\begin{tabular}{l}
+	\alpha_x = \left(1 - \dfrac{\alpha L}{2\pi\rho_0} \right) \dfrac{U_0}{2 E_0 T_0}. && \left(\begin{tabular}{l}
 \text{isomag} \\
 \text{sep. func.}
 \end{tabular}\right)
