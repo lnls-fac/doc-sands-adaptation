@@ -1,12 +1,12 @@
 \section{Chromaticity}
 
-In the last subsection, we understood how a gradient error, i.e., an error in the focusing function $K(s)$ may cause a tune shift. However, it was not discussed how such error may happen. In fact, if we look at Eq.~\eqref{eq:2.17}, one of the terms we have neglected was $K_x x \delta$, since it is a second order term. Nevertheless, we may treat this term as a first order quadrupole error $k(s) = K_x(s) \delta$. Pursuing this path, we can use Eq.~\eqref{eq:2.104} to write a contribution to the tune shift. From now on, let us assume that ${G^2 << K}$, so $K_x \approx K$ and $K_y \approx -K$,
+In the last subsection, we understood how a gradient error, i.e., an error in the focusing function $K(s)$ may cause a tune shift. However, it was not discussed how such error may happen. In fact, if we look at Eq.~\eqref{eq:2.17}, one of the terms we have neglected was $K_x x \delta$, since it is a second order term. Nevertheless, we may treat this term as a first order quadrupole error $\Delta K(s) = K_x(s) \delta$. Pursuing this path, we can use Eq.~\eqref{eq:2.104} to write a contribution to the tune shift. From now on, let us assume that ${G^2 << K_1}$, so $K_x \approx K_1$ and $K_y \approx -K_1$,
 \begin{align}\label{eq:Dnux_delta}
-	\Delta\nu_x = \left( -\dfrac{1}{4\pi}\oint\beta_x(s) K(s)ds \right) \delta.
+	\Delta\nu_x = \left( -\dfrac{1}{4\pi}\oint\beta_x(s) K_1(s)ds \right) \delta.
 \end{align}
 Using the same reasoning, we find that
 \begin{align}\label{eq:Dnuy_delta}
-	\Delta\nu_y = \left( \dfrac{1}{4\pi}\oint\beta_y(s) K(s)ds \right) \delta.
+	\Delta\nu_y = \left( \dfrac{1}{4\pi}\oint\beta_y(s) K_1(s)ds \right) \delta.
 \end{align}
 As a matter of fact, the quantity which is responsible to represent the variation of the tune with the energy deviation is the \emph{chromaticity} $\xi$ and it is defined as follows,
 \begin{align}
@@ -14,8 +14,8 @@ As a matter of fact, the quantity which is responsible to represent the variatio
 \end{align}
 The part of the chromaticity which comes from the quadrupoles is called the natural chromaticity and, as expected, its formula is given by
 \begin{align}
-	\xi_{x,\text{nat}} &= -\dfrac{1}{4\pi}\oint\beta_x(s) K(s)ds,\\
-   	\xi_{y,\text{nat}} &= \dfrac{1}{4\pi}\oint\beta_y(s) K(s)ds.
+	\xi_{x,\text{nat}} &= -\dfrac{1}{4\pi}\oint\beta_x(s) K_1(s)ds,\\
+   	\xi_{y,\text{nat}} &= \dfrac{1}{4\pi}\oint\beta_y(s) K_1(s)ds.
 \end{align}
 The natural chromaticity of a high luminosity accelerator ring is usually large. In subsection~\ref{sec:2.7} it was discussed how dangerous might be some values of tune, so it is natural to think that a wild variation of tune must be avoided. In this sense, it is important to keep $\xi$ small, despite the fact that $\xi_\text{nat}$ is large. This is one of the motivations to introduce the sextupoles in the ring, that is, to control the chromaticity.\\
 For a sextupole magnetic field, where we take into account the second order magnetic field terms, we have
