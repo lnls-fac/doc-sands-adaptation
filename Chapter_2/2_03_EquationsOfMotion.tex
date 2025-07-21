@@ -1,11 +1,11 @@
-\section{Equations of motion}\label{sec:2.3}
+\section{Equations of motion} \label{sec:EqsMotion}
 I would like now to write the equations of motion of an electron that is moving on a trajectory near the design orbit, and with an energy near, but not necessarily at, the design energy. I shall describe the energy of the electron in terms of the deviation $\epsilon$ from the design energy $E_0$:
 \begin{align}
 	\epsilon = E-E_0
 \end{align}
 In keeping with our linear approximation I shall keep terms only to first order in the ``small'' quantities $x$, $y$, and $\epsilon$. Rather than using time as the independent variable it will be more convenient to use the azimuthal coordinate $s$. Derivatives with respect to $s$ will be indicated by the ``prime'' ($'$); for example, $x' = dx/ds$.
 
-Let’s begin with the radial motion. Think of an electron that is at $x$ and moving with the slope $x'$. See Fig.~\ref{fig:fig9}. The slope $x'$ is the angle between the direction of motion of the electron and the tangent to the design orbit. Suppose we call $\theta_0$, the angle between the tangent and some arbitrary reference direction and $\theta$ the angle made by the trajectory with the same reference direction. Then $x' = \tan(\theta - \theta_0) \approx \theta - \theta_0$; and
+Let's begin with the radial motion. Think of an electron that is at $x$ and moving with the slope $x'$. See Fig.~\ref{fig:fig9}. The slope $x'$ is the angle between the direction of motion of the electron and the tangent to the design orbit. Suppose we call $\theta_0$, the angle between the tangent and some arbitrary reference direction and $\theta$ the angle made by the trajectory with the same reference direction. Then $x' = \tan(\theta - \theta_0) \approx \theta - \theta_0$; and
 \begin{align} \label{eq:2.12}
 	x'' = \frac{d(\theta-\theta_0)}{ds}.
 \end{align}
@@ -19,38 +19,34 @@ Let’s begin with the radial motion. Think of an electron that is at $x$ and mo
 
 The derivative of $\theta_0$ is, we have seen, just $-1/\varrho_s = -G(s)$. But what is $d\theta/ds$? The radius of curvature of the trajectory is
 \begin{align} \label{eq:2.13}
-	\varrho = \frac{E}{ecB},
+	\varrho = -\frac{E}{ecB_y},
 \end{align}
 and in a path element $d\ell$ of the trajectory the change in angle is
 \begin{align}
-	d\theta = -\frac{d\ell}{\varrho} = -\frac{ecB}{E}d\ell\label{eq:2.14}.
+	d\theta = -\frac{d\ell}{\varrho} = \frac{ecB_y}{E}d\ell\label{eq:2.14}.
 \end{align}
 
 Since $\frac{d\ell}{ds} = \frac{d\ell}{d\theta}\frac{d\theta}{d\theta_0}\frac{d\theta_0}{ds}$, then
-
 \begin{align*}
 \frac{d\ell}{ds} = \left(-\varrho\right)\frac{d\theta}{d\theta_0}\left(-\frac{1}{\varrho_s}\right).
 \end{align*}
 
-Next, notice that so long as the angle $x'$ is small -- as I shall always assume -- the variations of angles $\theta$ and $\theta_0$ are approximately the same in first order,
-so $\frac{d\theta}{d\theta_0} \approx 1$. Moreover, the radius of curvature $\varrho$ is $\varrho \approx \varrho_s + x$ in first order again. Thus, a path element $d\ell$ of a trajectory at
-$x$ is related to the corresponding change in $s$ by
-
+Next, notice that so long as the angle $x'$ is small -- as I shall always assume -- the variations of angles $\theta$ and $\theta_0$ are approximately the same in first order, so $\frac{d\theta}{d\theta_0} \approx 1$. Moreover, the radius of curvature $\varrho$ is $\varrho \approx \varrho_s + x$ in first order again. Thus, a path element $d\ell$ of a trajectory at $x$ is related to the corresponding change in $s$ by
 \begin{align}
 	d\ell = \frac{\varrho_s + x}{\varrho_s} ds = \left(1+\frac{x}{\varrho_s}\right)ds = (1+G(s)x)ds\label{eq:2.15}
 \end{align}
-Next, we may write for $B$
+Next, we may write for $B_y$
 \begin{align}
-	B = B_0 + \frac{\partial B}{\partial x}x = \frac{E_0}{ec}(G+K_1x)\label{eq:2.16}
+	B_y = B_0 + \left(\frac{\partial B}{\partial x}\right)_0 x = -\frac{E_0}{ec}(G+K_1x)\label{eq:2.16}
 \end{align}
 Putting these two into \eqref{eq:2.14} -- together with $E_0 + \epsilon$ for $E$ -- and keeping only first order terms, we find that
 \begin{align*}
-	d\theta = \left\{-G-(G^2+K_1)x + G\delta\right\}ds
+	d\theta = \left(-G-(G^2+K_1)x + G\delta\right)ds
 \end{align*}
 where
-\begin{align*}
+\begin{align}
 	\delta \equiv \epsilon / E_0.
-\end{align*}
+\end{align}
 And so we get from \eqref{eq:2.12} that
 \begin{align}\label{eq:2.17}
 	x'' = -(G^ 2+K_1)x + G\delta
@@ -59,8 +55,8 @@ And so we get from \eqref{eq:2.12} that
 \begin{proof}
 	From \eqref{eq:2.14},
 	\begin{align*}
-		d\theta &= -\frac{ecB}{E}d\ell\\
-				&= -\frac{ecB}{E}(1+Gx)ds\\
+		d\theta &= \frac{ecB_y}{E}d\ell\\
+				&= \frac{ecB_y}{E}(1+Gx)ds\\
 				&= -\frac{ec}{E}\left[\frac{E_0}{ec}(G+K_1x)\right](1+Gx)ds\\
 				&= -\frac{E_0}{E_0+\epsilon}(G+K_1x)(1+Gx)ds\\
 				&= -\frac{E_0}{E_0+\epsilon}(G+(G^2+K_1)x + K_1Gx^2)ds
@@ -97,13 +93,13 @@ The corresponding equation for the vertical motion is easier to derive; you can 
 \end{align}
 
 \begin{proof}
-	For the vertical motion, applying the Lorentz force, we can see that it has the opposite sign from the radial motion:
+	For the vertical motion, applying the Lorentz force, check Section \ref{sec:BasicsMagField} for a detailed explanation, we can see that it has the opposite sign from the radial motion:
 
 	\begin{align*}
-		d\theta &= -\frac{d\ell}{\varrho} = + \frac{ecB}{E}d\ell =  K_1 y ds.
+		d\theta &= -\frac{d\ell}{\varrho} = - \frac{ecB_x}{E}d\ell = \frac{1}{1+\delta} \, K_1 \, y \, dl \simeq K_1 \, y \, ds.
 	\end{align*}
 
- We have used the fact that there is no horizontal dipole component, therefore for the vertical plane the field expansion has only a linear term $\frac{ecB}{E} = K_1 y$ and $d\ell = ds$.
+ We have used the fact that there is no horizontal dipole component, therefore the horizontal field expansion has only a linear term $B_x = - \frac{E_0}{ec} K_1 y$ and $d\ell = ds$. Also, we kept only first order terms in $\delta$ and $y$.
 
 	Now, from \eqref{eq:2.12},
 	\begin{align*}
