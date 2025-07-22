@@ -6,7 +6,7 @@ will be different from what is necessary to keep an electron on the design orbit
  of the field at the design orbit will be called \emph{field errors}. Changes in the fields which cause the focusing functions $K_x$ and $K_y$ to differ from their nominal values will, for convenience, be called \emph{gradient errors}\footnote{Although field errors will, through the term $G^2$ in Eq. \eqref{eq:2.17} also change $K_x$, such effects are not usually important.}.\\
 When there are field errors, the design orbit is no longer a possible trajectory. If the errors
  are small, however, there will be another closed curve which is a possible orbit for an electron
- of the nominal energy. I shall call this trajectory the \emph{disturbed closed orbit}. The general trajectory will execute betatron oscillations with respect to this disturbed closed orbit. And the form of the betatron oscillations will be determined by the modified focussing function. That is, if we continue to let x represent the displacement from the original design orbit, we may write
+ of the nominal energy. I shall call this trajectory the \emph{disturbed closed orbit}. The general trajectory will execute betatron oscillations with respect to this disturbed closed orbit. And the form of the betatron oscillations will be determined by the modified focussing function. That is, if we continue to let $x$ represent the displacement from the original design orbit, we may write
 \begin{align}\label{eq:2.83}
 	x = x_c + x_\beta,
 \end{align}
@@ -18,7 +18,7 @@ Let's look first at the effect of the field errors. Suppose we begin by consider
 \begin{align*}
 	\Delta x' = \dfrac{ec\Delta B}{E_0}\Delta s,
 \end{align*}
-where $\Delta B$ is the deviation of the magnetic field from its nominal value. For the vertical motion we would have the same form if $\Delta B$ were identified as the total radial field at the design orbit (with a suitably chosen sign). In keeping with the definition of Eq. \eqref{eq:2.3} we set $-ec \Delta B/E_0 = \Delta G$ with a suitable subscript $x$ or $y$ in $\Delta G$ implied when we are considering the radial or vertical motion. We may, as before, consider only a generic $x$-motion with the understanding that all the results apply equally to $x$-motion or to $y$-motion when all identifying subscripts are restored. We write, then the effect of the field error in $\Delta s$ as
+where $\Delta B$ is the deviation of the magnetic field from its nominal value. For the vertical motion we would have the same form if $\Delta B$ were identified as the total radial field at the design orbit (with a suitably chosen sign). In keeping with the definition of Eq. \eqref{eq:2.3} we set $-ec \Delta B/E_0 = \Delta G$. The description is extended with a suitable subscript $x$ or $y$ in $\Delta G$ implied when we are considering the radial or vertical motion, then, as before, we consider a generic $x$-motion with the understanding that all the results apply equally to $x$-motion or to $y$-motion when all identifying subscripts are restored. We write the effect of the field error in $\Delta s$ as
 \begin{align}\label{eq:2.84}
 	\Delta x' = -\Delta G \Delta s.
 \end{align}
@@ -45,9 +45,9 @@ To make a proper calculation of $x_c$, we should use the correct pseudo-harmonic
  \begin{align}
 	x_c(L) = x_c(0);
 \end{align}
-and by Eq. \eqref{eq:2.84},
+and, after a complete revolution, look at Fig. \ref{fig:fig22}, the new angle is
 \begin{align}
-	x_c'(L) - \Delta G \Delta s = x_c'(0).
+	x_c'(L) = x_c'(0) - \Delta x' = x_c'(0) + \Delta G \Delta s.
 \end{align}
 But between $s = 0$ and $s = L$ there are no field errors, so $x_c$ is just a free oscillation about the ideal orbit. See Fig. \ref{fig:fig22}. That is, $x_c$ must be given by Eq. \eqref{eq:2.46}:
 \begin{figure}[!htb]
@@ -68,10 +68,10 @@ From Eq. \eqref{eq:2.52} we obtain
 \begin{align*}
 x_c'(s) =\dfrac{\beta'(s)x}{2\beta(s)} - \dfrac{a}{\sqrt{\beta(s)}}\sin\left(\varphi(s) - \vartheta\right).
 \end{align*}
-Since $x$ and $\beta$ are periodic, i.e., $x(0)=x(L)$ and $\beta(0) = \beta(L)$, $\varphi(L) - \varphi(0) = 2 \pi \nu$, by definition, and $\varphi(s=0)=0$, we use $\Delta x' =  \Delta G \Delta s$,
+Since $x$ and $\beta$ are periodic, i.e., $x(0)=x(L)$ and $\beta(0) = \beta(L)$, $\varphi(L) - \varphi(0) = 2 \pi \nu$, by definition, and $\varphi(s=0)=0$, we use $\Delta x' = -\Delta G \Delta s$,
 to get the following expression
 \begin{align*}
-\dfrac{a}{\sqrt{\beta(0)}}\left[\sin(2\pi \nu - \vartheta) - \sin(-\vartheta)\right] = \Delta G \Delta s.
+\dfrac{a}{\sqrt{\beta(0)}}\left[\sin(2\pi \nu - \vartheta) - \sin(-\vartheta)\right] = -\Delta G \Delta s.
 \end{align*}
 The terms between squared brackets can be simplified as follows
 \begin{align*}

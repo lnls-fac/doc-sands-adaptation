@@ -1,16 +1,16 @@
 \section{Gradient errors}\label{sec:2.11}
 
 Let's turn now to the effects of gradient errors about the ideal closed orbit. These ``errors'' refer to the deviations of the focusing function $K(s)$ from its initially prescribed
-- or nominal - value at each azimuth $s$. Let’s write
+- or nominal - value at each azimuth $s$. Let's write
 \begin{align}
 	K(s)_{actual} = K(s)_{nominal} + \Delta K (s),
 \end{align}
 where we assume $\Delta K(s)$ to be a small quantity. The effect of the deviation $\Delta K(s)$ will be to change the betatron function from its nominal value $\beta(s)$ to some new value $\beta(s)+\Delta\beta(s)$. And the tune will be changed from its nominal value $\nu$ to some new value $\nu + \Delta\nu$. Generally the \emph{tune shift} $\Delta\nu$ is of more particular concern, because of the need to keep the operating point away from resonances.\\
 Since the evaluation of $\Delta\beta$ is a bit tedious, I shall not give a rigorous deviation
 here. I shall rather show how a simple calculation of $\Delta\nu$ can be made and then just write down the exact results for $\Delta\beta$ whose derivation can be found elsewhere\footnote{In any book on accelerators; see for example Ref. \cite{5} or \cite{7}.}.\\
-Suppose that there is a gradient error $\Delta K$ in only a small azimuthal interval $\Delta s$ at $s = 0$. Then as an electron passes $s = 0$ it will receive an extra angular kick $\Delta x'$ which is proportional to its displacement $x$. In fact, by Eq.~\eqref{eq:2.19},
+Suppose that there is a gradient error $\Delta K$ in only a small azimuthal interval $\Delta s$ at $s = 0$. Then as an electron passes $s = 0$ it will receive an extra angular kick $\Delta x'$ which is proportional to its displacement $x$. In fact, by Eq.~\eqref{eq:2.31},
 \begin{align}\label{eq:2.96}
-	\Delta x' = \Delta K\, \Delta s\, x.
+	\Delta x' = - \Delta K\, x\, \Delta s.
 \end{align}
 Let's again approximate the betatron motion by a simple harmonic oscillation; and ask what will happen when an electron arrives at $s = 0$ at the maximum of an oscillation. The motion will be as shown in Fig.~\ref{fig:fig23}. Before arriving at $s = 0$ the
 \begin{figure}[!htb]
@@ -41,7 +41,7 @@ Using Eq.~\eqref{eq:2.96} for $\Delta x'$ - and remembering that at $s=0$ the di
 \end{align}
 The effect of the gradient error is mainly to shift the phase of the oscillation by this $\Delta \varphi$. Now recall that the $2\pi\nu$ is just the total phase shift in one revolution; so roughly speaking the gradient error has produced
 \begin{align}
-	\Delta\nu \approx \dfrac{\Delta\varphi}{2\pi} = - \dfrac{\beta_n \Delta K \Delta s }{2\pi}.
+	\Delta\nu \approx \dfrac{\Delta\varphi}{2\pi} = \dfrac{1}{2\pi} \beta_n \Delta K \Delta s.
 \end{align}
 This result is actually too large by a factor of two. The reason is that we have calculated $\Delta \varphi$ for the special case of the electron arriving at $s = 0$ at the maximum
 of its oscillation. If the electron arrives at $s = 0$ with the phase $\varphi_0$, the phase
@@ -51,7 +51,7 @@ shift $\Delta\varphi$ gets reduced by the factor $\cos^2\varphi_0$ - as you can 
 	\Delta\nu = \dfrac{1}{4\pi}\beta\, \Delta K\, \Delta s.
 \end{align}
 
-Notice that the tune shift is just proportional to the gradient error at any point and to the value of $\beta$ there. We see again that the betatron function is an indicator of the local ``sensiti-vity'' to imperfections of the guide field.\\
+Notice that the tune shift is just proportional to the gradient error at any point and to the value of $\beta$ there. We see again that the betatron function is an indicator of the local ``sensitivity'' to imperfections of the guide field.
 \begin{proof}
 	Let $x = a\ \cos(\varphi-\vartheta)$ be the solution of the differential equation $x'' = -Kx$. For $K(s) = K(s)_{nominal}$, we've seen that an approximate solution exists, which is given by $x = b\ \cos(s/\beta_n + \varphi_0)$. When an electron passes $s=0$, its motion is now given by another differential equation: $x'' = -K(s)_{actual}\ x$ where $K(s)_{actual} = K(s)_{nominal} + \Delta K(s)$. This change on the focussing function $K(s)$ will lead to a variation $\Delta \beta$ on the betatron function. Both amplitude and phase depends on $\beta(s)$, so both of them will change too. These changes will be written as $\Delta b$ and $\Delta \varphi$, respectively. So, the solution for the new differential equation can be written as
 	\begin{align*}
@@ -95,13 +95,9 @@ Notice that the tune shift is just proportional to the gradient error at any poi
 	\begin{align*}
 		b\ \cos(\varphi_0) = (b+\Delta b)[\cos(\varphi_0)-\Delta \varphi\ \sin(\varphi_0)]
 	\end{align*}
-	It can be rewritten as
-	\begin{align*}
-		\frac{\Delta b}{(b+\Delta b)\Delta \varphi} = \tan(\varphi_0)
-	\end{align*}
 	Discarding all second order terms,
 	\begin{align*}
-		\frac{\Delta b}{b \Delta \varphi} &= \tan(\varphi_0)\\
+		b\cos{(\varphi_0)} &=b\cos{(\varphi_0)} - \Delta\varphi\, b\sin{(\varphi_0)} + \Delta b \cos{(\varphi_0)}\\
 		\therefore \Delta b &= b\ \Delta \varphi\ \tan(\varphi_0)
 	\end{align*}
 	Substituting this in the  $\Delta x'$ expression, we have that
