@@ -1,0 +1,96 @@
+\section{Basics of Charged Particles in Magnetic Fields} \label{sec:BasicsMagField}
+
+A particle of charge $q$ with velocity $\bm{v}$ in the presence of a magnetic vector field $\bm{B} = \bm{B}(\bm{r})$ experiences a Lorentz force 
+\begin{equation}
+\bm{F} = q \; \bm{v} \times \bm{B},
+\end{equation}
+In the case of the electron, $q=-e$, where $e = 1.6021766208(98)\times10^{-19}\;C$ is the elementary charge fundamental constant. If the magnetic field is colinear with the velocity, the force vanishes. Moreover, the Lorentz force in a pure magnetic field does no work on the charged particle, as can be mathematically derived,
+\begin{eqnarray}
+\bm{F} \cdot d\bm{r} &=& q \; \left( \bm{v} \times \bm{B} \right) \cdot d\bm{r} \nonumber \\
+                     &=& q \; \left( d\bm{r} \times \bm{v} \right) \cdot \bm{B} = q \; dt \left( \bm{v} \times \bm{v} \right) \cdot \bm{B} \\
+                     &=& 0 \nonumber,
+\end{eqnarray}
+since the infinitesimal displacement vector is colinear with the velocity. As a consequence, the speed $v$ and the mechanical energy $E$ of the relativistic particle,
+\begin{equation}
+E = m c^2 = \gamma m_0 c^2 = \frac{m_0 c^2}{\sqrt{1-(v/c)^2}}
+\end{equation}
+are conserved. Therefore, its relativistic mass is constant and the time derivative of the linear momentum is proportional to the acceleration:
+\begin{equation}
+\frac{d\bm{p}}{dt} = m \frac{d\bm{v}}{dt} = q \; \bm{v} \times \bm{B}. 
+\end{equation}
+This equation describes how the particle velocity evolves in the presence of a magnetic field. 
+
+Since the magnitude $v$ of the velocity $\bm{v} = v\bm{\hat{v}}$ is a constant of motion, the above equation can be rewritten for the velocity versor $\bm{\hat{v}}$. Also, we can change the independent variable from time $t$ to the trajectory arc length $\ell$ using $v = d\ell/dt$. The rate at which the direction of movement $\bm{\hat{v}}$ changes with the arc length is then given by
+\begin{equation}
+\frac{d\bm{\hat{v}}}{d\ell} = \frac{qc}{\beta E} \bm{\hat{v}} \times \bm{B},
+\end{equation}
+where $\beta \equiv v/c$. By defining the magnetic rigidity $R_m=R_m(E)$ as
+\begin{equation}
+R_m = p/q = \frac{\beta E}{qc},
+\end{equation}
+it is possible to rewrite the equation for $d\bm{\hat{v}}/d\ell$ in a concise way as
+\begin{equation}
+\label{eq:lorentz_versor}
+\frac{d\bm{\hat{v}}}{d\ell} = \frac{1}{R_m} \bm{\hat{v}} \times \bm{B}.
+\end{equation}
+
+Assume a trajectory direction whose projection onto the plane normal to a field $\bm{B} = B\bm{\hat{y}}$ makes a angle $\theta=\theta(s)$ with respect to $\bm{\hat{z}}$,
+\begin{equation}
+\bm{\hat{v}} = \hat{v}_{\parallel}\cos{\theta} ~ \bm{\hat{z}} + \hat{v}_{\parallel}\sin{\theta} ~ \bm{\hat{x}} + \hat{v}_{\perp} ~ \bm{\hat{y}},
+\end{equation}
+Equation (\ref{eq:lorentz_versor}) is then solved for this case:
+\begin{align*}
+\frac{d}{d\ell}(\hat{v}_{\parallel}\cos{\theta} ~ \bm{\hat{z}} + \hat{v}_{\parallel}\sin{\theta} ~ \bm{\hat{x}} + \hat{v}_{\perp} ~ \bm{\hat{y}}) = \frac{1}{R_m} (\hat{v}_{\parallel}\cos{\theta} ~ \bm{\hat{z}} + \hat{v}_{\parallel}\sin{\theta} ~ \bm{\hat{x}} + \hat{v}_{\perp} ~ \bm{\hat{y}}) \times (B\bm{\hat{y}})
+\end{align*}
+
+In the ultrarrelativistic context considered here, the particle is moving along the longitudinal direction close to \bm{$\hat{z}}$, then $\hat{v}_{\parallel}$ not significantly changes with $\ell$ in comparison with the angle and the transverse component. The velocity in the $\bm{\hat{y}}$ direction remains unchanged whereas the two other components reduce to a single expression for the evolution of the deflected angle of the particle along the trajectory:
+\begin{equation}
+\frac{d\theta}{d\ell}  = -\frac{B}{R_m}. 
+\end{equation}
+
+This last equation shows that the deflection angle per unit path length is the ratio between the magnetic field intensity and the magnetic rigidity of the particle, which depends solely on its energy. The integral form of the equation, used to compute the angular displacement accumulated along a path $\Gamma$, reads
+\begin{equation}
+\label{equ:deflection_angle}
+\Delta \theta = -\frac{1}{R_m} \int_{\Gamma} B \; d\ell.
+\end{equation}
+
+A deflection in angle comes with a bending radius $\rho$ of curvature, conventionaly considered positive when the rotation direction is in the clockwise sense and negative when it is counter-clockwise. Together with the convention of angles measured counter-clockwise, the geometry of the problem is syntetized by the following equation:
+\begin{equation}
+    d\theta = -\frac{dl}{\rho} = -G dl
+\end{equation}
+where the curvature function $G$ is defined as
+\begin{align}
+    G = \frac{1}{\rho}
+\end{align}
+
+This relation now leads to an interesting expression for the magnetic rigidity
+\begin{equation}
+\label{eq:rigidity}
+    B\rho = {R_m} = p/q.
+\end{equation}
+This parameter relates the geometry of the magnetic problem, as shown in the left hand side of the equation, with the caracteristics of the particle, the right hand side. The larger the magnetic rigidity of the particle is -- hence the higher its energy is -- the more difficult it is for a given magnetic field amplitude to bend the particle trajectory and, therefore, the larger the bending radius is.
+
+For a numerical example, consider the 3 GeV beam at SIRIUS storage ring. Electrons in the beam have, for this nominal energy, a magnetic rigidity of approximately 10 T$\cdot$m. In order to deflect them by a complete turn, 360 degrees, the integrated field experienced must be of $2\pi R_m \approx$ 62.8 T$\cdot$m. Typical magnetic fields in dipoles are around 1 T, which means that if SIRIUS were to be build with such uniform field dipoles it would require exactly 62.8 meters of them.
+
+In general case of an arbitrary transverse field $\bm{B}=B_x\bm{\hat{x}}+B_y\bm{\hat{y}}$ its useful to express the movement direction of the particle close to the longitudinal $\bm{\hat{z}}$ using the small angles approximation.
+\begin{align}
+    \bm{\hat{v}} &= \sin{\theta}\cos{\phi} ~ \bm{\hat{x}} + \sin{\theta}\sin{\phi} ~ \bm{\hat{y}} + \cos{\theta} ~ \bm{\hat{z}} \nonumber \\
+    \bm{\hat{v}} &= \theta\cos{\phi} ~ \bm{\hat{x}} + \theta\sin{\phi} ~ \bm{\hat{y}} + \left(1-\frac{1}{2}\theta^2\right)\bm{\hat{z}} \nonumber \\
+    \bm{\hat{v}} &= \theta_x ~ \bm{\hat{x}} + \theta_y ~ \bm{\hat{y}} + \left(1-\frac{\theta_x^2+\theta_y^2}{2}\right)\bm{\hat{z}}
+\end{align}
+
+The Eq.(\ref{eq:lorentz_versor}) is solved again for the deflection angles at the horizontal and vertical planes:
+\begin{equation}
+    \frac{d\theta_x}{d\ell}  = - \frac{B_y}{R_m} \quad ; \quad \frac{d\theta_y}{d\ell}  = \frac{B_x}{R_m}
+\end{equation}
+
+Explicitly, the radius of curvatures at each plane are
+\begin{equation}
+    \rho_{x,y}=\pm \frac{R_m}{B_{y,x}}.
+\end{equation}
+Notice that the radius at the vertical has opposite sign of the one in the horizontal.
+
+For the ultrarrelativistic electrons, $\beta\approx 1$ and $q=-e$, then the radii of their orbit are:
+\begin{equation}
+    G_{x,y} = \frac{1}{\rho_{x,y}} = \mp \frac{ec}{E}B_{y,x}
+\end{equation}
