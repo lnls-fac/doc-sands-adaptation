@@ -19,10 +19,9 @@
 %-------------------------------
 \usepackage{booktabs,tabularx,ltablex} % breaking tables over several pages
 %-------------------------------
-
+\usepackage{subfiles} 
 %\usepackage{tipa}
 \citebrackets[]
-
 \DeclareMathOperator{\Tr}{Tr}
 
 \def\mean#1{\left< #1 \right>}
@@ -76,56 +75,56 @@
 \tableofcontents
 
 \newpage
-\input{Symbols.tex}
+\subfile{Symbols.tex}
 
 \chapter{Introduction} \label{ch:1}
-    \input{./Chapter_1/1_01_OpeningRemarks}
-    \input{./Chapter_1/1_02_BasicProcesses}
-    \input{./Chapter_1/1_03_CollectiveEffects}
+    \subfile{./Chapter_1/1_01_OpeningRemarks}
+    \subfile{./Chapter_1/1_02_BasicProcesses}
+    \subfile{./Chapter_1/1_03_CollectiveEffects}
 
 \chapter{The Betatron Oscillations} \label{ch:2}
-    \input{./Chapter_2/2_01_Coordinates}
-    \input{./Chapter_2/2_02_GuideField}
-    \input{./Chapter_2/2_03_EquationsOfMotion}
-    \input{./Chapter_2/2_04_SeparationRadialMotion}
-    \input{./Chapter_2/2_05_BetatronTrajectories}
-    \input{./Chapter_2/2_06_PseudoharmonicBetatronOscillations}
-    \input{./Chapter_2/2_07_Tune}
-    \input{./Chapter_2/2_08_ActionAngleVariables}
-    \input{./Chapter_2/2_09_NatureBetatronFunction}
-    \input{./Chapter_2/2_10_DisturbedClosedOrbits}
-    \input{./Chapter_2/2_11_GradientErrors}
-    \input{./Chapter_2/2_Chromaticity}
+    \subfile{./Chapter_2/2_01_Coordinates}
+    \subfile{./Chapter_2/2_02_GuideField}
+    \subfile{./Chapter_2/2_03_EquationsOfMotion}
+    \subfile{./Chapter_2/2_04_SeparationRadialMotion}
+    \subfile{./Chapter_2/2_05_BetatronTrajectories}
+    \subfile{./Chapter_2/2_06_PseudoharmonicBetatronOscillations}
+    \subfile{./Chapter_2/2_07_Tune}
+    \subfile{./Chapter_2/2_08_ActionAngleVariables}
+    \subfile{./Chapter_2/2_09_NatureBetatronFunction}
+    \subfile{./Chapter_2/2_10_DisturbedClosedOrbits}
+    \subfile{./Chapter_2/2_11_GradientErrors}
+    \subfile{./Chapter_2/2_Chromaticity}
 
 \chapter{Energy Oscillations} \label{ch:3}
-    \input{./Chapter_3/3_01_Off-EnergyOrbits}
-    \input{./Chapter_3/3_02_MomentumCompaction}
-    \input{./Chapter_3/3_04_EnergyLossGain}
-    \input{./Chapter_3/3_05_SmallOscillations}
-    \input{./Chapter_3/3_06_LargeOscillations}
+    \subfile{./Chapter_3/3_01_Off-EnergyOrbits}
+    \subfile{./Chapter_3/3_02_MomentumCompaction}
+    \subfile{./Chapter_3/3_04_EnergyLossGain}
+    \subfile{./Chapter_3/3_05_SmallOscillations}
+    \subfile{./Chapter_3/3_06_LargeOscillations}
 
 \chapter{Radiation Damping} \label{ch:4}
-    \input{./Chapter_4/4_01_EnergyLoss}
-    \input{./Chapter_4/4_02_DampingEnergyOscillations}
-    \input{./Chapter_4/4_03_DampingBetatronOscillations}
-    \input{./Chapter_4/4_04_RadiationDampingRates}
+    \subfile{./Chapter_4/4_01_EnergyLoss}
+    \subfile{./Chapter_4/4_02_DampingEnergyOscillations}
+    \subfile{./Chapter_4/4_03_DampingBetatronOscillations}
+    \subfile{./Chapter_4/4_04_RadiationDampingRates}
 
 \chapter{Radiation Excitation} \label{ch:5}
-    \input{./Chapter_5/5_01_QuantumRadiation}
-    \input{./Chapter_5/5_02_EnergyFluctuations}
-    \input{./Chapter_5/5_03_DistributionFluctuations}
-    \input{./Chapter_5/5_04_BunchLength}
-    \input{./Chapter_5/5_05_BeamWidth}
-    \input{./Chapter_5/5_06_BeamHeight}
-    \input{./Chapter_5/5_07_BeamLifetimeRadialOscillations}
-    \input{./Chapter_5/5_08_BeamLifetimeEnergyOscillations}
+    \subfile{./Chapter_5/5_01_QuantumRadiation}
+    \subfile{./Chapter_5/5_02_EnergyFluctuations}
+    \subfile{./Chapter_5/5_03_DistributionFluctuations}
+    \subfile{./Chapter_5/5_04_BunchLength}
+    \subfile{./Chapter_5/5_05_BeamWidth}
+    \subfile{./Chapter_5/5_06_BeamHeight}
+    \subfile{./Chapter_5/5_07_BeamLifetimeRadialOscillations}
+    \subfile{./Chapter_5/5_08_BeamLifetimeEnergyOscillations}
 
 \chapter{Appendices} \label{ch:app}
-    \input{./Appendices/App_BasicsElectronsMagFields}
-    \input{./Appendices/App_FloquetTheorem}
-    \input{./Appendices/App_TuneShiftGradErrors}
-    \input{./Appendices/App_HorizontalDamping}
-    \input{./Appendices/App_QuantumRadiation}
+    \subfile{./Appendices/App_BasicsElectronsMagFields}
+    \subfile{./Appendices/App_FloquetTheorem}
+    \subfile{./Appendices/App_TuneShiftGradErrors}
+    \subfile{./Appendices/App_HorizontalDamping}
+    \subfile{./Appendices/App_QuantumRadiation}
 
 \bibliographystyle{plain}
 \bibliography{ref}
