@@ -2,7 +2,7 @@
 
 The storage-ring designer is very much occupied with finding a magnet design which will provide a suitable betatron function $\beta(s)$. And a user may generally expect that along with the design of the ring will come a plot of that function.  I do not wish here to go into the intricate matter
  of the techniques for arriving at a design which will yield a ``good'' $\beta(s)$, but rather I would like only to give some idea about how $\beta(s)$ may be evaluated for a given set of magnet parameters. \\
-What is a desirable form for $\beta(s)$? We have already seen at the end of Section \ref{sec:2.7} that at least in certain respects, small values of $\beta$ (strong focusing) are desirable - provided that $\beta$ is reasonably uniform. Unfortunately, small $\beta$’s can only be obtained with alternating gradient focusing which tends to give reasonably large undulations to $\beta$. Also, smaller $\beta$’s imply larger values of $\nu$, which may, as remarked in Section \ref{sec:2.7}, lead to greater difficulties from resonances. \\
+What is a desirable form for $\beta(s)$? We have already seen at the end of Section \ref{sec:2.7} that at least in certain respects, small values of $\beta$ (strong focusing) are desirable - provided that $\beta$ is reasonably uniform. Unfortunately, small $\beta$'s can only be obtained with alternating gradient focusing which tends to give reasonably large undulations to $\beta$. Also, smaller $\beta$'s imply larger values of $\nu$, which may, as remarked in Section \ref{sec:2.7}, lead to greater difficulties from resonances. \\
 In Section \ref{sec:2.6} the betatron function $\beta(s)$ was defined as that single-valued continuous function whose square root $\zeta(s)$ satisfies
 \begin{align} \label{eq:2.74}
 	\zeta''+K(s)\zeta-\dfrac{1}{\zeta^3}=0
@@ -62,12 +62,12 @@ and unit slope. It can be expressed in terms of the pseudo-harmonic oscillation 
 \end{align}
 (You can check that $S(s_0, s_0) = 0$, and $S'(s_0, s_0) = 1$.) Now consider what happens if we follow this sine-like trajectory for one complete revolution - that is to $s = s_0 + L$. The integral becomes, by Eq. \eqref{eq:2.60} just $2\pi\nu$. Because of the periodicity of the betatron function, $\beta(s_0 + L) = \beta(s_0)$. So
 \begin{align}
-	S(s_0+L,s_0)=\beta(s_0)\sin2\pi\nu
+	S(s_0+L,s_0)=\beta(s_0)\sin{(2\pi\nu)}
 \end{align}
 which - since $\nu$ is independent of $s_0$ - I can also write as
 
 \begin{align}\label{eq:2.77}
-	\beta(s)=\dfrac{S(s+L,s)}{\sin2\pi\nu}.
+	\beta(s)=\dfrac{S(s+L,s)}{\sin{(2\pi\nu)}}.
 \end{align}
 The betatron-function at $s$ is, within a constant, just the displacement after one revolution
  of the sine-like trajectory which starts at $s$. See Fig. \ref{fig:fig19}.\\
@@ -80,14 +80,14 @@ We now have another prescription for finding $\beta(s)$. One needs only calculat
 \end{figure}
 The displacements obtained are proportional to $\beta(s)$. There is left only to determine the ``normalization'' factor $1/2\pi\nu$. Using the definition of $\nu$, Eq. \eqref{eq:2.60} together with Eq. \eqref{eq:2.77}, you can see that $\nu$ can be obtained as the solution of the transcendental equation
 \begin{align}
-	\dfrac{2\pi\nu}{\sin{2\pi\nu}}=\oint\dfrac{ds}{S(s+L,s)}.
+	\dfrac{2\pi\nu}{\sin{(2\pi\nu)}}=\oint\dfrac{ds}{S(s+L,s)}.
 \end{align}
 So, given $S(s+L, s)$ for all $s$, we can determine uniquely $\beta(s)$.\\
 The calculation of $S(s +L, s)$ can be carried out by a straightforward numerical integration
- of the equations of motion. Or, for a piece-wise-uniform guide field, it is conveniently obtained by using the matrix method described in Section \ref{sec:2.3}. Recalling Eq. \eqref{eq:2.37}, the sine-like trajectory from $s_0$ to $s_0 + L$ is just the upper right element of the transfer matrix $\bm{M}(s, s_0)$ for the complete machine starting at each azimuth $s_0$.\\
+ of the equations of motion. Or, for a piece-wise-uniform guide field, it is conveniently obtained by using the matrix method described in Section \ref{sec:EqsMotion}. Recalling Eq. \eqref{eq:2.37}, the sine-like trajectory from $s_0$ to $s_0 + L$ is just the upper right element of the transfer matrix $\bm{M}(s, s_0)$ for the complete machine starting at each azimuth $s_0$.\\
 It can also be shown - but I shall not stop to do so - that $\nu$ can be obtained from the trace of the matrix for the complete ring. Namely
 \begin{align}
-	\cos2\pi\nu &= \dfrac{1}{2}\Tr\bm{M}(s+L,s) \\
+	\cos{(2\pi\nu)} &= \dfrac{1}{2}\Tr\bm{M}(s+L,s) \\
     	&= \dfrac{1}{2}\left\lbrace C(s+L,s)+S'(s+L,s) \right\rbrace,
 \end{align}
 where $C$ is the cosine-like function. So if $C$ and $S'$ are calculated as well as $S$, $\nu$ can be determined and Eq. \eqref{eq:2.77} will give $\beta(s)$ directly.\\
