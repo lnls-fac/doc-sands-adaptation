@@ -1,3 +1,5 @@
+\documentclass[../sands-adaptation.tex]{subfiles}
+\begin{document}
 \section{Disturbed closed orbits}\label{sec:2.10}
 
 Until now I have considered the trajectories of electrons in a prescribed guide field. I wish next to consider the following question: Suppose we have analyzed the electron trajectories for this prescribed field; how will the trajectories be different if there are small deviations of the fields from the assumed prescription? In our linear approximation, the prescribed - or \emph{nominal} - guide field was specified by giving its value on the ideal orbit and its radial derivative. See Section \ref{sec:2.3}. Also, it was assumed that the field at the ideal orbit was everywhere vertical. I wish now to inquire about the effects of small deviations from the nominal field. If the vertical magnetic field at the ideal orbit differs
@@ -153,3 +155,4 @@ As mentioned earlier the total displacement from the ideal orbit is the sum of $
  Suppose that the BPMs measure the orbit distortion $\vec{u}_{\mathrm{d}}$. With the correctors it is possible to produce an orbit variation that minimizes the 2-norm of the residual orbit. From the minimization of $||\vec{u}_{\mathrm{d}} - \mathbf{M}\Delta \vec{\theta}||^2$ with respect to $\Delta\vec{\theta}$, the required kick variations are $\Delta \vec{\theta} = -\mathbf{M}^{-1}\vec{u}_{\mathrm{d}}$. The orbit response matrix may be non-square and in these cases the symbol $\mathbf{M}^{-1}$ must be viewed as a pseudo-inverse. Since the actual problem may be non-linear, the corrections must be calculated and applied iteratively until convergence.
 
  The pseudo-inverse of $\mathbf{M}$ can be obtained, for example, with the method of Singular Value Decomposition (SVD), with a suitable choice of singular values used in the pseudo-inversion procedure. The SVD-based orbit correction is quite common in storage rings but there are other algorithms also available, depending on the application purpose.
+\end{document}

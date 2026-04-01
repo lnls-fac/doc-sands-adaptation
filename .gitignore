@@ -10,6 +10,9 @@
 *.fls
 *.synctex.gz
 
+# ignore pdf in chapters
+Chapter*/*.pdf
+
 # temo files
 *~
 
